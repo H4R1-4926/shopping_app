@@ -1,0 +1,288 @@
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:iconsax/iconsax.dart';
+import 'package:shopping_app/Core/colors.dart';
+import 'package:shopping_app/Core/img.dart';
+import 'package:shopping_app/Core/size.dart';
+import 'package:shopping_app/Presentation/Screens/Cart/Address/address_change_page.dart';
+import 'package:shopping_app/Presentation/Screens/Cart/Shipping/shipping_detail.dart';
+
+class CheckoutPage extends StatelessWidget {
+  const CheckoutPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: klightGrey,
+      appBar: AppBar(
+        backgroundColor: kwhite,
+        surfaceTintColor: kwhite,
+        title: Text(
+          'Checkout',
+          style:
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+        ),
+      ),
+      body: ListView(
+        children: [
+          Divider(
+            indent: 23,
+            endIndent: 23,
+            color: kGrey.withOpacity(0.2),
+          ),
+          SizedBox(
+            width: double.infinity,
+            height: 150,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(left: 15),
+                  child: Text(
+                    'Shipping Address',
+                    style: GoogleFonts.lato(
+                        fontWeight: FontWeight.w900,
+                        fontSize: 22,
+                        color: kblack),
+                  ),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                Center(
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 22),
+                    child: ListTile(
+                      leading: CircleAvatar(
+                        backgroundColor: kGrey.withOpacity(0.4),
+                        radius: 34,
+                        child: const CircleAvatar(
+                          radius: 21,
+                          backgroundColor: kblack,
+                          child: Icon(
+                            Iconsax.location5,
+                            color: kwhite,
+                          ),
+                        ),
+                      ),
+                      trailing: IconButton(
+                          onPressed: () {
+                            Navigator.of(context).push(PageRouteBuilder(
+                              pageBuilder:
+                                  (context, animation, secondaryAnimation) =>
+                                      const AddressChangePage(),
+                              transitionsBuilder: (context, animation,
+                                  secondaryAnimation, child) {
+                                var tween = Tween(
+                                  begin: const Offset(1.0, 0.0),
+                                  end: Offset.zero,
+                                ).chain(CurveTween(curve: Curves.easeIn));
+                                return SlideTransition(
+                                  position: animation.drive(tween),
+                                  child: child,
+                                );
+                              },
+                            ));
+                          },
+                          icon: const Icon(Iconsax.edit)),
+                      title: Text(
+                        'Person Name',
+                        style: GoogleFonts.lato(
+                            fontWeight: FontWeight.w900,
+                            fontSize: 19,
+                            color: kblack),
+                      ),
+                      subtitle: Text(
+                        'Address',
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 1,
+                        style: GoogleFonts.lato(
+                            fontSize: 15, color: kGrey.withOpacity(0.8)),
+                      ),
+                      contentPadding: const EdgeInsets.symmetric(
+                          vertical: 15, horizontal: 10),
+                      tileColor: kwhite,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                  ),
+                )
+              ],
+            ),
+          ),
+          kSizedBoxHeight10,
+          Divider(
+            indent: 23,
+            endIndent: 23,
+            color: kGrey.withOpacity(0.2),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Text(
+              'Order List',
+              style: GoogleFonts.lato(
+                  fontWeight: FontWeight.w900, fontSize: 22, color: kblack),
+            ),
+          ),
+          kSizedBoxHeight10,
+          ListView.builder(
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, index) {
+              return Padding(
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                child: Container(
+                  height: 170,
+                  decoration: BoxDecoration(
+                      color: kwhite, borderRadius: BorderRadius.circular(20)),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          height: 115,
+                          width: 115,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(20),
+                              image: const DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(kDemoImg))),
+                        ),
+                        const SizedBox(
+                          width: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 18),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              SizedBox(
+                                height: 50,
+                                width: 200,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      height: 30,
+                                      width: 150,
+                                      child: Text(
+                                        'Name of Product',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: GoogleFonts.lato(
+                                            color: kblack,
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 18),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Row(
+                                children: [
+                                  const CircleAvatar(
+                                    radius: 15,
+                                    backgroundColor: kblack,
+                                  ),
+                                  const SizedBox(
+                                    width: 10,
+                                  ),
+                                  Text(
+                                    'Color',
+                                    style: GoogleFonts.lato(
+                                        fontWeight: FontWeight.bold),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 50,
+                                width: 216,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '₹ 99999\\-',
+                                      style: GoogleFonts.openSans(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                    const SizedBox(
+                                      width: 20,
+                                    ),
+                                    Padding(
+                                      padding: const EdgeInsets.only(right: 15),
+                                      child: Container(
+                                        height: 45,
+                                        width: 45,
+                                        decoration: const BoxDecoration(
+                                            color: klightGrey,
+                                            shape: BoxShape.circle),
+                                        child: Center(
+                                          child: Text(
+                                            '1',
+                                            style: GoogleFonts.lato(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 20,
+                                                color: kblack),
+                                          ),
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ),
+              );
+            },
+            itemCount: 25,
+          ),
+          const SizedBox(
+            height: 100,
+          )
+        ],
+      ),
+      bottomSheet: Container(
+        width: double.infinity,
+        height: 100,
+        color: kwhite,
+        child: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              Navigator.of(context).push(PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) =>
+                    const ShippingPage(),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                  var tween = Tween(
+                    begin: const Offset(1.0, 0.0),
+                    end: Offset.zero,
+                  ).chain(CurveTween(curve: Curves.easeIn));
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+              ));
+            },
+            style: const ButtonStyle(
+                fixedSize: MaterialStatePropertyAll(Size(310, 60)),
+                backgroundColor: MaterialStatePropertyAll(kblack),
+                foregroundColor: MaterialStatePropertyAll(kwhite),
+                elevation: MaterialStatePropertyAll(10)),
+            child: const Text('Continue ➤'),
+          ),
+        ),
+      ),
+    );
+  }
+}
