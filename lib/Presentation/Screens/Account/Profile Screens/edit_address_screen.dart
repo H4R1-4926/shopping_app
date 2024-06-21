@@ -4,18 +4,19 @@ import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
 
-class AddressChangePage extends StatelessWidget {
-  const AddressChangePage({super.key});
+class EditAddress extends StatelessWidget {
+  const EditAddress({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: klightGrey,
       appBar: AppBar(
-        backgroundColor: kwhite,
         surfaceTintColor: kwhite,
+        automaticallyImplyLeading: true,
+        backgroundColor: kwhite,
         title: Text(
-          'Shipping Address',
+          'Edit Address',
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
         ),
@@ -43,15 +44,8 @@ class AddressChangePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  trailing: Radio(
-                    value: 1,
-                    groupValue: 1,
-                    onChanged: (value) {},
-                    activeColor: kblack,
-                    fillColor: const MaterialStatePropertyAll(kblack),
-                    splashRadius: 25,
-                    visualDensity: VisualDensity.comfortable,
-                  ),
+                  trailing: IconButton(
+                      onPressed: () {}, icon: const Icon(Iconsax.edit)),
                   title: Text(
                     'Person Name',
                     style: GoogleFonts.lato(
@@ -107,7 +101,7 @@ class AddressChangePage extends StatelessWidget {
               Navigator.of(context).pop();
             },
             style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 60)),
+                fixedSize: MaterialStatePropertyAll(Size(310, 50)),
                 backgroundColor: MaterialStatePropertyAll(kblack),
                 foregroundColor: MaterialStatePropertyAll(kwhite),
                 elevation: MaterialStatePropertyAll(10)),

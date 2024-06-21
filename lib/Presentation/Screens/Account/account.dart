@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
+import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_address_screen.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_profile.dart';
 
 import 'widgets/listtile_widget.dart';
@@ -90,7 +91,23 @@ class AccountPage extends StatelessWidget {
             ListTileWidget(
               prefixIcon: Iconsax.location,
               titleText: 'Address',
-              ontap: () {},
+              ontap: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const EditAddress(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
               trailIcon: true,
             ),
             ListTileWidget(

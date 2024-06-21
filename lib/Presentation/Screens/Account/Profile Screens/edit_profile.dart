@@ -36,7 +36,7 @@ class EditProfile extends StatelessWidget {
               maxLength: 20,
               maxLines: 1,
               initialValue: 'Person',
-              style: GoogleFonts.lato(),
+              style: GoogleFonts.lato(fontWeight: FontWeight.bold),
               decoration: InputDecoration(
                   focusColor: kblack,
                   focusedBorder: OutlineInputBorder(
@@ -60,7 +60,7 @@ class EditProfile extends StatelessWidget {
               maxLength: 20,
               maxLines: 1,
               initialValue: 'Name',
-              style: GoogleFonts.lato(),
+              style: GoogleFonts.lato(fontWeight: FontWeight.bold),
               decoration: InputDecoration(
                   focusColor: kblack,
                   focusedBorder: OutlineInputBorder(
@@ -93,30 +93,52 @@ class EditProfile extends StatelessWidget {
                     borderSide: BorderSide.none),
                 filled: true,
                 fillColor: const Color.fromARGB(255, 243, 243, 243),
-                suffixIcon: DropdownButton(
-                  icon: const Icon(Icons.arrow_drop_down_rounded),
-                  iconEnabledColor: kblack,
-                  iconSize: 32,
-                  borderRadius: BorderRadius.circular(18),
-                  style: GoogleFonts.lato(
-                      color: kblack, fontWeight: FontWeight.bold),
-                  items: gender
-                      .map((e) => DropdownMenuItem(
-                            value: e,
-                            child: Text(e),
-                          ))
-                      .toList(),
-                  onChanged: (value) {
-                    genderController.text = value.toString();
+                suffixIcon: Padding(
+                  padding: const EdgeInsets.only(right: 5),
+                  child: DropdownButton(
+                    underline: const SizedBox(),
+                    icon: const Icon(Icons.arrow_drop_down_rounded),
+                    iconEnabledColor: kblack,
+                    iconSize: 32,
+                    borderRadius: BorderRadius.circular(18),
+                    style: GoogleFonts.lato(
+                        color: kblack, fontWeight: FontWeight.bold),
+                    items: gender
+                        .map((e) => DropdownMenuItem(
+                              value: e,
+                              child: Text(e),
+                            ))
+                        .toList(),
+                    onChanged: (value) {
+                      genderController.text = value.toString();
 
-                    log('$value taped');
-                  },
+                      log('$value taped');
+                    },
+                  ),
                 ),
               ),
             ),
           ),
         ],
       ),
+      bottomSheet: Container(
+          color: kwhite,
+          height: 100,
+          child: Center(
+              child: ElevatedButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            style: const ButtonStyle(
+                elevation: MaterialStatePropertyAll(8),
+                backgroundColor: MaterialStatePropertyAll(kblack),
+                fixedSize: MaterialStatePropertyAll(Size(350, 55))),
+            child: Text(
+              'Apply',
+              style: GoogleFonts.poppins(
+                  color: kwhite, fontWeight: FontWeight.bold),
+            ),
+          ))),
     );
   }
 }

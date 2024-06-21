@@ -232,7 +232,7 @@ class RecieptPage extends StatelessWidget {
         decoration: const BoxDecoration(
             color: kwhite,
             borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(15), topRight: Radius.circular(15))),
+                topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
               onPressed: () {

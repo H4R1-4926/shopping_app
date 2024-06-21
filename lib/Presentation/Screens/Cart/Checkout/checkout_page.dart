@@ -254,7 +254,10 @@ class CheckoutPage extends StatelessWidget {
       bottomSheet: Container(
         width: double.infinity,
         height: 100,
-        color: kwhite,
+        decoration: const BoxDecoration(
+            color: kwhite,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
             onPressed: () {

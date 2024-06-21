@@ -273,7 +273,10 @@ class PaymentPage extends StatelessWidget {
       bottomSheet: Container(
         height: 80,
         width: double.infinity,
-        color: kwhite,
+        decoration: const BoxDecoration(
+            color: kwhite,
+            borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
             onPressed: () {
