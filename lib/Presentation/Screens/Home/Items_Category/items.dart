@@ -44,7 +44,7 @@ class ItemList extends StatelessWidget {
         itemCount: 25,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.75,
+          childAspectRatio: 0.72,
         ),
         itemBuilder: (context, index) {
           return Padding(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -131,7 +132,7 @@ class CheckoutPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding:
-                    const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: Container(
                   height: 170,
                   decoration: BoxDecoration(
@@ -153,89 +154,92 @@ class CheckoutPage extends StatelessWidget {
                         const SizedBox(
                           width: 20,
                         ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 18),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              SizedBox(
-                                height: 50,
-                                width: 200,
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    SizedBox(
-                                      height: 30,
-                                      width: 150,
-                                      child: Text(
-                                        'Name of Product',
-                                        overflow: TextOverflow.ellipsis,
-                                        style: GoogleFonts.lato(
-                                            color: kblack,
-                                            fontWeight: FontWeight.w900,
-                                            fontSize: 18),
+                        Flexible(
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(vertical: 18),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                SizedBox(
+                                  height: 50,
+                                  width: 200,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SizedBox(
+                                        height: 30,
+                                        width: 150,
+                                        child: Text(
+                                          'Name of Product',
+                                          overflow: TextOverflow.ellipsis,
+                                          style: GoogleFonts.lato(
+                                              color: kblack,
+                                              fontWeight: FontWeight.w900,
+                                              fontSize: 18),
+                                        ),
                                       ),
+                                    ],
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    const CircleAvatar(
+                                      radius: 15,
+                                      backgroundColor: kblack,
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text(
+                                      'Color',
+                                      style: GoogleFonts.lato(
+                                          fontWeight: FontWeight.bold),
                                     ),
                                   ],
                                 ),
-                              ),
-                              Row(
-                                children: [
-                                  const CircleAvatar(
-                                    radius: 15,
-                                    backgroundColor: kblack,
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    'Color',
-                                    style: GoogleFonts.lato(
-                                        fontWeight: FontWeight.bold),
-                                  ),
-                                ],
-                              ),
-                              SizedBox(
-                                height: 50,
-                                width: 216,
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      '₹ 99999\\-',
-                                      style: GoogleFonts.openSans(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 18),
-                                    ),
-                                    const SizedBox(
-                                      width: 20,
-                                    ),
-                                    Padding(
-                                      padding: const EdgeInsets.only(right: 15),
-                                      child: Container(
-                                        height: 45,
-                                        width: 45,
-                                        decoration: const BoxDecoration(
-                                            color: klightGrey,
-                                            shape: BoxShape.circle),
-                                        child: Center(
-                                          child: Text(
-                                            '1',
-                                            style: GoogleFonts.lato(
-                                                fontWeight: FontWeight.bold,
-                                                fontSize: 20,
-                                                color: kblack),
+                                SizedBox(
+                                  height: 50,
+                                  width: 216,
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        '₹ 99999\\-',
+                                        style: GoogleFonts.openSans(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 18),
+                                      ),
+                                      const SizedBox(
+                                        width: 20,
+                                      ),
+                                      Padding(
+                                        padding:
+                                            const EdgeInsets.only(right: 15),
+                                        child: Container(
+                                          height: 45,
+                                          width: 45,
+                                          decoration: const BoxDecoration(
+                                              color: klightGrey,
+                                              shape: BoxShape.circle),
+                                          child: Center(
+                                            child: Text(
+                                              '1',
+                                              style: GoogleFonts.lato(
+                                                  fontWeight: FontWeight.bold,
+                                                  fontSize: 20,
+                                                  color: kblack),
+                                            ),
                                           ),
                                         ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                              )
-                            ],
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         )
                       ],

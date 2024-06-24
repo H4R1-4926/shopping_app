@@ -64,7 +64,7 @@ class _SearchPageState extends State<SearchPage> {
           surfaceTintColor: kwhite,
           flexibleSpace: SafeArea(
             child: Padding(
-              padding: const EdgeInsets.only(left: 43, right: 5),
+              padding: const EdgeInsets.only(left: 43, right: 5, top: 10),
               child: SearchBar(
                 controller: _searchController,
                 autoFocus: true,

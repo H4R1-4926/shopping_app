@@ -16,6 +16,6 @@ class MainApp extends StatelessWidget {
     return MaterialApp(
         theme: ThemeData(scaffoldBackgroundColor: kwhite),
         debugShowCheckedModeBanner: false,
-        home: const LogOrSignIn());
+        home: const TabBarPage());
   }
 }

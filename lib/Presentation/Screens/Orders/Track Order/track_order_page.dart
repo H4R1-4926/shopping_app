@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -20,7 +21,7 @@ class TrackOrderPage extends StatelessWidget {
           backgroundColor: kwhite,
           surfaceTintColor: kwhite,
           title: Text(
-            'Checkout',
+            'Track Order',
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 22),
           ),
@@ -28,7 +29,7 @@ class TrackOrderPage extends StatelessWidget {
         body: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Container(
                 height: 150,
                 decoration: BoxDecoration(
@@ -50,63 +51,65 @@ class TrackOrderPage extends StatelessWidget {
                       const SizedBox(
                         width: 20,
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                          children: [
-                            SizedBox(
-                              child: SizedBox(
-                                height: 20,
-                                width: 150,
-                                child: Text(
-                                  'Name of Product',
-                                  overflow: TextOverflow.ellipsis,
-                                  style: GoogleFonts.lato(
-                                      color: kblack,
-                                      fontWeight: FontWeight.w900,
-                                      fontSize: 18),
+                      Flexible(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 10),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              SizedBox(
+                                child: SizedBox(
+                                  height: 20,
+                                  width: 150,
+                                  child: Text(
+                                    'Name of Product',
+                                    overflow: TextOverflow.ellipsis,
+                                    style: GoogleFonts.lato(
+                                        color: kblack,
+                                        fontWeight: FontWeight.w900,
+                                        fontSize: 18),
+                                  ),
                                 ),
                               ),
-                            ),
-                            Row(
-                              children: [
-                                const CircleAvatar(
-                                  radius: 15,
-                                  backgroundColor: kblack,
-                                ),
-                                const SizedBox(
-                                  width: 10,
-                                ),
-                                Text(
-                                  'Color  |  Qty - 1',
-                                  style: GoogleFonts.lato(
-                                      fontWeight: FontWeight.bold,
-                                      color: kGrey.withOpacity(0.9)),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              height: 30,
-                              width: 216,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
+                              Row(
                                 children: [
-                                  Text(
-                                    '₹ 99999\\-',
-                                    style: GoogleFonts.openSans(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 18),
+                                  const CircleAvatar(
+                                    radius: 15,
+                                    backgroundColor: kblack,
                                   ),
                                   const SizedBox(
                                     width: 10,
                                   ),
+                                  Text(
+                                    'Color  |  Qty - 1',
+                                    style: GoogleFonts.lato(
+                                        fontWeight: FontWeight.bold,
+                                        color: kGrey.withOpacity(0.9)),
+                                  ),
                                 ],
                               ),
-                            )
-                          ],
+                              SizedBox(
+                                height: 30,
+                                width: 216,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(
+                                      '₹ 99999\\-',
+                                      style: GoogleFonts.openSans(
+                                          fontWeight: FontWeight.bold,
+                                          fontSize: 18),
+                                    ),
+                                    const SizedBox(
+                                      width: 10,
+                                    ),
+                                  ],
+                                ),
+                              )
+                            ],
+                          ),
                         ),
                       )
                     ],
@@ -124,40 +127,48 @@ class TrackOrderPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      HorizontalTmeLineWidget(
-                        isFirst: true,
-                        isLast: false,
-                        isPast: true,
-                        startChild: Icon(
-                          Icons.inventory_outlined,
-                          size: 30,
+                      Flexible(
+                        child: HorizontalTmeLineWidget(
+                          isFirst: true,
+                          isLast: false,
+                          isPast: true,
+                          startChild: Icon(
+                            Icons.inventory_outlined,
+                            size: 30,
+                          ),
                         ),
                       ),
-                      HorizontalTmeLineWidget(
-                        isFirst: false,
-                        isLast: false,
-                        isPast: true,
-                        startChild: Icon(
-                          Iconsax.box,
-                          size: 30,
+                      Flexible(
+                        child: HorizontalTmeLineWidget(
+                          isFirst: false,
+                          isLast: false,
+                          isPast: true,
+                          startChild: Icon(
+                            Iconsax.box,
+                            size: 30,
+                          ),
                         ),
                       ),
-                      HorizontalTmeLineWidget(
-                        isFirst: false,
-                        isLast: false,
-                        isPast: false,
-                        startChild: Icon(
-                          Iconsax.truck,
-                          size: 30,
+                      Flexible(
+                        child: HorizontalTmeLineWidget(
+                          isFirst: false,
+                          isLast: false,
+                          isPast: false,
+                          startChild: Icon(
+                            Iconsax.truck,
+                            size: 30,
+                          ),
                         ),
                       ),
-                      HorizontalTmeLineWidget(
-                        isFirst: false,
-                        isLast: true,
-                        isPast: false,
-                        startChild: Icon(
-                          Iconsax.tick_circle,
-                          size: 30,
+                      Flexible(
+                        child: HorizontalTmeLineWidget(
+                          isFirst: false,
+                          isLast: true,
+                          isPast: false,
+                          startChild: Icon(
+                            Iconsax.tick_circle,
+                            size: 30,
+                          ),
                         ),
                       )
                     ],
@@ -186,8 +197,8 @@ class TrackOrderPage extends StatelessWidget {
                     fontWeight: FontWeight.bold, fontSize: 20),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(left: 15),
+            const Padding(
+              padding: EdgeInsets.only(left: 15),
               child: SizedBox(height: 400, child: VerticalTimeline()),
             ),
           ],

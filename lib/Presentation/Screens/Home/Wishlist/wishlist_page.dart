@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
 
+import '../SelectedItem/selected_item.dart';
+
 class WishListPage extends StatelessWidget {
   const WishListPage({super.key});
 
@@ -22,66 +24,85 @@ class WishListPage extends StatelessWidget {
         itemCount: 15,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.75,
+          childAspectRatio: 0.72,
         ),
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: SizedBox(
-              child: Stack(
-                children: [
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
+          return GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(PageRouteBuilder(
+                pageBuilder: (context, animation, secondaryAnimation) =>
+                    const SelectedItemPage(),
+                transitionsBuilder:
+                    (context, animation, secondaryAnimation, child) {
+                  var tween = Tween(
+                    begin: const Offset(1.0, 0.0),
+                    end: Offset.zero,
+                  ).chain(CurveTween(curve: Curves.easeIn));
+                  return SlideTransition(
+                    position: animation.drive(tween),
+                    child: child,
+                  );
+                },
+              ));
+            },
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: SizedBox(
+                child: Stack(
+                  children: [
+                    Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 10),
+                          child: Center(
+                            child: Container(
+                              height: 180,
+                              width: 180,
+                              decoration: BoxDecoration(
+                                  image: const DecorationImage(
+                                      fit: BoxFit.cover,
+                                      image: NetworkImage(
+                                          'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                  borderRadius: BorderRadius.circular(25)),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 15, vertical: 7),
+                          child: Text(
+                            'Name Of The Product',
+                            overflow: TextOverflow.ellipsis,
+                            style: GoogleFonts.poppins(
+                                color: kblack,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16),
+                          ),
+                        ),
+                        Text(
+                          '₹ 350 \\-',
+                          style: GoogleFonts.poppins(
+                              fontWeight: FontWeight.bold, fontSize: 18),
+                        )
+                      ],
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 135, top: 15),
+                      child: CircleAvatar(
+                        backgroundColor: kblack,
+                        maxRadius: 19,
                         child: Center(
-                          child: Container(
-                            height: 180,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(
-                                        'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
-                                borderRadius: BorderRadius.circular(25)),
+                          child: IconButton(
+                            onPressed: () {},
+                            icon: const Icon(Icons.favorite),
+                            iconSize: 23,
+                            color: kwhite,
                           ),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 7),
-                        child: Text(
-                          'Name Of The Product',
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(
-                              color: kblack,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 16),
-                        ),
-                      ),
-                      Text(
-                        '₹ 350 \\-',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.bold, fontSize: 18),
-                      )
-                    ],
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 140, top: 15),
-                    child: CircleAvatar(
-                      backgroundColor: kblack,
-                      maxRadius: 19,
-                      child: Center(
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.favorite),
-                          iconSize: 22,
-                          color: kwhite,
-                        ),
-                      ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             ),
           );
