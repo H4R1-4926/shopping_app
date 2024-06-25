@@ -18,7 +18,7 @@ class HorizontalTmeLineWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 100,
+      width: 90,
       child: TimelineTile(
         axis: TimelineAxis.horizontal,
         isFirst: isFirst,
@@ -29,7 +29,7 @@ class HorizontalTmeLineWidget extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 8),
             color: isPast ? kblack : kGrey.withOpacity(0.4),
             width: 30,
-            height: 30,
+            height: 25,
             drawGap: true,
             iconStyle: IconStyle(
                 iconData: isPast ? Icons.check : Icons.schedule,

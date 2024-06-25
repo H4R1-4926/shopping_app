@@ -12,7 +12,9 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        backgroundColor: kwhite,
+      ),
       body: ListView(
         children: [
           Padding(
@@ -20,11 +22,11 @@ class SignUpPage extends StatelessWidget {
             child: Text(
               'Create Your Account',
               style: GoogleFonts.inter(
-                  color: kblack, fontSize: 50, fontWeight: FontWeight.bold),
+                  color: kblack, fontSize: 47, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
-          kSizedBoxHeight30,
+          kSizedBoxHeight20,
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: TextFormField(
@@ -36,7 +38,7 @@ class SignUpPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: const BorderSide(width: 1.5)),
                   prefixIcon: const Padding(
-                    padding: EdgeInsets.only(left: 35, right: 15),
+                    padding: EdgeInsets.only(left: 20, right: 15),
                     child: Icon(Icons.phone_outlined),
                   ),
                   prefixIconColor: Colors.grey,

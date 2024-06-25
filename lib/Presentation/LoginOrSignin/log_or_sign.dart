@@ -19,20 +19,20 @@ class LogOrSignIn extends StatelessWidget {
             children: [
               kSizedBoxHeight40,
               Container(
-                width: 200,
-                height: 200,
+                width: 180,
+                height: 180,
                 color: kblack,
               ),
               kSizedBoxHeight20,
               Text(
                 "Let's you in",
                 style: GoogleFonts.poppins(
-                    fontSize: 35, fontWeight: FontWeight.bold),
+                    fontSize: 30, fontWeight: FontWeight.bold),
               ),
               kSizedBoxHeight30,
               Container(
-                height: 55,
-                width: 300,
+                height: 50,
+                width: 280,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(15),
                     color: kwhite,
@@ -71,8 +71,8 @@ class LogOrSignIn extends StatelessWidget {
                       builder: (context) => const LoginPage(),
                     )),
                 child: Container(
-                  height: 55,
-                  width: 370,
+                  height: 50,
+                  width: 330,
                   decoration: BoxDecoration(
                       color: kblack, borderRadius: BorderRadius.circular(25)),
                   child: Center(

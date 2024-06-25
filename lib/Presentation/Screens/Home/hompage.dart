@@ -38,7 +38,8 @@ class HomePage extends StatelessWidget {
           pinned: true,
           title: Text(
             'Hello User',
-            style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),
+            style: GoogleFonts.montserrat(
+                fontWeight: FontWeight.bold, fontSize: 18),
           ),
           actions: [
             IconButton(
@@ -81,7 +82,7 @@ class HomePage extends StatelessWidget {
                 icon: const Icon(Icons.favorite_outline)),
           ],
           bottom: PreferredSize(
-              preferredSize: const Size(double.infinity, 100),
+              preferredSize: const Size(double.infinity, 85),
               child: GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(PageRouteBuilder(
@@ -101,7 +102,7 @@ class HomePage extends StatelessWidget {
                         horizontal: 20, vertical: 20),
                     child: Container(
                       width: 350,
-                      height: 55,
+                      height: 47,
                       decoration: BoxDecoration(
                           color: const Color.fromARGB(255, 241, 241, 241),
                           borderRadius: BorderRadius.circular(25)),

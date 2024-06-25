@@ -16,7 +16,7 @@ class ViewMorePage extends StatelessWidget {
         title: Text(
           'Category',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 25),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         actions: [
           IconButton(
@@ -58,7 +58,7 @@ class ViewMorePage extends StatelessWidget {
                     'Dhothi\'s',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -78,7 +78,7 @@ class ViewMorePage extends StatelessWidget {
                     'Saree\'s',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -98,7 +98,7 @@ class ViewMorePage extends StatelessWidget {
                     'Paavada',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -118,7 +118,7 @@ class ViewMorePage extends StatelessWidget {
                     'Towels',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -138,7 +138,7 @@ class ViewMorePage extends StatelessWidget {
                     'Top Piece\'s',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -158,7 +158,7 @@ class ViewMorePage extends StatelessWidget {
                     'Shirt Piece\'s',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -178,7 +178,7 @@ class ViewMorePage extends StatelessWidget {
                     'Bedsheets',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -198,7 +198,7 @@ class ViewMorePage extends StatelessWidget {
                     'Set Mundu',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -218,7 +218,7 @@ class ViewMorePage extends StatelessWidget {
                     'Set Saree',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),
@@ -238,7 +238,7 @@ class ViewMorePage extends StatelessWidget {
                     'Double Mundu',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 20,
+                        fontSize: 18,
                         color: Colors.black),
                   )),
                 ),

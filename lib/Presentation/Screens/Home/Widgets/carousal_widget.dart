@@ -30,7 +30,7 @@ class _TopContainerWidgetState extends State<TopContainerWidget> {
                 Text(
                   'Most Popular',
                   style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 22),
+                      fontWeight: FontWeight.bold, fontSize: 20),
                 ),
               ],
             ),
@@ -49,15 +49,18 @@ class _TopContainerWidgetState extends State<TopContainerWidget> {
                     child: CarouselSlider.builder(
                       itemCount: 5,
                       itemBuilder: (context, index, realIndex) {
-                        return Container(
-                          height: 230,
-                          width: 360,
-                          decoration: BoxDecoration(
-                              color: kwhite,
-                              borderRadius: BorderRadius.circular(20),
-                              image: const DecorationImage(
-                                  fit: BoxFit.fill,
-                                  image: AssetImage('assets/demo.webp'))),
+                        return Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 10),
+                          child: Container(
+                            height: 230,
+                            width: 360,
+                            decoration: BoxDecoration(
+                                color: kwhite,
+                                borderRadius: BorderRadius.circular(20),
+                                image: const DecorationImage(
+                                    fit: BoxFit.fill,
+                                    image: AssetImage('assets/demo.webp'))),
+                          ),
                         );
                       },
                       options: CarouselOptions(
@@ -75,10 +78,10 @@ class _TopContainerWidgetState extends State<TopContainerWidget> {
                   child: Center(
                       child: AnimatedSmoothIndicator(
                           effect: const ExpandingDotsEffect(
-                              dotHeight: 6,
-                              dotWidth: 8,
-                              dotColor: Color.fromARGB(255, 186, 186, 186),
-                              activeDotColor: Color.fromARGB(255, 70, 70, 70),
+                              dotHeight: 5,
+                              dotWidth: 7,
+                              dotColor: Color.fromARGB(255, 209, 209, 209),
+                              activeDotColor: Color.fromARGB(255, 50, 50, 50),
                               spacing: 8),
                           activeIndex: _current,
                           count: 5)),

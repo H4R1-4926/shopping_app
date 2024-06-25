@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
+import 'package:shopping_app/Presentation/Screens/Account/widgets/address_edit_or_create.dart';
 
 class EditAddress extends StatelessWidget {
   const EditAddress({super.key});
@@ -18,7 +19,7 @@ class EditAddress extends StatelessWidget {
         title: Text(
           'Edit Address',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView(
@@ -34,23 +35,40 @@ class EditAddress extends StatelessWidget {
                   tileColor: kwhite,
                   leading: CircleAvatar(
                     backgroundColor: kGrey.withOpacity(0.4),
-                    radius: 34,
+                    radius: 25,
                     child: const CircleAvatar(
-                      radius: 21,
+                      radius: 18,
                       backgroundColor: kblack,
-                      child: Icon(
-                        Iconsax.location5,
-                        color: kwhite,
-                      ),
+                      child: Icon(Iconsax.location5, color: kwhite, size: 19),
                     ),
                   ),
                   trailing: IconButton(
-                      onPressed: () {}, icon: const Icon(Iconsax.edit)),
+                      onPressed: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  const AddressEditOrCreate(
+                            type: AddressType.editAddress,
+                          ),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            var tween = Tween(
+                              begin: const Offset(1.0, 0.0),
+                              end: Offset.zero,
+                            ).chain(CurveTween(curve: Curves.easeIn));
+                            return SlideTransition(
+                              position: animation.drive(tween),
+                              child: child,
+                            );
+                          },
+                        ));
+                      },
+                      icon: const Icon(Iconsax.edit, size: 22)),
                   title: Text(
                     'Person Name',
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900,
-                        fontSize: 19,
+                        fontSize: 17,
                         color: kblack),
                   ),
                   subtitle: Text(
@@ -61,7 +79,7 @@ class EditAddress extends StatelessWidget {
                         fontSize: 15, color: kGrey.withOpacity(0.8)),
                   ),
                   contentPadding:
-                      const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                      const EdgeInsets.symmetric(vertical: 10, horizontal: 10),
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(20)),
                 ),
@@ -73,7 +91,25 @@ class EditAddress extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const AddressEditOrCreate(
+                    type: AddressType.addNewAddress,
+                  ),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
               style: ButtonStyle(
                   backgroundColor:
                       MaterialStatePropertyAll(kGrey.withOpacity(0.1)),
@@ -82,7 +118,7 @@ class EditAddress extends StatelessWidget {
               child: Text(
                 'Add New Address',
                 style:
-                    GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 15),
+                    GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 13),
               ),
             ),
           )
@@ -105,7 +141,9 @@ class EditAddress extends StatelessWidget {
                 backgroundColor: MaterialStatePropertyAll(kblack),
                 foregroundColor: MaterialStatePropertyAll(kwhite),
                 elevation: MaterialStatePropertyAll(10)),
-            child: const Text('Apply'),
+            child: Text('Apply',
+                style: GoogleFonts.lato(
+                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 12)),
           ),
         ),
       ),

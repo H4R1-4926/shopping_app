@@ -17,7 +17,7 @@ class ShippingPage extends StatelessWidget {
         title: Text(
           'Choose Shipping',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView.builder(
@@ -50,7 +50,7 @@ class ShippingPage extends StatelessWidget {
               title: Text(
                 'Delivary Mode',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 19, color: kblack),
+                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
               ),
               subtitle: Row(
                 children: [
@@ -81,30 +81,33 @@ class ShippingPage extends StatelessWidget {
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) =>
-                    const RecieptPage(),
-                transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) {
-                  var tween = Tween(
-                    begin: const Offset(1.0, 0.0),
-                    end: Offset.zero,
-                  ).chain(CurveTween(curve: Curves.easeIn));
-                  return SlideTransition(
-                    position: animation.drive(tween),
-                    child: child,
-                  );
-                },
-              ));
-            },
-            style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 60)),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                foregroundColor: MaterialStatePropertyAll(kwhite),
-                elevation: MaterialStatePropertyAll(10)),
-            child: const Text('Continue To Payment ➤'),
-          ),
+              onPressed: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const RecieptPage(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
+              style: const ButtonStyle(
+                  fixedSize: MaterialStatePropertyAll(Size(310, 60)),
+                  backgroundColor: MaterialStatePropertyAll(kblack),
+                  foregroundColor: MaterialStatePropertyAll(kwhite),
+                  elevation: MaterialStatePropertyAll(10)),
+              child: Text(
+                'Continue To Payment ➤',
+                style: GoogleFonts.lato(
+                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 14),
+              )),
         ),
       ),
     );

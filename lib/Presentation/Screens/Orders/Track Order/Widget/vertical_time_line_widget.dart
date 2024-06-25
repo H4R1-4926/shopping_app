@@ -35,7 +35,7 @@ class TimeLineTileWidget extends StatelessWidget {
                   Text(
                     'Order Packed',
                     style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                        fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                   Text(
                     orderDateOrExpected,
@@ -76,9 +76,10 @@ class TimeLineTileWidget extends StatelessWidget {
                 ),
           indicator: OutlinedDotIndicator(
               color: kblack,
-              size: 30,
+              size: 25,
               child: DotIndicator(
                 color: isPast ? kblack : kGrey.withOpacity(0.4),
+                size: 10,
               )),
         ));
   }

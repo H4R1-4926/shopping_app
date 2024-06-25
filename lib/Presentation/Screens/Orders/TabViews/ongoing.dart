@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/img.dart';
@@ -21,9 +21,9 @@ class OrderOnGoing extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 15, vertical: 8),
                   child: Container(
-                    height: 170,
+                    height: 150,
                     decoration: BoxDecoration(
                         color: kwhite, borderRadius: BorderRadius.circular(20)),
                     child: Padding(
@@ -32,8 +32,8 @@ class OrderOnGoing extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            height: 115,
-                            width: 115,
+                            height: 110,
+                            width: 110,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: const DecorationImage(
@@ -45,7 +45,7 @@ class OrderOnGoing extends StatelessWidget {
                           ),
                           Flexible(
                             child: Padding(
-                              padding: const EdgeInsets.symmetric(vertical: 10),
+                              padding: const EdgeInsets.symmetric(vertical: 5),
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 mainAxisAlignment:
@@ -61,14 +61,14 @@ class OrderOnGoing extends StatelessWidget {
                                         style: GoogleFonts.lato(
                                             color: kblack,
                                             fontWeight: FontWeight.w900,
-                                            fontSize: 18),
+                                            fontSize: 16),
                                       ),
                                     ),
                                   ),
                                   Row(
                                     children: [
                                       const CircleAvatar(
-                                        radius: 15,
+                                        radius: 13,
                                         backgroundColor: kblack,
                                       ),
                                       const SizedBox(
@@ -83,8 +83,8 @@ class OrderOnGoing extends StatelessWidget {
                                     ],
                                   ),
                                   Container(
-                                    height: 30,
-                                    width: 100,
+                                    height: 25,
+                                    width: 80,
                                     decoration: BoxDecoration(
                                         color: kGrey.withOpacity(0.3),
                                         borderRadius:
@@ -92,7 +92,8 @@ class OrderOnGoing extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         'In Delivery',
-                                        style: GoogleFonts.openSans(),
+                                        style:
+                                            GoogleFonts.openSans(fontSize: 12),
                                       ),
                                     ),
                                   ),
@@ -107,56 +108,58 @@ class OrderOnGoing extends StatelessWidget {
                                           '₹ 99999\\-',
                                           style: GoogleFonts.openSans(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 18),
+                                              fontSize: 16),
                                         ),
                                         const SizedBox(
                                           width: 10,
                                         ),
-                                        Padding(
-                                          padding:
-                                              const EdgeInsets.only(right: 15),
-                                          child: GestureDetector(
-                                            onTap: () {
-                                              Navigator.of(context)
-                                                  .push(PageRouteBuilder(
-                                                pageBuilder: (context,
-                                                        animation,
-                                                        secondaryAnimation) =>
-                                                    const TrackOrderPage(),
-                                                transitionsBuilder: (context,
-                                                    animation,
-                                                    secondaryAnimation,
-                                                    child) {
-                                                  var tween = Tween(
-                                                    begin:
-                                                        const Offset(1.0, 0.0),
-                                                    end: Offset.zero,
-                                                  ).chain(CurveTween(
-                                                      curve: Curves.easeIn));
-                                                  return SlideTransition(
-                                                    position:
-                                                        animation.drive(tween),
-                                                    child: child,
-                                                  );
-                                                },
-                                              ));
-                                            },
-                                            child: Container(
-                                              height: 50,
-                                              width: 80,
-                                              decoration: BoxDecoration(
-                                                  color: kblack,
-                                                  borderRadius:
-                                                      BorderRadius.circular(
-                                                          20)),
-                                              child: Center(
-                                                child: Text(
-                                                  'Track',
-                                                  style: GoogleFonts.lato(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 16,
-                                                      color: kwhite),
+                                        Flexible(
+                                          child: Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 15),
+                                            child: GestureDetector(
+                                              onTap: () {
+                                                Navigator.of(context)
+                                                    .push(PageRouteBuilder(
+                                                  pageBuilder: (context,
+                                                          animation,
+                                                          secondaryAnimation) =>
+                                                      const TrackOrderPage(),
+                                                  transitionsBuilder: (context,
+                                                      animation,
+                                                      secondaryAnimation,
+                                                      child) {
+                                                    var tween = Tween(
+                                                      begin: const Offset(
+                                                          1.0, 0.0),
+                                                      end: Offset.zero,
+                                                    ).chain(CurveTween(
+                                                        curve: Curves.easeIn));
+                                                    return SlideTransition(
+                                                      position: animation
+                                                          .drive(tween),
+                                                      child: child,
+                                                    );
+                                                  },
+                                                ));
+                                              },
+                                              child: Container(
+                                                height: 44,
+                                                width: 72,
+                                                decoration: BoxDecoration(
+                                                    color: kblack,
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            20)),
+                                                child: Center(
+                                                  child: Text(
+                                                    'Track',
+                                                    style: GoogleFonts.lato(
+                                                        fontWeight:
+                                                            FontWeight.bold,
+                                                        fontSize: 14,
+                                                        color: kwhite),
+                                                  ),
                                                 ),
                                               ),
                                             ),

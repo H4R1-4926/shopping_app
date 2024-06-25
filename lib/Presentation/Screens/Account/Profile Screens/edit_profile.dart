@@ -23,7 +23,7 @@ class EditProfile extends StatelessWidget {
         title: Text(
           'Edit Profile',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView(
@@ -132,11 +132,11 @@ class EditProfile extends StatelessWidget {
             style: const ButtonStyle(
                 elevation: MaterialStatePropertyAll(8),
                 backgroundColor: MaterialStatePropertyAll(kblack),
-                fixedSize: MaterialStatePropertyAll(Size(350, 55))),
+                fixedSize: MaterialStatePropertyAll(Size(300, 55))),
             child: Text(
               'Apply',
-              style: GoogleFonts.poppins(
-                  color: kwhite, fontWeight: FontWeight.bold),
+              style: GoogleFonts.lato(
+                  color: kwhite, fontWeight: FontWeight.bold, fontSize: 12),
             ),
           ))),
     );

@@ -44,7 +44,7 @@ class ItemList extends StatelessWidget {
         itemCount: 25,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.72,
+          childAspectRatio: 0.668,
         ),
         itemBuilder: (context, index) {
           return Padding(
@@ -77,18 +77,19 @@ class ItemList extends StatelessWidget {
                           style: GoogleFonts.poppins(
                               color: kblack,
                               fontWeight: FontWeight.bold,
-                              fontSize: 16),
+                              fontSize: 14),
                         ),
                       ),
                       Text(
                         '₹ 350 \\-',
                         style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.bold, fontSize: 18),
+                            fontWeight: FontWeight.bold, fontSize: 16),
                       )
                     ],
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 140, top: 15),
+                    padding:
+                        const EdgeInsets.only(left: 120, top: 15, right: 9),
                     child: CircleAvatar(
                       backgroundColor: kblack,
                       maxRadius: 19,
@@ -96,7 +97,7 @@ class ItemList extends StatelessWidget {
                         child: IconButton(
                           onPressed: () {},
                           icon: const Icon(Icons.favorite_outline),
-                          iconSize: 22,
+                          iconSize: 20,
                           color: kwhite,
                         ),
                       ),

@@ -12,7 +12,9 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          automaticallyImplyLeading: false,
+          automaticallyImplyLeading: true,
+          backgroundColor: kwhite,
+          surfaceTintColor: kwhite,
           leading: IconButton(
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
@@ -30,7 +32,7 @@ class LoginPage extends StatelessWidget {
             child: Text(
               'Login To Your Account',
               style: GoogleFonts.inter(
-                  color: kblack, fontSize: 50, fontWeight: FontWeight.bold),
+                  color: kblack, fontSize: 47, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
@@ -46,7 +48,7 @@ class LoginPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: const BorderSide(width: 1.5)),
                   prefixIcon: const Padding(
-                    padding: EdgeInsets.only(left: 35, right: 15),
+                    padding: EdgeInsets.only(left: 20, right: 15),
                     child: Icon(Icons.phone_outlined),
                   ),
                   prefixIconColor: Colors.grey,

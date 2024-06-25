@@ -40,12 +40,12 @@ class ListTileWidget extends StatelessWidget {
                 style: GoogleFonts.poppins(
                     color: textColour,
                     fontWeight: FontWeight.w600,
-                    fontSize: 18),
+                    fontSize: 16),
               ),
               Text(
                 secondText ?? ' ',
                 style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.w600, fontSize: 18),
+                    fontWeight: FontWeight.w600, fontSize: 16),
               ),
             ],
           ),

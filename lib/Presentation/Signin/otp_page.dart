@@ -19,7 +19,7 @@ class OtpPage extends StatelessWidget {
             child: Text(
               'Enter Otp',
               style: GoogleFonts.inter(
-                  color: kblack, fontSize: 50, fontWeight: FontWeight.bold),
+                  color: kblack, fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
@@ -34,17 +34,21 @@ class OtpPage extends StatelessWidget {
             filled: true,
             fillColor: const Color.fromARGB(60, 243, 243, 243),
             numberOfFields: 4,
+            autoFocus: true,
           ),
-          kSizedBoxHeight20,
+          kSizedBoxHeight10,
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              const Padding(
-                padding: EdgeInsets.only(left: 44),
-                child: Text('00:59'),
+              Padding(
+                padding: const EdgeInsets.only(left: 30),
+                child: Text(
+                  '00:59',
+                  style: GoogleFonts.poppins(fontSize: 15),
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 44),
+                padding: const EdgeInsets.only(right: 30),
                 child: Text(
                   'Resend Otp',
                   style: GoogleFonts.poppins(fontSize: 15),

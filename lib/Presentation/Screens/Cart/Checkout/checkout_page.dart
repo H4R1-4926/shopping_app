@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -21,16 +21,12 @@ class CheckoutPage extends StatelessWidget {
         title: Text(
           'Checkout',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView(
         children: [
-          Divider(
-            indent: 23,
-            endIndent: 23,
-            color: kGrey.withOpacity(0.2),
-          ),
+          kSizedBoxHeight5,
           SizedBox(
             width: double.infinity,
             height: 150,
@@ -43,7 +39,7 @@ class CheckoutPage extends StatelessWidget {
                     'Shipping Address',
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900,
-                        fontSize: 22,
+                        fontSize: 21,
                         color: kblack),
                   ),
                 ),
@@ -122,7 +118,7 @@ class CheckoutPage extends StatelessWidget {
             child: Text(
               'Order List',
               style: GoogleFonts.lato(
-                  fontWeight: FontWeight.w900, fontSize: 22, color: kblack),
+                  fontWeight: FontWeight.w900, fontSize: 21, color: kblack),
             ),
           ),
           kSizedBoxHeight10,
@@ -134,7 +130,7 @@ class CheckoutPage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: Container(
-                  height: 170,
+                  height: 150,
                   decoration: BoxDecoration(
                       color: kwhite, borderRadius: BorderRadius.circular(20)),
                   child: Padding(
@@ -143,8 +139,8 @@ class CheckoutPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Container(
-                          height: 115,
-                          width: 115,
+                          height: 108,
+                          width: 108,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(20),
                               image: const DecorationImage(
@@ -156,7 +152,7 @@ class CheckoutPage extends StatelessWidget {
                         ),
                         Flexible(
                           child: Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 18),
+                            padding: const EdgeInsets.symmetric(vertical: 10),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -193,9 +189,10 @@ class CheckoutPage extends StatelessWidget {
                                       width: 10,
                                     ),
                                     Text(
-                                      'Color',
+                                      'Color  |  Qty - 1',
                                       style: GoogleFonts.lato(
-                                          fontWeight: FontWeight.bold),
+                                          fontWeight: FontWeight.bold,
+                                          color: kGrey.withOpacity(0.9)),
                                     ),
                                   ],
                                 ),
@@ -214,26 +211,6 @@ class CheckoutPage extends StatelessWidget {
                                       ),
                                       const SizedBox(
                                         width: 20,
-                                      ),
-                                      Padding(
-                                        padding:
-                                            const EdgeInsets.only(right: 15),
-                                        child: Container(
-                                          height: 45,
-                                          width: 45,
-                                          decoration: const BoxDecoration(
-                                              color: klightGrey,
-                                              shape: BoxShape.circle),
-                                          child: Center(
-                                            child: Text(
-                                              '1',
-                                              style: GoogleFonts.lato(
-                                                  fontWeight: FontWeight.bold,
-                                                  fontSize: 20,
-                                                  color: kblack),
-                                            ),
-                                          ),
-                                        ),
                                       ),
                                     ],
                                   ),
@@ -264,30 +241,33 @@ class CheckoutPage extends StatelessWidget {
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
-            onPressed: () {
-              Navigator.of(context).push(PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) =>
-                    const ShippingPage(),
-                transitionsBuilder:
-                    (context, animation, secondaryAnimation, child) {
-                  var tween = Tween(
-                    begin: const Offset(1.0, 0.0),
-                    end: Offset.zero,
-                  ).chain(CurveTween(curve: Curves.easeIn));
-                  return SlideTransition(
-                    position: animation.drive(tween),
-                    child: child,
-                  );
-                },
-              ));
-            },
-            style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 60)),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                foregroundColor: MaterialStatePropertyAll(kwhite),
-                elevation: MaterialStatePropertyAll(10)),
-            child: const Text('Continue ➤'),
-          ),
+              onPressed: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const ShippingPage(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
+              style: const ButtonStyle(
+                  fixedSize: MaterialStatePropertyAll(Size(310, 60)),
+                  backgroundColor: MaterialStatePropertyAll(kblack),
+                  foregroundColor: MaterialStatePropertyAll(kwhite),
+                  elevation: MaterialStatePropertyAll(10)),
+              child: Text(
+                'Continue ➤',
+                style: GoogleFonts.lato(
+                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 14),
+              )),
         ),
       ),
     );

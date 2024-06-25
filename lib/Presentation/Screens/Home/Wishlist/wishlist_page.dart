@@ -15,7 +15,7 @@ class WishListPage extends StatelessWidget {
         title: Text(
           'My Wishlist',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 28),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
         surfaceTintColor: klightGrey,
         backgroundColor: klightGrey,
@@ -24,7 +24,7 @@ class WishListPage extends StatelessWidget {
         itemCount: 15,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
-          childAspectRatio: 0.72,
+          childAspectRatio: 0.66,
         ),
         itemBuilder: (context, index) {
           return GestureDetector(
@@ -76,26 +76,26 @@ class WishListPage extends StatelessWidget {
                             style: GoogleFonts.poppins(
                                 color: kblack,
                                 fontWeight: FontWeight.bold,
-                                fontSize: 16),
+                                fontSize: 14),
                           ),
                         ),
                         Text(
                           '₹ 350 \\-',
                           style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 18),
+                              fontWeight: FontWeight.bold, fontSize: 16),
                         )
                       ],
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 135, top: 15),
+                      padding: const EdgeInsets.only(left: 119, top: 15),
                       child: CircleAvatar(
                         backgroundColor: kblack,
-                        maxRadius: 19,
+                        maxRadius: 17,
                         child: Center(
                           child: IconButton(
                             onPressed: () {},
                             icon: const Icon(Icons.favorite),
-                            iconSize: 23,
+                            iconSize: 19,
                             color: kwhite,
                           ),
                         ),

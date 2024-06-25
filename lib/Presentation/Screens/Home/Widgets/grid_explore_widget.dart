@@ -1,5 +1,6 @@
 import 'package:buttons_tabbar/buttons_tabbar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -20,7 +21,7 @@ class GridCategaryWidget extends StatelessWidget {
           child: Text(
             'Explore',
             style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.bold, fontSize: 22),
+                fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
         DefaultTabController(
@@ -38,10 +39,13 @@ class GridCategaryWidget extends StatelessWidget {
                         fontWeight: FontWeight.w600, color: kblack),
                     labelStyle: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 15,
+                        fontSize: 13,
                         color: kwhite),
                     radius: 25,
-                    buttonMargin: const EdgeInsets.symmetric(horizontal: 10),
+                    height: 40,
+                    buttonMargin: const EdgeInsets.symmetric(
+                      horizontal: 8,
+                    ),
                     contentPadding: const EdgeInsets.symmetric(horizontal: 15),
                     tabs: const [
                       Tab(
@@ -67,7 +71,7 @@ class GridCategaryWidget extends StatelessWidget {
                       ),
                     ]),
                 SizedBox(
-                  height: 2890,
+                  height: 2800,
                   child: TabBarView(children: [
                     Scrollbar(
                       child: GridView.builder(
@@ -76,7 +80,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -133,29 +137,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -175,7 +179,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -232,29 +236,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -274,7 +278,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -331,29 +335,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -373,7 +377,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -430,29 +434,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -472,7 +476,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -529,29 +533,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -571,7 +575,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -628,29 +632,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),
@@ -670,7 +674,7 @@ class GridCategaryWidget extends StatelessWidget {
                           gridDelegate:
                               const SliverGridDelegateWithFixedCrossAxisCount(
                             crossAxisCount: 2,
-                            childAspectRatio: 0.72,
+                            childAspectRatio: 0.68,
                           ),
                           itemCount: 20,
                           itemBuilder: (context, index) {
@@ -727,29 +731,29 @@ class GridCategaryWidget extends StatelessWidget {
                                               style: GoogleFonts.poppins(
                                                   color: kblack,
                                                   fontWeight: FontWeight.bold,
-                                                  fontSize: 16),
+                                                  fontSize: 14),
                                             ),
                                           ),
                                           Text(
                                             '₹ 350 \\-',
                                             style: GoogleFonts.poppins(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 18),
+                                                fontSize: 16),
                                           )
                                         ],
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 135, top: 15),
+                                            left: 120, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
-                                          maxRadius: 19,
+                                          maxRadius: 18,
                                           child: Center(
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: const Icon(Icons
                                                   .favorite_border_outlined),
-                                              iconSize: 23,
+                                              iconSize: 20,
                                               color: kwhite,
                                             ),
                                           ),

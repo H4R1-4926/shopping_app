@@ -20,11 +20,11 @@ class IconWithTextWidget extends StatelessWidget {
           onTap: ontap,
           child: CircleAvatar(
             backgroundColor: const Color.fromARGB(255, 233, 233, 233),
-            radius: 30,
+            radius: 27,
             child: Icon(
               icon,
               color: kblack,
-              size: 32,
+              size: 28,
             ),
           ),
         ),
@@ -33,7 +33,7 @@ class IconWithTextWidget extends StatelessWidget {
         ),
         Text(
           text,
-          style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13),
         )
       ],
     );

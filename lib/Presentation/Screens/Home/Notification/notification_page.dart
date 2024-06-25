@@ -16,7 +16,7 @@ class NotificationPage extends StatelessWidget {
         title: Text(
           'Notifications',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 28),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView.builder(
@@ -35,13 +35,13 @@ class NotificationPage extends StatelessWidget {
                   child: Text(
                     'Date',
                     style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, fontSize: 20),
+                        fontWeight: FontWeight.bold, fontSize: 18),
                   ),
                 ),
                 kSizedBoxHeight5,
                 Center(
                   child: Container(
-                    width: 350,
+                    width: 340,
                     height: 110,
                     decoration: BoxDecoration(
                         color: kwhite, borderRadius: BorderRadius.circular(18)),
@@ -65,11 +65,11 @@ class NotificationPage extends StatelessWidget {
                               maxLines: 1,
                               'Title Goes Here',
                               style: GoogleFonts.poppins(
-                                  fontWeight: FontWeight.bold, fontSize: 23),
+                                  fontWeight: FontWeight.bold, fontSize: 19),
                             ),
                             Text(
                               'Description Goes Here',
-                              style: GoogleFonts.lato(fontSize: 15),
+                              style: GoogleFonts.lato(fontSize: 13),
                             )
                           ],
                         )

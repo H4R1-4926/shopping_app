@@ -18,6 +18,8 @@ class ProfileSetUpPage extends StatelessWidget {
         TextEditingController(text: 'Gender');
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: kwhite,
+        surfaceTintColor: kwhite,
         title: Text(
           'Fill your profile',
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),

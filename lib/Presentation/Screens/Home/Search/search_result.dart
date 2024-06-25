@@ -15,7 +15,7 @@ class SearchResultPage extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 15),
+          padding: const EdgeInsets.symmetric(vertical: 4, horizontal: 15),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -38,7 +38,7 @@ class SearchResultPage extends StatelessWidget {
             itemCount: 15,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              childAspectRatio: 0.75,
+              childAspectRatio: 0.68,
             ),
             itemBuilder: (context, index) {
               return Padding(
@@ -72,26 +72,26 @@ class SearchResultPage extends StatelessWidget {
                               style: GoogleFonts.poppins(
                                   color: kblack,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16),
+                                  fontSize: 14),
                             ),
                           ),
                           Text(
                             '₹ 350 \\-',
                             style: GoogleFonts.poppins(
-                                fontWeight: FontWeight.bold, fontSize: 18),
+                                fontWeight: FontWeight.bold, fontSize: 16),
                           )
                         ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 140, top: 15),
+                        padding: const EdgeInsets.only(left: 120, top: 15),
                         child: CircleAvatar(
                           backgroundColor: kblack,
-                          maxRadius: 19,
+                          maxRadius: 17,
                           child: Center(
                             child: IconButton(
                               onPressed: () {},
                               icon: const Icon(Icons.favorite_outline),
-                              iconSize: 22,
+                              iconSize: 19,
                               color: kwhite,
                             ),
                           ),

@@ -21,7 +21,7 @@ class AccountPage extends StatelessWidget {
           title: Text(
             'Profile',
             style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.bold, fontSize: 22),
+                fontWeight: FontWeight.bold, fontSize: 20),
           ),
           leading: const Padding(
             padding: EdgeInsets.only(left: 5),
@@ -49,7 +49,7 @@ class AccountPage extends StatelessWidget {
                     Text(
                       'Person Name',
                       style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold, fontSize: 24),
+                          fontWeight: FontWeight.bold, fontSize: 22),
                     ),
                     Text(
                       '1010101010',

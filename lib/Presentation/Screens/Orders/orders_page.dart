@@ -18,7 +18,7 @@ class OrdersPage extends StatelessWidget {
             title: Text(
               'My Orders',
               style: GoogleFonts.montserrat(
-                  fontWeight: FontWeight.bold, fontSize: 22),
+                  fontWeight: FontWeight.bold, fontSize: 20),
             ),
             leading: const Padding(
               padding: EdgeInsets.only(left: 5),
@@ -41,9 +41,9 @@ class OrdersPage extends StatelessWidget {
               indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),
               indicatorWeight: 3,
               labelStyle: GoogleFonts.poppins(
-                  fontWeight: FontWeight.bold, fontSize: 15, color: kblack),
+                  fontWeight: FontWeight.bold, fontSize: 14, color: kblack),
               unselectedLabelStyle: GoogleFonts.poppins(
-                  fontWeight: FontWeight.w500, fontSize: 13, color: kGrey),
+                  fontWeight: FontWeight.w500, fontSize: 12, color: kGrey),
             ),
           ),
           body: const TabBarView(children: [OrderOnGoing(), OrderCompleted()])),

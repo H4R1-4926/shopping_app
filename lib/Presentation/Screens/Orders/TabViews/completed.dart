@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/img.dart';
@@ -20,9 +20,9 @@ class OrderCompleted extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 18, vertical: 10),
+                      const EdgeInsets.symmetric(horizontal: 18, vertical: 8),
                   child: Container(
-                    height: 170,
+                    height: 150,
                     decoration: BoxDecoration(
                         color: kwhite, borderRadius: BorderRadius.circular(20)),
                     child: Padding(
@@ -31,8 +31,8 @@ class OrderCompleted extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            height: 115,
-                            width: 115,
+                            height: 110,
+                            width: 110,
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(20),
                                 image: const DecorationImage(
@@ -60,14 +60,14 @@ class OrderCompleted extends StatelessWidget {
                                         style: GoogleFonts.lato(
                                             color: kblack,
                                             fontWeight: FontWeight.w900,
-                                            fontSize: 18),
+                                            fontSize: 16),
                                       ),
                                     ),
                                   ),
                                   Row(
                                     children: [
                                       const CircleAvatar(
-                                        radius: 15,
+                                        radius: 12,
                                         backgroundColor: kblack,
                                       ),
                                       const SizedBox(
@@ -82,8 +82,8 @@ class OrderCompleted extends StatelessWidget {
                                     ],
                                   ),
                                   Container(
-                                    height: 30,
-                                    width: 100,
+                                    height: 25,
+                                    width: 80,
                                     decoration: BoxDecoration(
                                         color: kGrey.withOpacity(0.3),
                                         borderRadius:
@@ -91,7 +91,8 @@ class OrderCompleted extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         'Completed',
-                                        style: GoogleFonts.openSans(),
+                                        style:
+                                            GoogleFonts.openSans(fontSize: 12),
                                       ),
                                     ),
                                   ),
@@ -102,7 +103,7 @@ class OrderCompleted extends StatelessWidget {
                                       '₹ 99999\\-',
                                       style: GoogleFonts.openSans(
                                           fontWeight: FontWeight.bold,
-                                          fontSize: 18),
+                                          fontSize: 16),
                                     ),
                                   )
                                 ],

@@ -117,7 +117,7 @@ class _SearchPageState extends State<SearchPage> {
                   children: [
                     Text('Recent Searches',
                         style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.bold, fontSize: 20)),
+                            fontWeight: FontWeight.bold, fontSize: 18)),
                     TextButton(
                         onPressed: () {
                           _clearRecentSearches();
@@ -125,7 +125,7 @@ class _SearchPageState extends State<SearchPage> {
                         child: Text(
                           'Clear All',
                           style: GoogleFonts.montserrat(
-                              fontSize: 17,
+                              fontSize: 15,
                               fontWeight: FontWeight.bold,
                               color: Colors.redAccent),
                         ))
@@ -147,7 +147,7 @@ class _SearchPageState extends State<SearchPage> {
                       title: Text(
                         _recentSearches[index],
                         style: GoogleFonts.poppins(
-                            fontSize: 20, fontWeight: FontWeight.bold),
+                            fontSize: 15, fontWeight: FontWeight.bold),
                       ),
                       onTap: () {
                         _searchController.text = _recentSearches[index];

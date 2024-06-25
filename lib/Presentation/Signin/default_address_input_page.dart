@@ -17,7 +17,7 @@ class MainAddressAddPage extends StatelessWidget {
         title: Text(
           'Add Address',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView(
@@ -246,7 +246,10 @@ class MainAddressAddPage extends StatelessWidget {
                 backgroundColor: MaterialStatePropertyAll(kblack),
                 foregroundColor: MaterialStatePropertyAll(kwhite),
                 elevation: MaterialStatePropertyAll(10)),
-            child: const Text('Continue'),
+            child: Text(
+              'Continue',
+              style: GoogleFonts.lato(fontWeight: FontWeight.bold),
+            ),
           ),
         ),
       ),

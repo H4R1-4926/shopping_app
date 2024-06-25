@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -23,7 +22,7 @@ class TrackOrderPage extends StatelessWidget {
           title: Text(
             'Track Order',
             style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.bold, fontSize: 22),
+                fontWeight: FontWeight.bold, fontSize: 20),
           ),
         ),
         body: ListView(
@@ -40,8 +39,8 @@ class TrackOrderPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        height: 115,
-                        width: 115,
+                        height: 110,
+                        width: 110,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             image: const DecorationImage(
@@ -75,7 +74,7 @@ class TrackOrderPage extends StatelessWidget {
                               Row(
                                 children: [
                                   const CircleAvatar(
-                                    radius: 15,
+                                    radius: 12,
                                     backgroundColor: kblack,
                                   ),
                                   const SizedBox(
@@ -95,6 +94,7 @@ class TrackOrderPage extends StatelessWidget {
                                 child: Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
                                       '₹ 99999\\-',
@@ -134,7 +134,7 @@ class TrackOrderPage extends StatelessWidget {
                           isPast: true,
                           startChild: Icon(
                             Icons.inventory_outlined,
-                            size: 30,
+                            size: 25,
                           ),
                         ),
                       ),
@@ -145,7 +145,7 @@ class TrackOrderPage extends StatelessWidget {
                           isPast: true,
                           startChild: Icon(
                             Iconsax.box,
-                            size: 30,
+                            size: 25,
                           ),
                         ),
                       ),
@@ -156,7 +156,7 @@ class TrackOrderPage extends StatelessWidget {
                           isPast: false,
                           startChild: Icon(
                             Iconsax.truck,
-                            size: 30,
+                            size: 25,
                           ),
                         ),
                       ),
@@ -167,7 +167,7 @@ class TrackOrderPage extends StatelessWidget {
                           isPast: false,
                           startChild: Icon(
                             Iconsax.tick_circle,
-                            size: 30,
+                            size: 25,
                           ),
                         ),
                       )
@@ -180,7 +180,7 @@ class TrackOrderPage extends StatelessWidget {
               child: Text(
                 'Packet In Delivery',
                 style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold, fontSize: 20),
+                    fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
             Divider(
@@ -194,11 +194,11 @@ class TrackOrderPage extends StatelessWidget {
               child: Text(
                 'Order Status Details',
                 style: GoogleFonts.poppins(
-                    fontWeight: FontWeight.bold, fontSize: 20),
+                    fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
             const Padding(
-              padding: EdgeInsets.only(left: 15),
+              padding: EdgeInsets.only(left: 15, top: 10),
               child: SizedBox(height: 400, child: VerticalTimeline()),
             ),
           ],
