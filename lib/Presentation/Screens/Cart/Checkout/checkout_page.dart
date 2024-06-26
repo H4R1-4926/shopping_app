@@ -86,7 +86,7 @@ class CheckoutPage extends StatelessWidget {
                         'Person Name',
                         style: GoogleFonts.lato(
                             fontWeight: FontWeight.w900,
-                            fontSize: 19,
+                            fontSize: 18,
                             color: kblack),
                       ),
                       subtitle: Text(
@@ -173,7 +173,7 @@ class CheckoutPage extends StatelessWidget {
                                           style: GoogleFonts.lato(
                                               color: kblack,
                                               fontWeight: FontWeight.w900,
-                                              fontSize: 18),
+                                              fontSize: 17),
                                         ),
                                       ),
                                     ],

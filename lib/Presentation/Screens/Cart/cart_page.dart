@@ -164,7 +164,7 @@ class CartPage extends StatelessWidget {
                                           style: GoogleFonts.lato(
                                               color: kblack,
                                               fontWeight: FontWeight.w900,
-                                              fontSize: 18),
+                                              fontSize: 17),
                                         ),
                                       ),
                                       const SizedBox(
@@ -281,7 +281,7 @@ class CartPage extends StatelessWidget {
                                                                                     child: Text(
                                                                                       'Name of Product',
                                                                                       overflow: TextOverflow.ellipsis,
-                                                                                      style: GoogleFonts.lato(color: kblack, fontWeight: FontWeight.w900, fontSize: 18),
+                                                                                      style: GoogleFonts.lato(color: kblack, fontWeight: FontWeight.w900, fontSize: 17),
                                                                                     ),
                                                                                   ),
                                                                                 ],

@@ -17,7 +17,7 @@ class AddressChangePage extends StatelessWidget {
         title: Text(
           'Shipping Address',
           style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 22),
+              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       body: ListView(
@@ -56,7 +56,7 @@ class AddressChangePage extends StatelessWidget {
                     'Person Name',
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900,
-                        fontSize: 19,
+                        fontSize: 18,
                         color: kblack),
                   ),
                   subtitle: Text(

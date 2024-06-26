@@ -53,7 +53,7 @@ class RecieptPage extends StatelessWidget {
               title: Text(
                 'Person Name',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 19, color: kblack),
+                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
               ),
               subtitle: Text(
                 'Address',
@@ -98,7 +98,7 @@ class RecieptPage extends StatelessWidget {
               title: Text(
                 'Delivery',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 19, color: kblack),
+                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
               ),
               subtitle: Text(
                 'Time',

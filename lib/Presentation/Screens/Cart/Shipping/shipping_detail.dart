@@ -50,7 +50,7 @@ class ShippingPage extends StatelessWidget {
               title: Text(
                 'Delivary Mode',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
+                    fontWeight: FontWeight.w900, fontSize: 17, color: kblack),
               ),
               subtitle: Row(
                 children: [
