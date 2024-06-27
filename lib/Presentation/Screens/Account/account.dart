@@ -228,6 +228,12 @@ class AccountPage extends StatelessWidget {
               trailIcon: true,
             ),
             ListTileWidget(
+              prefixIcon: Iconsax.note_21,
+              titleText: 'Terms & Conditions',
+              ontap: () {},
+              trailIcon: true,
+            ),
+            ListTileWidget(
               prefixIcon: Iconsax.people,
               titleText: 'Invite Friends',
               ontap: () {},
