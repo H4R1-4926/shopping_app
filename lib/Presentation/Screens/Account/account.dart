@@ -7,6 +7,7 @@ import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_profile.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/language_change_page.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/notification_settings.dart';
+import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/theme_settings.dart';
 
 import 'widgets/listtile_widget.dart';
 
@@ -161,7 +162,23 @@ class AccountPage extends StatelessWidget {
               prefixIcon: Iconsax.eye,
               titleText: 'Theme',
               secondText: '(System Default)',
-              ontap: () {},
+              ontap: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const ThemeSettings(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
               trailIcon: true,
             ),
             ListTileWidget(
