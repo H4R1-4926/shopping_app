@@ -5,10 +5,16 @@ import 'package:shopping_app/Core/colors.dart';
 
 class ListTileRadioWidget extends StatelessWidget {
   final String language;
+  final int value;
+  final int groupValue;
+  final void Function(int?) onChanged;
 
   const ListTileRadioWidget({
     super.key,
     required this.language,
+    required this.value,
+    required this.onChanged,
+    required this.groupValue,
   });
 
   @override
@@ -22,26 +28,15 @@ class ListTileRadioWidget extends StatelessWidget {
             style:
                 GoogleFonts.poppins(fontWeight: FontWeight.w700, fontSize: 14),
           ),
-          trailing: const RadioWidget(),
+          trailing: Radio(
+            value: value,
+            groupValue: groupValue,
+            onChanged: onChanged,
+            activeColor: kblack,
+            splashRadius: 20,
+          ),
         ),
       ),
-    );
-  }
-}
-
-class RadioWidget extends StatelessWidget {
-  const RadioWidget({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Radio(
-      value: 1,
-      groupValue: 1,
-      onChanged: (value) {},
-      activeColor: kblack,
-      splashRadius: 20,
     );
   }
 }
