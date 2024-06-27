@@ -5,8 +5,10 @@ import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_address_screen.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_profile.dart';
+import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/help_centre.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/language_change_page.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/notification_settings.dart';
+import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/privacy_policy.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/theme_settings.dart';
 
 import 'widgets/listtile_widget.dart';
@@ -184,13 +186,45 @@ class AccountPage extends StatelessWidget {
             ListTileWidget(
               prefixIcon: Iconsax.lock,
               titleText: 'Privacy Policy',
-              ontap: () {},
+              ontap: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const PrivacyPolicyPage(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
               trailIcon: true,
             ),
             ListTileWidget(
               prefixIcon: Iconsax.info_circle,
-              titleText: 'Help Center',
-              ontap: () {},
+              titleText: 'Help Centre',
+              ontap: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const HelpCentrePage(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
               trailIcon: true,
             ),
             ListTileWidget(
