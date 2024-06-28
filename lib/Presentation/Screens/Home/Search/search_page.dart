@@ -117,7 +117,7 @@ class _SearchPageState extends State<SearchPage> {
                   children: [
                     Text('Recent Searches',
                         style: GoogleFonts.montserrat(
-                            fontWeight: FontWeight.bold, fontSize: 18)),
+                            fontWeight: FontWeight.bold, fontSize: 16)),
                     TextButton(
                         onPressed: () {
                           _clearRecentSearches();
@@ -125,7 +125,7 @@ class _SearchPageState extends State<SearchPage> {
                         child: Text(
                           'Clear All',
                           style: GoogleFonts.montserrat(
-                              fontSize: 15,
+                              fontSize: 14,
                               fontWeight: FontWeight.bold,
                               color: Colors.redAccent),
                         ))

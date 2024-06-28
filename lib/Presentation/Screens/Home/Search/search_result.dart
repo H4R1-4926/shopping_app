@@ -22,11 +22,11 @@ class SearchResultPage extends StatelessWidget {
               Text(
                 'Results For \'$searchBarText\'',
                 style: GoogleFonts.montserrat(
-                    fontWeight: FontWeight.bold, fontSize: 18),
+                    fontWeight: FontWeight.bold, fontSize: 17),
               ),
               Text('$searchResultLength founds',
                   style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.bold, fontSize: 15))
+                      fontWeight: FontWeight.bold, fontSize: 14))
             ],
           ),
         ),
@@ -52,8 +52,8 @@ class SearchResultPage extends StatelessWidget {
                             padding: const EdgeInsets.only(top: 10),
                             child: Center(
                               child: Container(
-                                height: 180,
-                                width: 180,
+                                height: 170,
+                                width: 170,
                                 decoration: BoxDecoration(
                                     image: const DecorationImage(
                                         fit: BoxFit.cover,
