@@ -9,6 +9,7 @@ import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/help
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/language_change_page.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/notification_settings.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/privacy_policy.dart';
+import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/terms_conditions.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/theme_settings.dart';
 
 import 'widgets/listtile_widget.dart';
@@ -206,6 +207,28 @@ class AccountPage extends StatelessWidget {
               trailIcon: true,
             ),
             ListTileWidget(
+              prefixIcon: Iconsax.note_21,
+              titleText: 'Terms & Conditions',
+              ontap: () {
+                Navigator.of(context).push(PageRouteBuilder(
+                  pageBuilder: (context, animation, secondaryAnimation) =>
+                      const TermsAndConditions(),
+                  transitionsBuilder:
+                      (context, animation, secondaryAnimation, child) {
+                    var tween = Tween(
+                      begin: const Offset(1.0, 0.0),
+                      end: Offset.zero,
+                    ).chain(CurveTween(curve: Curves.easeIn));
+                    return SlideTransition(
+                      position: animation.drive(tween),
+                      child: child,
+                    );
+                  },
+                ));
+              },
+              trailIcon: true,
+            ),
+            ListTileWidget(
               prefixIcon: Iconsax.info_circle,
               titleText: 'Help Centre',
               ontap: () {
@@ -225,12 +248,6 @@ class AccountPage extends StatelessWidget {
                   },
                 ));
               },
-              trailIcon: true,
-            ),
-            ListTileWidget(
-              prefixIcon: Iconsax.note_21,
-              titleText: 'Terms & Conditions',
-              ontap: () {},
               trailIcon: true,
             ),
             ListTileWidget(
