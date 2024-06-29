@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:share_plus/share_plus.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_address_screen.dart';
@@ -255,7 +255,7 @@ class AccountPage extends StatelessWidget {
               prefixIcon: Iconsax.people,
               titleText: 'Invite Friends',
               ontap: () {
-                Share.share('check out my website https://example.com');
+                // FlutterShare.share(title: 'Example');
               },
               trailIcon: true,
             ),
