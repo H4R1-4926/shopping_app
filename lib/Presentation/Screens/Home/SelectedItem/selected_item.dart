@@ -69,8 +69,8 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                       activeIndex: _current,
                       count: 5,
                       effect: const ExpandingDotsEffect(
-                          dotHeight: 8,
-                          dotWidth: 8,
+                          dotHeight: 6,
+                          dotWidth: 7,
                           dotColor: klightGrey,
                           activeDotColor: Color.fromARGB(255, 44, 44, 44),
                           spacing: 8),
@@ -89,14 +89,16 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                     'Name of the Product',
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900, fontSize: 30),
+                        fontWeight: FontWeight.w900, fontSize: 25),
                   ),
-                  IconButton(
-                      onPressed: () {},
-                      icon: const Icon(
-                        Icons.favorite_outline,
-                        size: 35,
-                      ))
+                  Flexible(
+                    child: IconButton(
+                        onPressed: () {},
+                        icon: const Icon(
+                          Icons.favorite_outline,
+                          size: 32,
+                        )),
+                  )
                 ],
               ),
             ),
@@ -105,7 +107,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               endIndent: 23,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 250, top: 10),
+              padding: const EdgeInsets.only(right: 230, top: 10),
               child: Text(
                 'Description',
                 style:
@@ -126,7 +128,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               endIndent: 23,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 280, top: 10),
+              padding: const EdgeInsets.only(right: 270, top: 10),
               child: Text(
                 'Colours',
                 style:
@@ -141,10 +143,10 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                   itemBuilder: (context, index) {
                     return CircleAvatar(
                       backgroundColor: colors[index],
-                      radius: 30,
+                      radius: 26,
                       child: CircleAvatar(
                         backgroundColor: kwhite.withOpacity(0.3),
-                        radius: 30,
+                        radius: 26,
                         child: const Icon(
                           Icons.check,
                           color: kblack,
@@ -166,11 +168,11 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               endIndent: 23,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 280, top: 15),
+              padding: const EdgeInsets.only(right: 270, top: 15),
               child: Text(
                 'In Stock',
                 style: GoogleFonts.lato(
-                    fontSize: 20,
+                    fontSize: 18,
                     fontWeight: FontWeight.w900,
                     color: Colors.greenAccent),
               ),
@@ -181,7 +183,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               child: Text(
                 '₹ 999\\-',
                 style: GoogleFonts.roboto(
-                    fontWeight: FontWeight.bold, fontSize: 40),
+                    fontWeight: FontWeight.bold, fontSize: 32),
               ),
             ),
             kSizedBoxHeight5,
@@ -214,20 +216,25 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
-                                  'Name Of The Product',
-                                  style: GoogleFonts.poppins(
-                                      fontSize: 25,
-                                      fontWeight: FontWeight.bold),
+                                Flexible(
+                                  child: Text(
+                                    'Name Of The Product',
+                                    style: GoogleFonts.poppins(
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold),
+                                  ),
                                 ),
-                                Container(
-                                  width: 70,
-                                  height: 80,
-                                  decoration: BoxDecoration(
-                                      image: const DecorationImage(
-                                          fit: BoxFit.cover,
-                                          image: NetworkImage(kDemoImg)),
-                                      borderRadius: BorderRadius.circular(15)),
+                                Flexible(
+                                  child: Container(
+                                    width: 80,
+                                    height: 80,
+                                    decoration: BoxDecoration(
+                                        image: const DecorationImage(
+                                            fit: BoxFit.cover,
+                                            image: NetworkImage(kDemoImg)),
+                                        borderRadius:
+                                            BorderRadius.circular(15)),
+                                  ),
                                 )
                               ],
                             ),
@@ -264,7 +271,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                               children: [
                                 Text('Quantity',
                                     style: GoogleFonts.poppins(
-                                        fontSize: 20,
+                                        fontSize: 18,
                                         fontWeight: FontWeight.bold)),
                                 Row(
                                   children: [
@@ -319,7 +326,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                           '1',
                                           style: GoogleFonts.openSans(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 25),
+                                              fontSize: 23),
                                         ),
                                       ),
                                     ),
@@ -399,7 +406,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                           Text(
                                             '₹ 999\\-',
                                             style: GoogleFonts.openSans(
-                                                fontSize: 35,
+                                                fontSize: 31,
                                                 fontWeight: FontWeight.bold),
                                           )
                                         ],
@@ -410,17 +417,16 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                       child: ElevatedButton(
                                         onPressed: () {},
                                         style: const ButtonStyle(
-                                            fixedSize: MaterialStatePropertyAll(
+                                            fixedSize: WidgetStatePropertyAll(
                                                 Size(210, 50)),
                                             backgroundColor:
-                                                MaterialStatePropertyAll(
-                                                    kblack)),
+                                                WidgetStatePropertyAll(kblack)),
                                         child: Text(
                                           'Add to cart',
                                           style: GoogleFonts.lato(
                                               color: kwhite,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 17),
+                                              fontSize: 16),
                                         ),
                                       ),
                                     )
@@ -436,14 +442,14 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                 );
               },
               style: const ButtonStyle(
-                  backgroundColor: MaterialStatePropertyAll(
+                  backgroundColor: WidgetStatePropertyAll(
                     Color.fromARGB(255, 255, 234, 0),
                   ),
-                  fixedSize: MaterialStatePropertyAll(Size(300, 50))),
+                  fixedSize: WidgetStatePropertyAll(Size(300, 45))),
               child: Text(
                 'Add to Cart',
                 style: GoogleFonts.roboto(
-                    fontSize: 18, fontWeight: FontWeight.w700, color: kblack),
+                    fontSize: 17, fontWeight: FontWeight.w700, color: kblack),
               ),
             ),
             kSizedBoxHeight20

@@ -14,6 +14,7 @@ class OrdersPage extends StatelessWidget {
       child: Scaffold(
           appBar: AppBar(
             surfaceTintColor: kwhite,
+            backgroundColor: kwhite,
             automaticallyImplyLeading: false,
             title: Text(
               'My Orders',

@@ -17,6 +17,7 @@ class CartPage extends StatelessWidget {
         backgroundColor: klightGrey,
         appBar: AppBar(
           surfaceTintColor: kwhite,
+          backgroundColor: kwhite,
           title: Text(
             'My Cart',
             style: GoogleFonts.montserrat(
@@ -90,8 +91,8 @@ class CartPage extends StatelessWidget {
                           ));
                         },
                         style: const ButtonStyle(
-                            backgroundColor: MaterialStatePropertyAll(kblack),
-                            fixedSize: MaterialStatePropertyAll(Size(200, 55))),
+                            backgroundColor: WidgetStatePropertyAll(kblack),
+                            fixedSize: WidgetStatePropertyAll(Size(200, 55))),
                         child: Text(
                           'Checkout  ➤',
                           style: GoogleFonts.lato(
@@ -352,14 +353,14 @@ class CartPage extends StatelessWidget {
                                                                 style:
                                                                     const ButtonStyle(
                                                                   surfaceTintColor:
-                                                                      MaterialStatePropertyAll(
+                                                                      WidgetStatePropertyAll(
                                                                           kwhite),
                                                                   fixedSize:
-                                                                      MaterialStatePropertyAll(Size(
+                                                                      WidgetStatePropertyAll(Size(
                                                                           150,
                                                                           50)),
                                                                   backgroundColor:
-                                                                      MaterialStatePropertyAll(
+                                                                      WidgetStatePropertyAll(
                                                                           kwhite),
                                                                 ),
                                                                 child: Text(
@@ -377,14 +378,14 @@ class CartPage extends StatelessWidget {
                                                                 },
                                                                 style: const ButtonStyle(
                                                                     fixedSize:
-                                                                        MaterialStatePropertyAll(Size(
+                                                                        WidgetStatePropertyAll(Size(
                                                                             150,
                                                                             50)),
                                                                     backgroundColor:
-                                                                        MaterialStatePropertyAll(
+                                                                        WidgetStatePropertyAll(
                                                                             kblack),
                                                                     foregroundColor:
-                                                                        MaterialStatePropertyAll(
+                                                                        WidgetStatePropertyAll(
                                                                             kwhite)),
                                                                 child: Text(
                                                                   'Yes, Remove',

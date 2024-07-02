@@ -17,6 +17,7 @@ class VerticalTimeline extends StatelessWidget {
           orderTime: '11:11 PM',
           isFirst: true,
           isLast: false,
+          title: 'Order Recieved',
         ),
         TimeLineTileWidget(
           isPast: true,
@@ -24,13 +25,7 @@ class VerticalTimeline extends StatelessWidget {
           orderTime: '11:11 PM',
           isFirst: false,
           isLast: false,
-        ),
-        TimeLineTileWidget(
-          isPast: false,
-          orderDateOrExpected: 'Expected on 01/01/2024',
-          isFirst: false,
-          isLast: false,
-          orderTime: '11:11 PM',
+          title: 'Order Packed',
         ),
         TimeLineTileWidget(
           isPast: false,
@@ -38,6 +33,7 @@ class VerticalTimeline extends StatelessWidget {
           isFirst: false,
           isLast: true,
           orderTime: '11:11 PM',
+          title: 'Order Shipped',
         ),
       ],
     );

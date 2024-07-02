@@ -28,6 +28,7 @@ class HomePage extends StatelessWidget {
                   bottomRight: Radius.elliptical(50, 45),
                   bottomLeft: Radius.elliptical(50, 45))),
           surfaceTintColor: kwhite,
+          backgroundColor: kwhite,
           leading: const Padding(
             padding: EdgeInsets.only(left: 5),
             child: CircleAvatar(

@@ -199,8 +199,29 @@ class TrackOrderPage extends StatelessWidget {
             ),
             const Padding(
               padding: EdgeInsets.only(left: 15, top: 10),
-              child: SizedBox(height: 400, child: VerticalTimeline()),
+              child: SizedBox(height: 250, child: VerticalTimeline()),
             ),
+            Divider(
+              indent: 23,
+              endIndent: 23,
+              color: kGrey.withOpacity(0.3),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              child: ElevatedButton(
+                  onPressed: () {},
+                  style: ButtonStyle(
+                      backgroundColor: const WidgetStatePropertyAll(klightGrey),
+                      elevation: const WidgetStatePropertyAll(0),
+                      shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                          side: const BorderSide(width: 1, color: kblack),
+                          borderRadius: BorderRadius.circular(25)))),
+                  child: Text(
+                    'Cancel Order',
+                    style: GoogleFonts.lato(
+                        color: kblack, fontWeight: FontWeight.bold),
+                  )),
+            )
           ],
         ));
   }

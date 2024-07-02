@@ -68,8 +68,8 @@ class _SearchPageState extends State<SearchPage> {
               child: SearchBar(
                 controller: _searchController,
                 autoFocus: true,
-                elevation: const MaterialStatePropertyAll(0),
-                backgroundColor: const MaterialStatePropertyAll(
+                elevation: const WidgetStatePropertyAll(0),
+                backgroundColor: const WidgetStatePropertyAll(
                     Color.fromARGB(255, 241, 241, 241)),
                 leading: const Icon(
                   Icons.search_outlined,

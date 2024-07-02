@@ -13,6 +13,7 @@ class ItemList extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         surfaceTintColor: kwhite,
+        backgroundColor: kwhite,
         title: Text(
           'Item Name',
           style:

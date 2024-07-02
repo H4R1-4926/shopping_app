@@ -8,6 +8,7 @@ class TimeLineTileWidget extends StatelessWidget {
   final bool isFirst;
   final bool isLast;
   final String orderDateOrExpected;
+  final String title;
   final String orderTime;
   const TimeLineTileWidget({
     super.key,
@@ -16,6 +17,7 @@ class TimeLineTileWidget extends StatelessWidget {
     required this.orderTime,
     required this.isFirst,
     required this.isLast,
+    required this.title,
   });
 
   @override
@@ -33,13 +35,13 @@ class TimeLineTileWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Order Packed',
+                    title,
                     style: GoogleFonts.montserrat(
-                        fontWeight: FontWeight.bold, fontSize: 18),
+                        fontWeight: FontWeight.bold, fontSize: 16),
                   ),
                   Text(
                     orderDateOrExpected,
-                    style: GoogleFonts.openSans(fontSize: 16),
+                    style: GoogleFonts.openSans(fontSize: 14),
                   )
                 ],
               ),
@@ -47,7 +49,7 @@ class TimeLineTileWidget extends StatelessWidget {
                 padding: const EdgeInsets.only(right: 15),
                 child: Text(
                   orderTime,
-                  style: GoogleFonts.openSans(fontSize: 16),
+                  style: GoogleFonts.openSans(fontSize: 14),
                 ),
               )
             ],
