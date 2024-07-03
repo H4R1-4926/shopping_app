@@ -26,34 +26,32 @@ class _VisblityListTileState extends State<VisblityListTile> {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                isVisible = !isVisible;
-              });
-            },
-            child: ListTile(
-                tileColor: kwhite,
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.only(
-                        topLeft: const Radius.circular(22),
-                        topRight: const Radius.circular(22),
-                        bottomLeft: isVisible
-                            ? const Radius.circular(0)
-                            : const Radius.circular(22),
-                        bottomRight: isVisible
-                            ? const Radius.circular(0)
-                            : const Radius.circular(22))),
-                title: Text(
-                  widget.title,
-                  style: GoogleFonts.poppins(
-                      fontSize: 15, fontWeight: FontWeight.bold),
-                ),
-                trailing: const Icon(
-                  Iconsax.arrow_down_1,
-                  size: 20,
-                )),
-          ),
+          child: ListTile(
+              onTap: () {
+                setState(() {
+                  isVisible = !isVisible;
+                });
+              },
+              tileColor: kwhite,
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                      topLeft: const Radius.circular(22),
+                      topRight: const Radius.circular(22),
+                      bottomLeft: isVisible
+                          ? const Radius.circular(0)
+                          : const Radius.circular(22),
+                      bottomRight: isVisible
+                          ? const Radius.circular(0)
+                          : const Radius.circular(22))),
+              title: Text(
+                widget.title,
+                style: GoogleFonts.poppins(
+                    fontSize: 15, fontWeight: FontWeight.bold),
+              ),
+              trailing: const Icon(
+                Iconsax.arrow_down_1,
+                size: 20,
+              )),
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
