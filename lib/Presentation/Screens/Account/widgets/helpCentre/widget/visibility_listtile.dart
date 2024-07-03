@@ -25,47 +25,86 @@ class _VisblityListTileState extends State<VisblityListTile> {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 15),
-          child: ListTile(
-              onTap: () {
-                setState(() {
-                  isVisible = !isVisible;
-                });
-              },
-              tileColor: kwhite,
-              shape: RoundedRectangleBorder(
+            padding: const EdgeInsets.symmetric(horizontal: 15),
+            child: AnimatedContainer(
+              decoration: BoxDecoration(
+                  color: kwhite,
                   borderRadius: BorderRadius.only(
-                      topLeft: const Radius.circular(22),
-                      topRight: const Radius.circular(22),
-                      bottomLeft: isVisible
-                          ? const Radius.circular(0)
-                          : const Radius.circular(22),
-                      bottomRight: isVisible
-                          ? const Radius.circular(0)
-                          : const Radius.circular(22))),
-              title: Text(
-                widget.title,
-                style: GoogleFonts.poppins(
-                    fontSize: 15, fontWeight: FontWeight.bold),
+                    topLeft: const Radius.circular(22),
+                    topRight: const Radius.circular(22),
+                    bottomLeft: isVisible
+                        ? const Radius.circular(0)
+                        : const Radius.circular(22),
+                    bottomRight: isVisible
+                        ? const Radius.circular(0)
+                        : const Radius.circular(22),
+                  )),
+              duration: const Duration(milliseconds: 900),
+              curve: Curves.easeInOut,
+              height: 55,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Flexible(
+                      child: Text(
+                        widget.title,
+                        style: GoogleFonts.poppins(
+                            fontSize: 15, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    InkWell(
+                      onTap: () {
+                        setState(() {
+                          isVisible = !isVisible;
+                        });
+                      },
+                      child: const Icon(
+                        Iconsax.arrow_down_1,
+                        size: 20,
+                      ),
+                    )
+                  ],
+                ),
               ),
-              trailing: const Icon(
-                Iconsax.arrow_down_1,
-                size: 20,
-              )),
-        ),
+            )),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15),
           child: AnimatedContainer(
-              alignment:
-                  isVisible ? Alignment.center : AlignmentDirectional.topStart,
-              duration: const Duration(milliseconds: 500),
-              curve: Curves.easeInOut,
-              height: isVisible ? 120 : 0,
-              decoration: const BoxDecoration(
-                  color: kwhite,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(22),
-                      bottomRight: Radius.circular(22)))),
+            alignment:
+                isVisible ? Alignment.center : AlignmentDirectional.topStart,
+            duration: const Duration(milliseconds: 800),
+            curve: Curves.easeInOut,
+            height: isVisible ? 120 : 0,
+            decoration: BoxDecoration(
+                color: kwhite,
+                borderRadius: BorderRadius.only(
+                    topRight: isVisible
+                        ? const Radius.circular(0)
+                        : const Radius.circular(22),
+                    topLeft: isVisible
+                        ? const Radius.circular(0)
+                        : const Radius.circular(22),
+                    bottomLeft: const Radius.circular(22),
+                    bottomRight: const Radius.circular(22))),
+            child: Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: AnimatedDefaultTextStyle(
+                style: isVisible
+                    ? GoogleFonts.poppins(
+                        color: kblack,
+                        fontSize: 13,
+                      )
+                    : GoogleFonts.poppins(color: kblack, fontSize: 0),
+                curve: Curves.easeInOut,
+                duration: const Duration(milliseconds: 900),
+                child: Text(
+                  widget.answer,
+                ),
+              ),
+            ),
+          ),
         ),
         kSizedBoxHeight20
       ],
