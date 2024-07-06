@@ -21,7 +21,7 @@ class MainApp extends StatelessWidget {
       child: MaterialApp(
           theme: ThemeData(scaffoldBackgroundColor: kwhite),
           debugShowCheckedModeBanner: false,
-          home: const TabBarPage()),
+          home: const LogOrSignIn()),
     );
   }
 }

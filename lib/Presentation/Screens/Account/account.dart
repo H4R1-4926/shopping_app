@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_share/flutter_share.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
+import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_address_screen.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/edit_profile.dart';
 import 'package:shopping_app/Presentation/Screens/Account/Profile%20Screens/help_centre.dart';
@@ -255,15 +257,114 @@ class AccountPage extends StatelessWidget {
               prefixIcon: Iconsax.people,
               titleText: 'Invite Friends',
               ontap: () {
-                // FlutterShare.share(title: 'Example');
+                FlutterShare.share(title: 'Example', text: 'Invite Link');
               },
               trailIcon: true,
             ),
             ListTileWidget(
               prefixIcon: Iconsax.logout,
               iconColour: Colors.red,
-              titleText: 'Log Out',
-              ontap: () {},
+              titleText: 'Logout',
+              ontap: () {
+                showModalBottomSheet(
+                  showDragHandle: true,
+                  backgroundColor: kwhite,
+                  context: context,
+                  builder: (context) {
+                    return Container(
+                      height: 190,
+                      width: double.infinity,
+                      decoration: const BoxDecoration(
+                          color: kwhite,
+                          boxShadow: [
+                            BoxShadow(
+                                color: kwhite,
+                                blurRadius: 10,
+                                spreadRadius: 10),
+                          ],
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(15),
+                              topRight: Radius.circular(15))),
+                      child: Column(
+                        children: [
+                          Center(
+                            child: Text(
+                              'Logout',
+                              style: GoogleFonts.poppins(
+                                  color: Colors.red,
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                          ),
+                          kSizedBoxHeight10,
+                          const Divider(
+                            indent: 23,
+                            endIndent: 23,
+                          ),
+                          kSizedBoxHeight20,
+                          Center(
+                            child: Text(
+                              'Are you sure you want to logout?',
+                              style: GoogleFonts.openSans(
+                                  fontWeight: FontWeight.bold, color: kblack),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    },
+                                    style: const ButtonStyle(
+                                      surfaceTintColor:
+                                          WidgetStatePropertyAll(kwhite),
+                                      fixedSize:
+                                          WidgetStatePropertyAll(Size(150, 50)),
+                                      backgroundColor:
+                                          WidgetStatePropertyAll(kwhite),
+                                    ),
+                                    child: Text(
+                                      'Cancel',
+                                      style: GoogleFonts.lato(
+                                          fontSize: 14,
+                                          color: kblack,
+                                          fontWeight: FontWeight.w700),
+                                    )),
+                                ElevatedButton(
+                                    onPressed: () {
+                                      Navigator.pushAndRemoveUntil(
+                                          context,
+                                          MaterialPageRoute(
+                                            builder: (context) =>
+                                                const LogOrSignIn(),
+                                          ),
+                                          (route) => false);
+                                    },
+                                    style: const ButtonStyle(
+                                        fixedSize: WidgetStatePropertyAll(
+                                            Size(150, 50)),
+                                        backgroundColor:
+                                            WidgetStatePropertyAll(kblack),
+                                        foregroundColor:
+                                            WidgetStatePropertyAll(kwhite)),
+                                    child: Text(
+                                      'Yes, Logout',
+                                      style: GoogleFonts.lato(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.bold),
+                                    ))
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
+                    );
+                  },
+                );
+              },
               textColour: Colors.red,
               trailIcon: false,
             ),
