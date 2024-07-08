@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/img.dart';
+import 'package:shopping_app/Core/size.dart';
 
 class OrderCompleted extends StatelessWidget {
   const OrderCompleted({super.key});
@@ -96,20 +97,44 @@ class OrderCompleted extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 30,
-                                    width: 216,
-                                    child: Text(
-                                      '₹ 99999\\-',
-                                      style: GoogleFonts.openSans(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 16),
-                                    ),
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SizedBox(
+                                        height: 30,
+                                        width: 100,
+                                        child: Text(
+                                          '₹ 99999\\-',
+                                          style: GoogleFonts.openSans(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        ),
+                                      ),
+                                      Flexible(
+                                          child: ElevatedButton(
+                                        style: const ButtonStyle(
+                                            foregroundColor:
+                                                WidgetStatePropertyAll(kblack),
+                                            backgroundColor:
+                                                WidgetStatePropertyAll(
+                                                    klightGrey)),
+                                        child: Text(
+                                          'Return Item',
+                                          style: GoogleFonts.poppins(
+                                            fontWeight: FontWeight.bold,
+                                            fontSize: 12,
+                                          ),
+                                        ),
+                                        onPressed: () {},
+                                      )),
+                                    ],
                                   )
                                 ],
                               ),
                             ),
-                          )
+                          ),
+                          kSizedBoxHeight10
                         ],
                       ),
                     ),
