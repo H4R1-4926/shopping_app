@@ -19,15 +19,15 @@ class LogOrSignIn extends StatelessWidget {
             children: [
               kSizedBoxHeight40,
               Container(
-                width: 180,
-                height: 180,
+                width: 165,
+                height: 165,
                 color: kblack,
               ),
               kSizedBoxHeight20,
               Text(
                 "Let's you in",
                 style: GoogleFonts.poppins(
-                    fontSize: 30, fontWeight: FontWeight.bold),
+                    fontSize: 28, fontWeight: FontWeight.bold),
               ),
               kSizedBoxHeight30,
               Container(

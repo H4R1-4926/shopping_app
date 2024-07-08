@@ -32,7 +32,7 @@ class LoginPage extends StatelessWidget {
             child: Text(
               'Login To Your Account',
               style: GoogleFonts.inter(
-                  color: kblack, fontSize: 47, fontWeight: FontWeight.bold),
+                  color: kblack, fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
