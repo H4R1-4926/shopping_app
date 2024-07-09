@@ -137,7 +137,7 @@ class CartPage extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               image: const DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: NetworkImage(kDemoImg))),
+                                  image: NetworkImage(kDummyImg))),
                         ),
                         const SizedBox(
                           width: 10,
@@ -251,7 +251,7 @@ class CartPage extends StatelessWidget {
                                                                               20),
                                                                           image: const DecorationImage(
                                                                               fit: BoxFit.cover,
-                                                                              image: NetworkImage(kDemoImg))),
+                                                                              image: NetworkImage(kDummyImg))),
                                                                     ),
                                                                     const SizedBox(
                                                                       width: 10,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
+import 'package:shopping_app/Core/img.dart';
 
 class SearchResultPage extends StatelessWidget {
   final String searchBarText;
@@ -57,8 +58,7 @@ class SearchResultPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     image: const DecorationImage(
                                         fit: BoxFit.cover,
-                                        image: NetworkImage(
-                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                        image: NetworkImage(kDummyImg)),
                                     borderRadius: BorderRadius.circular(25)),
                               ),
                             ),

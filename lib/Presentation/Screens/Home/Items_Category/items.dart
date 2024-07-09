@@ -64,7 +64,7 @@ class ItemList extends StatelessWidget {
                             decoration: BoxDecoration(
                                 image: const DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: NetworkImage(kDemoImg)),
+                                    image: NetworkImage(kDummyImg)),
                                 borderRadius: BorderRadius.circular(25)),
                           ),
                         ),

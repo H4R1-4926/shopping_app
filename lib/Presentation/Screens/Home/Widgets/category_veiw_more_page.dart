@@ -55,10 +55,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Dhothi\'s',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -67,7 +67,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -75,10 +75,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Saree\'s',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -87,7 +87,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -95,10 +95,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Paavada',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -107,7 +107,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -115,10 +115,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Towels',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -127,7 +127,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -135,10 +135,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Top Piece\'s',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -147,7 +147,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -155,10 +155,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Shirt Piece\'s',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -167,7 +167,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -175,10 +175,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Bedsheets',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -187,7 +187,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -195,10 +195,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Set Mundu',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -207,7 +207,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -215,10 +215,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Set Saree',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -227,7 +227,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
             GridTile(
                 footer: Container(
@@ -235,10 +235,10 @@ class ViewMorePage extends StatelessWidget {
                   color: kwhite.withOpacity(0.5),
                   child: Center(
                       child: Text(
-                    'Double Mundu',
+                    'Item Name',
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold,
-                        fontSize: 18,
+                        fontSize: 16,
                         color: Colors.black),
                   )),
                 ),
@@ -247,7 +247,7 @@ class ViewMorePage extends StatelessWidget {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(18),
                       image: const DecorationImage(
-                          fit: BoxFit.cover, image: NetworkImage(kDemoImg))),
+                          fit: BoxFit.cover, image: NetworkImage(kDummyImg))),
                 )),
           ],
         ),

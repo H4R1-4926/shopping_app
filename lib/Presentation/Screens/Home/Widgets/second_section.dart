@@ -30,7 +30,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Dhoti',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {
@@ -41,7 +41,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Saree\'s',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {
@@ -52,7 +52,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'BedSheets',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {
@@ -63,7 +63,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Towels',
+                text: 'Product',
               ),
             ],
           ),
@@ -80,7 +80,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Top Piece\'s',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {
@@ -91,7 +91,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Shirt Piece\'s',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {
@@ -102,7 +102,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.style,
-                text: 'Set Mundu',
+                text: 'Product',
               ),
               IconWithTextWidget(
                 ontap: () {

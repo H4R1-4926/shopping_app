@@ -38,7 +38,7 @@ class OrderOnGoing extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 image: const DecorationImage(
                                     fit: BoxFit.cover,
-                                    image: NetworkImage(kDemoImg))),
+                                    image: NetworkImage(kDummyImg))),
                           ),
                           const SizedBox(
                             width: 20,

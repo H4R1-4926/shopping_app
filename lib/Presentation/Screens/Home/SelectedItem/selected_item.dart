@@ -50,7 +50,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                           decoration: const BoxDecoration(
                               image: DecorationImage(
                                   fit: BoxFit.cover,
-                                  image: AssetImage('assets/demo.webp'))),
+                                  image: NetworkImage(kDummyImgVertical))),
                         );
                       },
                       options: CarouselOptions(
@@ -231,7 +231,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                     decoration: BoxDecoration(
                                         image: const DecorationImage(
                                             fit: BoxFit.cover,
-                                            image: NetworkImage(kDemoImg)),
+                                            image: NetworkImage(kDummyImg)),
                                         borderRadius:
                                             BorderRadius.circular(15)),
                                   ),

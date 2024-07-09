@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:shopping_app/Core/colors.dart';
+import 'package:shopping_app/Core/theme.dart';
 import 'package:shopping_app/Presentation/Home/tab_bar.dart';
 import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
 
@@ -19,6 +20,7 @@ class MainApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => RadioButtonBloc(),
       child: MaterialApp(
+          darkTheme: kdarkMode,
           theme: ThemeData(scaffoldBackgroundColor: kwhite),
           debugShowCheckedModeBanner: false,
           home: const TabBarPage()),

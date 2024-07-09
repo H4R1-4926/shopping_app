@@ -4,6 +4,7 @@ import 'package:flutter/widgets.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
+import 'package:shopping_app/Core/img.dart';
 import 'package:shopping_app/Presentation/Screens/Home/SelectedItem/selected_item.dart';
 
 class GridCategaryWidget extends StatelessWidget {
@@ -49,25 +50,25 @@ class GridCategaryWidget extends StatelessWidget {
                     contentPadding: const EdgeInsets.symmetric(horizontal: 15),
                     tabs: const [
                       Tab(
-                        text: 'All',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Saree\'s',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Dhoti\'s',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Bedsheet\'s',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Towel\'s',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Top Piece\'s',
+                        text: 'Items',
                       ),
                       Tab(
-                        text: 'Shirt Piece\'s',
+                        text: 'Items',
                       ),
                     ]),
                 SizedBox(
@@ -118,10 +119,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
