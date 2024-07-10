@@ -72,7 +72,7 @@ class GridCategaryWidget extends StatelessWidget {
                       ),
                     ]),
                 SizedBox(
-                  height: 2800,
+                  height: 3150,
                   child: TabBarView(children: [
                     Scrollbar(
                       child: GridView.builder(
@@ -152,7 +152,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -219,10 +219,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -251,7 +252,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -318,10 +319,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -350,7 +352,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -417,10 +419,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -449,7 +452,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -516,10 +519,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -548,7 +552,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -615,10 +619,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -647,7 +652,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
@@ -714,10 +719,11 @@ class GridCategaryWidget extends StatelessWidget {
                                                 height: 180,
                                                 width: 180,
                                                 decoration: BoxDecoration(
-                                                    image: const DecorationImage(
-                                                        fit: BoxFit.cover,
-                                                        image: NetworkImage(
-                                                            'https://pulimoottilonline.com/cdn/shop/products/IMG_1446_600x.jpg?v=1679904691')),
+                                                    image:
+                                                        const DecorationImage(
+                                                            fit: BoxFit.cover,
+                                                            image: NetworkImage(
+                                                                kDummyImg)),
                                                     borderRadius:
                                                         BorderRadius.circular(
                                                             25)),
@@ -746,7 +752,7 @@ class GridCategaryWidget extends StatelessWidget {
                                       ),
                                       Padding(
                                         padding: const EdgeInsets.only(
-                                            left: 120, top: 15),
+                                            left: 140, top: 15),
                                         child: CircleAvatar(
                                           backgroundColor: kblack,
                                           maxRadius: 18,
