@@ -89,7 +89,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                     'Name of the Product',
                     overflow: TextOverflow.ellipsis,
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900, fontSize: 25),
+                        fontWeight: FontWeight.w900, fontSize: 22),
                   ),
                   Flexible(
                     child: IconButton(
@@ -111,7 +111,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               child: Text(
                 'Description',
                 style:
-                    GoogleFonts.lato(fontSize: 20, fontWeight: FontWeight.w900),
+                    GoogleFonts.lato(fontSize: 18, fontWeight: FontWeight.w900),
               ),
             ),
             Padding(
@@ -172,7 +172,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               child: Text(
                 'In Stock',
                 style: GoogleFonts.lato(
-                    fontSize: 18,
+                    fontSize: 17,
                     fontWeight: FontWeight.w900,
                     color: Colors.greenAccent),
               ),
@@ -183,7 +183,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               child: Text(
                 '₹ 999\\-',
                 style: GoogleFonts.roboto(
-                    fontWeight: FontWeight.bold, fontSize: 32),
+                    fontWeight: FontWeight.bold, fontSize: 28),
               ),
             ),
             kSizedBoxHeight5,
@@ -220,7 +220,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                   child: Text(
                                     'Name Of The Product',
                                     style: GoogleFonts.poppins(
-                                        fontSize: 20,
+                                        fontSize: 17,
                                         fontWeight: FontWeight.bold),
                                   ),
                                 ),
@@ -449,7 +449,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               child: Text(
                 'Add to Cart',
                 style: GoogleFonts.roboto(
-                    fontSize: 17, fontWeight: FontWeight.w700, color: kblack),
+                    fontSize: 15, fontWeight: FontWeight.w700, color: kblack),
               ),
             ),
             kSizedBoxHeight20
