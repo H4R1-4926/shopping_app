@@ -47,54 +47,56 @@ class SearchResultPage extends StatelessWidget {
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Stack(
+                child: Column(
                   children: [
-                    Column(
-                      children: [
-                        Center(
-                          child: Container(
-                            height: 170,
-                            width: 170,
-                            decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(kDummyImg)),
-                                borderRadius: BorderRadius.circular(25)),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 7),
-                          child: Text(
-                            'Name Of The Product',
-                            overflow: TextOverflow.ellipsis,
-                            style: GoogleFonts.poppins(
-                                color: kblack,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14),
-                          ),
-                        ),
-                        Text(
-                          '₹ 350 \\-',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        )
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 140, top: 10),
-                      child: CircleAvatar(
-                        backgroundColor: kblack,
-                        maxRadius: 17,
-                        child: Center(
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.favorite_outline),
-                            iconSize: 19,
-                            color: kwhite,
-                          ),
+                    Center(
+                      child: Container(
+                        height: 170,
+                        width: 170,
+                        decoration: BoxDecoration(
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(kDummyImg)),
+                            borderRadius: BorderRadius.circular(25)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8, top: 8),
+                              child: CircleAvatar(
+                                backgroundColor: kblack,
+                                maxRadius: 18,
+                                child: Center(
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                        Icons.favorite_border_outlined),
+                                    iconSize: 20,
+                                    color: kwhite,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 7),
+                      child: Text(
+                        'Name Of The Product',
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.poppins(
+                            color: kblack,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14),
+                      ),
+                    ),
+                    Text(
+                      '₹ 350 \\-',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold, fontSize: 16),
                     )
                   ],
                 ),

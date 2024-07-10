@@ -20,7 +20,7 @@ class MainApp extends StatelessWidget {
     return BlocProvider(
       create: (context) => RadioButtonBloc(),
       child: MaterialApp(
-          darkTheme: kdarkMode,
+          // darkTheme: kdarkMode,
           theme: ThemeData(scaffoldBackgroundColor: kwhite),
           debugShowCheckedModeBanner: false,
           home: const TabBarPage()),

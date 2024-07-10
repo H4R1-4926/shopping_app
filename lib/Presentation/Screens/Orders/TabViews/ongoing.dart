@@ -41,7 +41,7 @@ class OrderOnGoing extends StatelessWidget {
                                     image: NetworkImage(kDummyImg))),
                           ),
                           const SizedBox(
-                            width: 20,
+                            width: 8,
                           ),
                           Flexible(
                             child: Padding(
@@ -61,7 +61,7 @@ class OrderOnGoing extends StatelessWidget {
                                         style: GoogleFonts.lato(
                                             color: kblack,
                                             fontWeight: FontWeight.w900,
-                                            fontSize: 16),
+                                            fontSize: 15),
                                       ),
                                     ),
                                   ),
@@ -97,76 +97,58 @@ class OrderOnGoing extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 30,
-                                    width: 216,
-                                    child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Text(
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      SizedBox(
+                                        height: 30,
+                                        width: 90,
+                                        child: Text(
                                           '₹ 99999\\-',
                                           style: GoogleFonts.openSans(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 16),
+                                              fontSize: 14),
                                         ),
-                                        const SizedBox(
-                                          width: 10,
-                                        ),
-                                        Flexible(
-                                          child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                right: 15),
-                                            child: GestureDetector(
-                                              onTap: () {
-                                                Navigator.of(context)
-                                                    .push(PageRouteBuilder(
-                                                  pageBuilder: (context,
-                                                          animation,
-                                                          secondaryAnimation) =>
-                                                      const TrackOrderPage(),
-                                                  transitionsBuilder: (context,
-                                                      animation,
-                                                      secondaryAnimation,
-                                                      child) {
-                                                    var tween = Tween(
-                                                      begin: const Offset(
-                                                          1.0, 0.0),
-                                                      end: Offset.zero,
-                                                    ).chain(CurveTween(
-                                                        curve: Curves.easeIn));
-                                                    return SlideTransition(
-                                                      position: animation
-                                                          .drive(tween),
-                                                      child: child,
-                                                    );
-                                                  },
-                                                ));
-                                              },
-                                              child: Container(
-                                                height: 44,
-                                                width: 72,
-                                                decoration: BoxDecoration(
-                                                    color: kblack,
-                                                    borderRadius:
-                                                        BorderRadius.circular(
-                                                            20)),
-                                                child: Center(
-                                                  child: Text(
-                                                    'Track',
-                                                    style: GoogleFonts.lato(
-                                                        fontWeight:
-                                                            FontWeight.bold,
-                                                        fontSize: 14,
-                                                        color: kwhite),
-                                                  ),
-                                                ),
-                                              ),
-                                            ),
+                                      ),
+                                      ElevatedButton(
+                                        style: const ButtonStyle(
+                                            backgroundColor:
+                                                WidgetStatePropertyAll(kblack)),
+                                        onPressed: () {
+                                          Navigator.of(context)
+                                              .push(PageRouteBuilder(
+                                            pageBuilder: (context, animation,
+                                                    secondaryAnimation) =>
+                                                const TrackOrderPage(),
+                                            transitionsBuilder: (context,
+                                                animation,
+                                                secondaryAnimation,
+                                                child) {
+                                              var tween = Tween(
+                                                begin: const Offset(1.0, 0.0),
+                                                end: Offset.zero,
+                                              ).chain(CurveTween(
+                                                  curve: Curves.easeIn));
+                                              return SlideTransition(
+                                                position:
+                                                    animation.drive(tween),
+                                                child: child,
+                                              );
+                                            },
+                                          ));
+                                        },
+                                        child: Center(
+                                          child: Text(
+                                            'Track',
+                                            style: GoogleFonts.lato(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 13,
+                                                color: kwhite),
                                           ),
                                         ),
-                                      ],
-                                    ),
+                                      ),
+                                    ],
                                   )
                                 ],
                               ),

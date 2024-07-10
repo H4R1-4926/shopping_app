@@ -149,276 +149,279 @@ class CartPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                SizedBox(
-                                  height: 50,
-                                  width: 200,
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: [
-                                      SizedBox(
-                                        height: 30,
-                                        width: 150,
-                                        child: Text(
-                                          'Name of Product',
-                                          overflow: TextOverflow.ellipsis,
-                                          style: GoogleFonts.lato(
-                                              color: kblack,
-                                              fontWeight: FontWeight.w900,
-                                              fontSize: 17),
-                                        ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    SizedBox(
+                                      height: 30,
+                                      width: 150,
+                                      child: Text(
+                                        'Name of Product',
+                                        overflow: TextOverflow.ellipsis,
+                                        style: GoogleFonts.lato(
+                                            color: kblack,
+                                            fontWeight: FontWeight.w900,
+                                            fontSize: 15),
                                       ),
-                                      const SizedBox(
-                                        width: 8,
-                                      ),
-                                      Flexible(
-                                        child: IconButton(
-                                          onPressed: () {
-                                            showModalBottomSheet(
-                                              showDragHandle: true,
-                                              backgroundColor: klightGrey,
-                                              context: context,
-                                              builder: (context) {
-                                                return Container(
-                                                  height: 380,
-                                                  width: double.infinity,
-                                                  decoration:
-                                                      const BoxDecoration(
+                                    ),
+                                    const SizedBox(
+                                      width: 8,
+                                    ),
+                                    Flexible(
+                                      child: IconButton(
+                                        onPressed: () {
+                                          showModalBottomSheet(
+                                            showDragHandle: true,
+                                            backgroundColor: klightGrey,
+                                            context: context,
+                                            builder: (context) {
+                                              return Container(
+                                                height: 380,
+                                                width: double.infinity,
+                                                decoration: const BoxDecoration(
+                                                    color: klightGrey,
+                                                    boxShadow: [
+                                                      BoxShadow(
                                                           color: klightGrey,
-                                                          boxShadow: [
-                                                        BoxShadow(
-                                                            color: klightGrey,
-                                                            blurRadius: 10,
-                                                            spreadRadius: 10)
-                                                      ]),
-                                                  child: Column(
-                                                    children: [
-                                                      Text(
-                                                        'Remove from Cart?',
-                                                        style: GoogleFonts
-                                                            .montserrat(
-                                                                fontSize: 20,
-                                                                fontWeight:
-                                                                    FontWeight
-                                                                        .bold),
-                                                      ),
-                                                      kSizedBoxHeight10,
-                                                      Divider(
-                                                        indent: 23,
-                                                        endIndent: 23,
-                                                        color: kGrey
-                                                            .withOpacity(0.2),
-                                                      ),
-                                                      kSizedBoxHeight10,
-                                                      Container(
-                                                        height: 210,
-                                                        width: double.infinity,
-                                                        color: klightGrey,
-                                                        child: Center(
-                                                          child: Padding(
-                                                            padding:
-                                                                const EdgeInsets
-                                                                    .symmetric(
-                                                                    horizontal:
-                                                                        10,
-                                                                    vertical:
-                                                                        20),
-                                                            child: Container(
-                                                              height: 150,
-                                                              decoration: BoxDecoration(
-                                                                  color: kwhite,
-                                                                  borderRadius:
-                                                                      BorderRadius
-                                                                          .circular(
-                                                                              20)),
-                                                              child: Padding(
-                                                                padding: const EdgeInsets
-                                                                    .symmetric(
-                                                                    horizontal:
-                                                                        10),
-                                                                child: Row(
-                                                                  mainAxisAlignment:
-                                                                      MainAxisAlignment
-                                                                          .spaceBetween,
-                                                                  children: [
-                                                                    Container(
-                                                                      height:
-                                                                          108,
-                                                                      width:
-                                                                          108,
-                                                                      decoration: BoxDecoration(
-                                                                          borderRadius: BorderRadius.circular(
-                                                                              20),
-                                                                          image: const DecorationImage(
-                                                                              fit: BoxFit.cover,
-                                                                              image: NetworkImage(kDummyImg))),
-                                                                    ),
-                                                                    const SizedBox(
-                                                                      width: 10,
-                                                                    ),
-                                                                    Flexible(
+                                                          blurRadius: 10,
+                                                          spreadRadius: 10)
+                                                    ]),
+                                                child: Column(
+                                                  children: [
+                                                    Text(
+                                                      'Remove from Cart?',
+                                                      style: GoogleFonts
+                                                          .montserrat(
+                                                              fontSize: 20,
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .bold),
+                                                    ),
+                                                    kSizedBoxHeight10,
+                                                    Divider(
+                                                      indent: 23,
+                                                      endIndent: 23,
+                                                      color: kGrey
+                                                          .withOpacity(0.2),
+                                                    ),
+                                                    kSizedBoxHeight10,
+                                                    Container(
+                                                      height: 210,
+                                                      width: double.infinity,
+                                                      color: klightGrey,
+                                                      child: Center(
+                                                        child: Padding(
+                                                          padding:
+                                                              const EdgeInsets
+                                                                  .symmetric(
+                                                                  horizontal:
+                                                                      10,
+                                                                  vertical: 20),
+                                                          child: Container(
+                                                            height: 150,
+                                                            decoration: BoxDecoration(
+                                                                color: kwhite,
+                                                                borderRadius:
+                                                                    BorderRadius
+                                                                        .circular(
+                                                                            20)),
+                                                            child: Padding(
+                                                              padding:
+                                                                  const EdgeInsets
+                                                                      .symmetric(
+                                                                      horizontal:
+                                                                          10),
+                                                              child: Row(
+                                                                mainAxisAlignment:
+                                                                    MainAxisAlignment
+                                                                        .spaceBetween,
+                                                                children: [
+                                                                  Container(
+                                                                    height: 108,
+                                                                    width: 108,
+                                                                    decoration: BoxDecoration(
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(
+                                                                                20),
+                                                                        image: const DecorationImage(
+                                                                            fit:
+                                                                                BoxFit.cover,
+                                                                            image: NetworkImage(kDummyImg))),
+                                                                  ),
+                                                                  const SizedBox(
+                                                                    width: 10,
+                                                                  ),
+                                                                  Flexible(
+                                                                    child:
+                                                                        Padding(
+                                                                      padding: const EdgeInsets
+                                                                          .symmetric(
+                                                                          vertical:
+                                                                              10),
                                                                       child:
-                                                                          Padding(
-                                                                        padding: const EdgeInsets
-                                                                            .symmetric(
-                                                                            vertical:
-                                                                                10),
-                                                                        child:
-                                                                            Column(
-                                                                          crossAxisAlignment:
-                                                                              CrossAxisAlignment.start,
-                                                                          mainAxisAlignment:
-                                                                              MainAxisAlignment.spaceBetween,
-                                                                          children: [
-                                                                            SizedBox(
-                                                                              height: 50,
-                                                                              width: 200,
-                                                                              child: Row(
-                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                children: [
-                                                                                  SizedBox(
-                                                                                    height: 30,
-                                                                                    width: 150,
-                                                                                    child: Text(
-                                                                                      'Name of Product',
-                                                                                      overflow: TextOverflow.ellipsis,
-                                                                                      style: GoogleFonts.lato(color: kblack, fontWeight: FontWeight.w900, fontSize: 17),
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                            ),
-                                                                            Row(
+                                                                          Column(
+                                                                        crossAxisAlignment:
+                                                                            CrossAxisAlignment.start,
+                                                                        mainAxisAlignment:
+                                                                            MainAxisAlignment.spaceBetween,
+                                                                        children: [
+                                                                          SizedBox(
+                                                                            height:
+                                                                                50,
+                                                                            width:
+                                                                                200,
+                                                                            child:
+                                                                                Row(
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                                                                               children: [
-                                                                                const CircleAvatar(
-                                                                                  radius: 15,
-                                                                                  backgroundColor: kblack,
-                                                                                ),
-                                                                                const SizedBox(
-                                                                                  width: 10,
-                                                                                ),
-                                                                                Text(
-                                                                                  'Color  |  Qty - 1',
-                                                                                  style: GoogleFonts.lato(fontWeight: FontWeight.bold, color: kGrey.withOpacity(0.9)),
+                                                                                SizedBox(
+                                                                                  height: 30,
+                                                                                  width: 150,
+                                                                                  child: Text(
+                                                                                    'Name of Product',
+                                                                                    overflow: TextOverflow.ellipsis,
+                                                                                    style: GoogleFonts.lato(color: kblack, fontWeight: FontWeight.w900, fontSize: 17),
+                                                                                  ),
                                                                                 ),
                                                                               ],
                                                                             ),
-                                                                            SizedBox(
-                                                                              height: 50,
-                                                                              width: 216,
-                                                                              child: Row(
-                                                                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                                                                children: [
-                                                                                  Text(
-                                                                                    '₹ 99999\\-',
-                                                                                    style: GoogleFonts.openSans(fontWeight: FontWeight.bold, fontSize: 18),
-                                                                                  ),
-                                                                                  const SizedBox(
-                                                                                    width: 15,
-                                                                                  ),
-                                                                                ],
+                                                                          ),
+                                                                          Row(
+                                                                            children: [
+                                                                              const CircleAvatar(
+                                                                                radius: 15,
+                                                                                backgroundColor: kblack,
                                                                               ),
-                                                                            )
-                                                                          ],
-                                                                        ),
+                                                                              const SizedBox(
+                                                                                width: 10,
+                                                                              ),
+                                                                              Text(
+                                                                                'Color  |  Qty - 1',
+                                                                                style: GoogleFonts.lato(fontWeight: FontWeight.bold, color: kGrey.withOpacity(0.9)),
+                                                                              ),
+                                                                            ],
+                                                                          ),
+                                                                          SizedBox(
+                                                                            height:
+                                                                                50,
+                                                                            width:
+                                                                                216,
+                                                                            child:
+                                                                                Row(
+                                                                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                                                              children: [
+                                                                                Text(
+                                                                                  '₹ 99999\\-',
+                                                                                  style: GoogleFonts.openSans(fontWeight: FontWeight.bold, fontSize: 18),
+                                                                                ),
+                                                                                const SizedBox(
+                                                                                  width: 15,
+                                                                                ),
+                                                                              ],
+                                                                            ),
+                                                                          )
+                                                                        ],
                                                                       ),
-                                                                    )
-                                                                  ],
-                                                                ),
+                                                                    ),
+                                                                  )
+                                                                ],
                                                               ),
                                                             ),
                                                           ),
                                                         ),
                                                       ),
-                                                      Divider(
-                                                        indent: 23,
-                                                        endIndent: 23,
-                                                        color: kGrey
-                                                            .withOpacity(0.2),
-                                                      ),
-                                                      Padding(
-                                                        padding:
-                                                            const EdgeInsets
-                                                                .only(top: 10),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .spaceEvenly,
-                                                          children: [
-                                                            ElevatedButton(
-                                                                onPressed: () {
-                                                                  Navigator.pop(
-                                                                      context);
-                                                                },
-                                                                style:
-                                                                    const ButtonStyle(
-                                                                  surfaceTintColor:
-                                                                      WidgetStatePropertyAll(
-                                                                          kwhite),
+                                                    ),
+                                                    Divider(
+                                                      indent: 23,
+                                                      endIndent: 23,
+                                                      color: kGrey
+                                                          .withOpacity(0.2),
+                                                    ),
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              top: 10),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .spaceEvenly,
+                                                        children: [
+                                                          ElevatedButton(
+                                                              onPressed: () {
+                                                                Navigator.pop(
+                                                                    context);
+                                                              },
+                                                              style:
+                                                                  const ButtonStyle(
+                                                                surfaceTintColor:
+                                                                    WidgetStatePropertyAll(
+                                                                        kwhite),
+                                                                fixedSize:
+                                                                    WidgetStatePropertyAll(
+                                                                        Size(
+                                                                            150,
+                                                                            50)),
+                                                                backgroundColor:
+                                                                    WidgetStatePropertyAll(
+                                                                        kwhite),
+                                                              ),
+                                                              child: Text(
+                                                                'Cancel',
+                                                                style: GoogleFonts
+                                                                    .lato(
+                                                                        fontSize:
+                                                                            14,
+                                                                        color:
+                                                                            kblack),
+                                                              )),
+                                                          ElevatedButton(
+                                                              onPressed: () {
+                                                                Navigator.pop(
+                                                                    context);
+                                                              },
+                                                              style: const ButtonStyle(
                                                                   fixedSize:
                                                                       WidgetStatePropertyAll(Size(
                                                                           150,
                                                                           50)),
                                                                   backgroundColor:
                                                                       WidgetStatePropertyAll(
-                                                                          kwhite),
-                                                                ),
-                                                                child: Text(
-                                                                  'Cancel',
-                                                                  style: GoogleFonts.lato(
-                                                                      fontSize:
-                                                                          14,
-                                                                      color:
                                                                           kblack),
-                                                                )),
-                                                            ElevatedButton(
-                                                                onPressed: () {
-                                                                  Navigator.pop(
-                                                                      context);
-                                                                },
-                                                                style: const ButtonStyle(
-                                                                    fixedSize:
-                                                                        WidgetStatePropertyAll(Size(
-                                                                            150,
-                                                                            50)),
-                                                                    backgroundColor:
-                                                                        WidgetStatePropertyAll(
-                                                                            kblack),
-                                                                    foregroundColor:
-                                                                        WidgetStatePropertyAll(
-                                                                            kwhite)),
-                                                                child: Text(
-                                                                  'Yes, Remove',
-                                                                  style: GoogleFonts.lato(
-                                                                      fontSize:
-                                                                          14,
-                                                                      fontWeight:
-                                                                          FontWeight
-                                                                              .bold),
-                                                                ))
-                                                          ],
-                                                        ),
-                                                      )
-                                                    ],
-                                                  ),
-                                                );
-                                              },
-                                            );
-                                          },
-                                          icon: const Icon(
-                                            Icons.delete_outline_outlined,
-                                            size: 26,
-                                            color: kblack,
-                                          ),
+                                                                  foregroundColor:
+                                                                      WidgetStatePropertyAll(
+                                                                          kwhite)),
+                                                              child: Text(
+                                                                'Yes, Remove',
+                                                                style: GoogleFonts.lato(
+                                                                    fontSize:
+                                                                        14,
+                                                                    fontWeight:
+                                                                        FontWeight
+                                                                            .bold),
+                                                              ))
+                                                        ],
+                                                      ),
+                                                    )
+                                                  ],
+                                                ),
+                                              );
+                                            },
+                                          );
+                                        },
+                                        icon: const Icon(
+                                          Icons.delete_outline_outlined,
+                                          size: 23,
+                                          color: kblack,
                                         ),
-                                      )
-                                    ],
-                                  ),
+                                      ),
+                                    )
+                                  ],
                                 ),
                                 Row(
                                   children: [
                                     const CircleAvatar(
-                                      radius: 15,
+                                      radius: 13,
                                       backgroundColor: kblack,
                                     ),
                                     const SizedBox(
@@ -434,7 +437,7 @@ class CartPage extends StatelessWidget {
                                 ),
                                 SizedBox(
                                   height: 50,
-                                  width: 216,
+                                  width: 150,
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -443,7 +446,7 @@ class CartPage extends StatelessWidget {
                                         '₹ 99999\\-',
                                         style: GoogleFonts.openSans(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 18),
+                                            fontSize: 15),
                                       ),
                                       const SizedBox(
                                         width: 20,

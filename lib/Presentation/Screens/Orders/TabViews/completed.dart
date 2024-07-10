@@ -41,7 +41,7 @@ class OrderCompleted extends StatelessWidget {
                                     image: NetworkImage(kDummyImg))),
                           ),
                           const SizedBox(
-                            width: 20,
+                            width: 8,
                           ),
                           Flexible(
                             child: Padding(
@@ -61,7 +61,7 @@ class OrderCompleted extends StatelessWidget {
                                         style: GoogleFonts.lato(
                                             color: kblack,
                                             fontWeight: FontWeight.w900,
-                                            fontSize: 16),
+                                            fontSize: 15),
                                       ),
                                     ),
                                   ),
@@ -103,16 +103,15 @@ class OrderCompleted extends StatelessWidget {
                                     children: [
                                       SizedBox(
                                         height: 30,
-                                        width: 100,
+                                        width: 90,
                                         child: Text(
                                           '₹ 99999\\-',
                                           style: GoogleFonts.openSans(
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 16),
+                                              fontSize: 14),
                                         ),
                                       ),
-                                      Flexible(
-                                          child: ElevatedButton(
+                                      ElevatedButton(
                                         style: const ButtonStyle(
                                             foregroundColor:
                                                 WidgetStatePropertyAll(kblack),
@@ -120,14 +119,14 @@ class OrderCompleted extends StatelessWidget {
                                                 WidgetStatePropertyAll(
                                                     klightGrey)),
                                         child: Text(
-                                          'Return Item',
+                                          'Return',
                                           style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12,
                                           ),
                                         ),
                                         onPressed: () {},
-                                      )),
+                                      ),
                                     ],
                                   )
                                 ],
