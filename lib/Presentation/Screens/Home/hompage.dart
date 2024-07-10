@@ -20,9 +20,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: CustomScrollView(
-      slivers: [
-        SliverAppBar(
+        appBar: AppBar(
           shape: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   bottomRight: Radius.elliptical(50, 45),
@@ -36,7 +34,6 @@ class HomePage extends StatelessWidget {
               radius: 2,
             ),
           ),
-          pinned: true,
           title: Text(
             'Hello User',
             style: GoogleFonts.montserrat(
@@ -121,13 +118,12 @@ class HomePage extends StatelessWidget {
                     )),
               )),
         ),
-        const SliverList(
-            delegate: SliverChildListDelegate.fixed([
-          TopContainerWidget(),
-          CatogorySection(),
-          GridCategaryWidget(),
-        ]))
-      ],
-    ));
+        body: ListView(
+          children: const [
+            TopContainerWidget(),
+            CatogorySection(),
+            GridCategaryWidget(),
+          ],
+        ));
   }
 }
