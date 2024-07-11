@@ -13,18 +13,18 @@ class OrdersPage extends StatelessWidget {
       length: 2,
       child: Scaffold(
           appBar: AppBar(
-            surfaceTintColor: kwhite,
-            backgroundColor: kwhite,
             automaticallyImplyLeading: false,
             title: Text(
               'My Orders',
               style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.bold, fontSize: 20),
             ),
-            leading: const Padding(
-              padding: EdgeInsets.only(left: 5),
+            leading: Padding(
+              padding: const EdgeInsets.only(left: 5),
               child: CircleAvatar(
-                backgroundColor: kblack,
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? kwhite
+                    : kblack,
                 radius: 2,
               ),
             ),
@@ -37,12 +37,18 @@ class OrdersPage extends StatelessWidget {
                   text: 'Completed',
                 )
               ],
-              indicatorColor: kblack,
+              indicatorColor: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
               indicatorSize: TabBarIndicatorSize.tab,
               indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),
               indicatorWeight: 3,
               labelStyle: GoogleFonts.poppins(
-                  fontWeight: FontWeight.bold, fontSize: 14, color: kblack),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 14,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? kwhite
+                      : kblack),
               unselectedLabelStyle: GoogleFonts.poppins(
                   fontWeight: FontWeight.w500, fontSize: 12, color: kGrey),
             ),

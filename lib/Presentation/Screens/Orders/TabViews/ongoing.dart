@@ -11,7 +11,9 @@ class OrderOnGoing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: klightGrey,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
         body: ListView(
           children: [
             ListView.builder(
@@ -25,7 +27,10 @@ class OrderOnGoing extends StatelessWidget {
                   child: Container(
                     height: 150,
                     decoration: BoxDecoration(
-                        color: kwhite, borderRadius: BorderRadius.circular(20)),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 53, 53, 53)
+                            : kwhite,
+                        borderRadius: BorderRadius.circular(20)),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 10),
                       child: Row(
@@ -59,7 +64,6 @@ class OrderOnGoing extends StatelessWidget {
                                         'Name of Product',
                                         overflow: TextOverflow.ellipsis,
                                         style: GoogleFonts.lato(
-                                            color: kblack,
                                             fontWeight: FontWeight.w900,
                                             fontSize: 15),
                                       ),

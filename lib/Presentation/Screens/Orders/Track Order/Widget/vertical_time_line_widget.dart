@@ -22,6 +22,9 @@ class TimeLineTileWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color color =
+        Theme.of(context).brightness == Brightness.dark ? kwhite : kblack;
+
     return TimelineTile(
         nodeAlign: TimelineNodeAlign.start,
         mainAxisExtent: 80,
@@ -63,7 +66,7 @@ class TimeLineTileWidget extends StatelessWidget {
                   child: DashedLineConnector(
                     gap: 3,
                     thickness: 3,
-                    color: isPast ? kblack : kGrey.withOpacity(0.4),
+                    color: isPast ? color : kGrey.withOpacity(0.4),
                   ),
                 ),
           startConnector: isFirst
@@ -73,14 +76,14 @@ class TimeLineTileWidget extends StatelessWidget {
                   child: DashedLineConnector(
                     gap: 3,
                     thickness: 3,
-                    color: isPast ? kblack : kGrey.withOpacity(0.4),
+                    color: isPast ? color : kGrey.withOpacity(0.4),
                   ),
                 ),
           indicator: OutlinedDotIndicator(
               color: kblack,
               size: 25,
               child: DotIndicator(
-                color: isPast ? kblack : kGrey.withOpacity(0.4),
+                color: isPast ? color : kGrey.withOpacity(0.4),
                 size: 10,
               )),
         ));

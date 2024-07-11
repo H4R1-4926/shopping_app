@@ -17,6 +17,10 @@ class HorizontalTmeLineWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final Color color1 =
+        Theme.of(context).brightness == Brightness.dark ? kwhite : kblack;
+    final Color color2 =
+        Theme.of(context).brightness == Brightness.dark ? kblack : kwhite;
     return SizedBox(
       width: 90,
       child: TimelineTile(
@@ -27,16 +31,16 @@ class HorizontalTmeLineWidget extends StatelessWidget {
         startChild: startChild,
         indicatorStyle: IndicatorStyle(
             padding: const EdgeInsets.symmetric(horizontal: 8),
-            color: isPast ? kblack : kGrey.withOpacity(0.4),
+            color: isPast ? color1 : kGrey.withOpacity(0.4),
             width: 30,
             height: 25,
             drawGap: true,
             iconStyle: IconStyle(
                 iconData: isPast ? Icons.check : Icons.schedule,
-                color: isPast ? kwhite : kwhite.withOpacity(0.4),
+                color: isPast ? color2 : kwhite.withOpacity(0.4),
                 fontSize: 18)),
         beforeLineStyle:
-            LineStyle(color: isPast ? kblack : kGrey.withOpacity(0.4)),
+            LineStyle(color: isPast ? color1 : kGrey.withOpacity(0.4)),
       ),
     );
   }

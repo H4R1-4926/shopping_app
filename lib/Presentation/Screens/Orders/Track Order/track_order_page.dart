@@ -15,10 +15,10 @@ class TrackOrderPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: klightGrey,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
         appBar: AppBar(
-          backgroundColor: kwhite,
-          surfaceTintColor: kwhite,
           title: Text(
             'Track Order',
             style: GoogleFonts.montserrat(
@@ -32,7 +32,10 @@ class TrackOrderPage extends StatelessWidget {
               child: Container(
                 height: 150,
                 decoration: BoxDecoration(
-                    color: kwhite, borderRadius: BorderRadius.circular(20)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? const Color.fromARGB(255, 54, 54, 54)
+                        : kwhite,
+                    borderRadius: BorderRadius.circular(20)),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 10),
                   child: Row(
@@ -65,7 +68,6 @@ class TrackOrderPage extends StatelessWidget {
                                     'Name of Product',
                                     overflow: TextOverflow.ellipsis,
                                     style: GoogleFonts.lato(
-                                        color: kblack,
                                         fontWeight: FontWeight.w900,
                                         fontSize: 18),
                                   ),
@@ -183,10 +185,9 @@ class TrackOrderPage extends StatelessWidget {
                     fontWeight: FontWeight.bold, fontSize: 18),
               ),
             ),
-            Divider(
+            const Divider(
               indent: 23,
               endIndent: 23,
-              color: kGrey.withOpacity(0.3),
             ),
             kSizedBoxHeight20,
             Padding(
@@ -201,10 +202,9 @@ class TrackOrderPage extends StatelessWidget {
               padding: EdgeInsets.only(left: 15, top: 10),
               child: SizedBox(height: 250, child: VerticalTimeline()),
             ),
-            Divider(
+            const Divider(
               indent: 23,
               endIndent: 23,
-              color: kGrey.withOpacity(0.3),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
