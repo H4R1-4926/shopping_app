@@ -11,22 +11,25 @@ class WishListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
+        surfaceTintColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
         title: Text(
           'My Wishlist',
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
-        surfaceTintColor: klightGrey,
-        backgroundColor: klightGrey,
       ),
       body: GridView.builder(
         itemCount: 15,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
-          childAspectRatio: 0.66,
-        ),
+            crossAxisCount: 2, childAspectRatio: 0.66, mainAxisExtent: 280),
         itemBuilder: (context, index) {
           return GestureDetector(
             onTap: () {
@@ -49,57 +52,57 @@ class WishListPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(
-                child: Stack(
+                child: Column(
                   children: [
-                    Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(top: 10),
-                          child: Center(
-                            child: Container(
-                              height: 180,
-                              width: 180,
-                              decoration: BoxDecoration(
-                                  image: const DecorationImage(
-                                      fit: BoxFit.cover,
-                                      image: NetworkImage(kDummyImg)),
-                                  borderRadius: BorderRadius.circular(25)),
-                            ),
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 7),
-                          child: Text(
-                            'Name Of The Product',
-                            overflow: TextOverflow.ellipsis,
-                            style: GoogleFonts.poppins(
-                                color: kblack,
-                                fontWeight: FontWeight.bold,
-                                fontSize: 14),
-                          ),
-                        ),
-                        Text(
-                          '₹ 350 \\-',
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, fontSize: 16),
-                        )
-                      ],
-                    ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 119, top: 15),
-                      child: CircleAvatar(
-                        backgroundColor: kblack,
-                        maxRadius: 17,
-                        child: Center(
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: const Icon(Icons.favorite),
-                            iconSize: 19,
-                            color: kwhite,
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Center(
+                        child: Container(
+                          height: 180,
+                          width: 180,
+                          decoration: BoxDecoration(
+                              image: const DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(kDummyImg)),
+                              borderRadius: BorderRadius.circular(25)),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.end,
+                            children: [
+                              Padding(
+                                padding:
+                                    const EdgeInsets.only(right: 8, top: 8),
+                                child: CircleAvatar(
+                                  backgroundColor: kblack,
+                                  maxRadius: 18,
+                                  child: Center(
+                                    child: IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(Icons.favorite),
+                                      iconSize: 20,
+                                      color: kwhite,
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                       ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 15, vertical: 7),
+                      child: Text(
+                        'Name Of The Product',
+                        overflow: TextOverflow.ellipsis,
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.bold, fontSize: 14),
+                      ),
+                    ),
+                    Text(
+                      '₹ 350 \\-',
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold, fontSize: 16),
                     )
                   ],
                 ),

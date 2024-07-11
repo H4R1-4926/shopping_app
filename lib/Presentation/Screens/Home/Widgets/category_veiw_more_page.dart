@@ -52,7 +52,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -72,7 +74,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -92,7 +96,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -112,7 +118,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -132,7 +140,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -152,7 +162,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -172,7 +184,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -192,7 +206,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -212,7 +228,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',
@@ -232,7 +250,9 @@ class ViewMorePage extends StatelessWidget {
             GridTile(
                 footer: Container(
                   height: 50,
-                  color: kwhite.withOpacity(0.5),
+                  decoration: BoxDecoration(
+                      color: kwhite.withOpacity(0.5),
+                      borderRadius: BorderRadius.circular(18)),
                   child: Center(
                       child: Text(
                     'Item Name',

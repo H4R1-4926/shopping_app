@@ -37,19 +37,25 @@ class TabBarPage extends StatelessWidget {
               height: 70,
               width: double.infinity,
               decoration: BoxDecoration(
-                  boxShadow: [
-                    BoxShadow(
-                        color: kblack.withOpacity(0.5),
-                        offset: const Offset(-3, 10),
-                        spreadRadius: 0,
-                        blurRadius: 42)
-                  ],
-                  borderRadius: BorderRadius.circular(
-                    25,
-                  ),
-                  color: kwhite),
+                boxShadow: [
+                  BoxShadow(
+                      color: kblack.withOpacity(0.5),
+                      offset: const Offset(-3, 10),
+                      spreadRadius: 0,
+                      blurRadius: 42)
+                ],
+                borderRadius: BorderRadius.circular(
+                  25,
+                ),
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? const Color.fromARGB(255, 49, 49, 49)
+                    : kwhite,
+              ),
               child: BottomNavigationBar(
-                selectedItemColor: kblack,
+                selectedItemColor:
+                    Theme.of(context).brightness == Brightness.dark
+                        ? kwhite
+                        : kblack,
                 unselectedItemColor: const Color.fromARGB(255, 162, 162, 162),
                 backgroundColor: kwhite,
                 selectedLabelStyle: GoogleFonts.lato(),

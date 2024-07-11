@@ -88,9 +88,7 @@ class SearchResultPage extends StatelessWidget {
                         'Name Of The Product',
                         overflow: TextOverflow.ellipsis,
                         style: GoogleFonts.poppins(
-                            color: kblack,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14),
+                            fontWeight: FontWeight.bold, fontSize: 14),
                       ),
                     ),
                     Text(

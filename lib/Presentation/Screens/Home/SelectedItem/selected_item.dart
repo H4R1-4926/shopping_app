@@ -191,21 +191,25 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               onPressed: () {
                 showModalBottomSheet(
                   showDragHandle: true,
-                  backgroundColor: kwhite,
                   context: context,
                   builder: (context) {
                     return Container(
                       height: 380,
                       width: double.infinity,
-                      decoration: const BoxDecoration(
-                          color: kwhite,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? kblack
+                              : kwhite,
                           boxShadow: [
                             BoxShadow(
-                                color: kwhite,
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? kblack
+                                    : kwhite,
                                 blurRadius: 10,
                                 spreadRadius: 10),
                           ],
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15))),
                       child: Column(
@@ -280,13 +284,19 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                         Container(
                                           width: 45,
                                           height: 45,
-                                          decoration: const BoxDecoration(
-                                              color: klightGrey,
-                                              borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(25),
-                                                  topLeft:
-                                                      Radius.circular(25))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                          .brightness ==
+                                                      Brightness.dark
+                                                  ? const Color.fromARGB(
+                                                      255, 53, 53, 53)
+                                                  : klightGrey,
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(25),
+                                                      topLeft:
+                                                          Radius.circular(25))),
                                           child: Center(
                                             child: Text(
                                               '-1',
@@ -299,13 +309,19 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                         Container(
                                           width: 45,
                                           height: 45,
-                                          decoration: const BoxDecoration(
-                                              color: klightGrey,
-                                              borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(25),
-                                                  topLeft:
-                                                      Radius.circular(25))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                          .brightness ==
+                                                      Brightness.dark
+                                                  ? const Color.fromARGB(
+                                                      255, 53, 53, 53)
+                                                  : klightGrey,
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                      bottomLeft:
+                                                          Radius.circular(25),
+                                                      topLeft:
+                                                          Radius.circular(25))),
                                           child: Center(
                                             child: Text(
                                               '-5',
@@ -320,7 +336,11 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                     Container(
                                       width: 45,
                                       height: 90,
-                                      color: klightGrey,
+                                      color: Theme.of(context).brightness ==
+                                              Brightness.dark
+                                          ? const Color.fromARGB(
+                                              255, 53, 53, 53)
+                                          : klightGrey,
                                       child: Center(
                                         child: Text(
                                           '1',
@@ -335,13 +355,19 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                         Container(
                                           width: 45,
                                           height: 45,
-                                          decoration: const BoxDecoration(
-                                              color: klightGrey,
-                                              borderRadius: BorderRadius.only(
-                                                  bottomRight:
-                                                      Radius.circular(25),
-                                                  topRight:
-                                                      Radius.circular(25))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                          .brightness ==
+                                                      Brightness.dark
+                                                  ? const Color.fromARGB(
+                                                      255, 53, 53, 53)
+                                                  : klightGrey,
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                      bottomRight:
+                                                          Radius.circular(25),
+                                                      topRight:
+                                                          Radius.circular(25))),
                                           child: Center(
                                             child: Text(
                                               '+1',
@@ -354,13 +380,19 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                         Container(
                                           width: 45,
                                           height: 45,
-                                          decoration: const BoxDecoration(
-                                              color: klightGrey,
-                                              borderRadius: BorderRadius.only(
-                                                  bottomRight:
-                                                      Radius.circular(25),
-                                                  topRight:
-                                                      Radius.circular(25))),
+                                          decoration: BoxDecoration(
+                                              color: Theme.of(context)
+                                                          .brightness ==
+                                                      Brightness.dark
+                                                  ? const Color.fromARGB(
+                                                      255, 53, 53, 53)
+                                                  : klightGrey,
+                                              borderRadius:
+                                                  const BorderRadius.only(
+                                                      bottomRight:
+                                                          Radius.circular(25),
+                                                      topRight:
+                                                          Radius.circular(25))),
                                           child: Center(
                                             child: Text(
                                               '+5',
@@ -383,7 +415,10 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                           ),
                           Expanded(
                             child: Container(
-                              color: kwhite,
+                              color: Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? kblack
+                                  : kwhite,
                               height: 70,
                               child: Padding(
                                 padding:
@@ -416,11 +451,18 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                       padding: const EdgeInsets.only(top: 19),
                                       child: ElevatedButton(
                                         onPressed: () {},
-                                        style: const ButtonStyle(
-                                            fixedSize: WidgetStatePropertyAll(
-                                                Size(210, 50)),
-                                            backgroundColor:
-                                                WidgetStatePropertyAll(kblack)),
+                                        style: ButtonStyle(
+                                            fixedSize:
+                                                const WidgetStatePropertyAll(
+                                                    Size(210, 50)),
+                                            backgroundColor: Theme.of(context)
+                                                        .brightness ==
+                                                    Brightness.dark
+                                                ? const WidgetStatePropertyAll(
+                                                    Color.fromARGB(
+                                                        255, 53, 53, 53))
+                                                : const WidgetStatePropertyAll(
+                                                    kblack)),
                                         child: Text(
                                           'Add to cart',
                                           style: GoogleFonts.lato(

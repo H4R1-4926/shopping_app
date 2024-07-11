@@ -12,8 +12,6 @@ class ItemList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: kwhite,
-        backgroundColor: kwhite,
         title: Text(
           'Item Name',
           style:
@@ -45,64 +43,68 @@ class ItemList extends StatelessWidget {
         itemCount: 25,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
+          mainAxisExtent: 280,
           childAspectRatio: 0.668,
         ),
         itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.all(8.0),
             child: SizedBox(
-              child: Stack(
+              child: Column(
                 children: [
-                  Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 10),
-                        child: Center(
-                          child: Container(
-                            height: 180,
-                            width: 180,
-                            decoration: BoxDecoration(
-                                image: const DecorationImage(
-                                    fit: BoxFit.cover,
-                                    image: NetworkImage(kDummyImg)),
-                                borderRadius: BorderRadius.circular(25)),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
-                            horizontal: 15, vertical: 7),
-                        child: Text(
-                          'Name Of The Product',
-                          overflow: TextOverflow.ellipsis,
-                          style: GoogleFonts.poppins(
-                              color: kblack,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 14),
-                        ),
-                      ),
-                      Text(
-                        '₹ 350 \\-',
-                        style: GoogleFonts.poppins(
-                            fontWeight: FontWeight.bold, fontSize: 16),
-                      )
-                    ],
-                  ),
                   Padding(
-                    padding:
-                        const EdgeInsets.only(left: 120, top: 15, right: 9),
-                    child: CircleAvatar(
-                      backgroundColor: kblack,
-                      maxRadius: 19,
-                      child: Center(
-                        child: IconButton(
-                          onPressed: () {},
-                          icon: const Icon(Icons.favorite_outline),
-                          iconSize: 20,
-                          color: kwhite,
+                    padding: const EdgeInsets.only(top: 10),
+                    child: Center(
+                      child: Container(
+                        height: 180,
+                        width: 180,
+                        decoration: BoxDecoration(
+                            image: const DecorationImage(
+                                fit: BoxFit.cover,
+                                image: NetworkImage(kDummyImg)),
+                            borderRadius: BorderRadius.circular(25)),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8, top: 8),
+                              child: CircleAvatar(
+                                backgroundColor: kblack,
+                                maxRadius: 18,
+                                child: Center(
+                                  child: IconButton(
+                                    onPressed: () {},
+                                    icon: const Icon(
+                                        Icons.favorite_border_outlined),
+                                    iconSize: 20,
+                                    color: kwhite,
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
                     ),
+                  ),
+                  Padding(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 15, vertical: 7),
+                    child: Text(
+                      'Name Of The Product',
+                      overflow: TextOverflow.ellipsis,
+                      style: GoogleFonts.poppins(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14),
+                    ),
+                  ),
+                  Text(
+                    '₹ 350 \\-',
+                    style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold, fontSize: 16),
                   )
                 ],
               ),

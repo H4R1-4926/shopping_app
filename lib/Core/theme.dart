@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:shopping_app/Core/colors.dart';
 
 ThemeData kdarkMode = ThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
+      modalBackgroundColor: kblack,
+    ),
     searchBarTheme: const SearchBarThemeData(
         backgroundColor: WidgetStatePropertyAll(Color.fromARGB(95, 69, 69, 69)),
         surfaceTintColor:
@@ -16,6 +19,9 @@ ThemeData kdarkMode = ThemeData(
       inversePrimary: kGrey,
     ));
 ThemeData klightMode = ThemeData(
+    bottomSheetTheme: const BottomSheetThemeData(
+      modalBackgroundColor: kwhite,
+    ),
     searchBarTheme: const SearchBarThemeData(
         backgroundColor: WidgetStatePropertyAll(
           klightGrey,

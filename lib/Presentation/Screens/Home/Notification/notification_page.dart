@@ -9,10 +9,15 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        surfaceTintColor: klightGrey,
-        backgroundColor: klightGrey,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
+        surfaceTintColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
         title: Text(
           'Notifications',
           style:
@@ -24,8 +29,12 @@ class NotificationPage extends StatelessWidget {
           return Card(
             margin: const EdgeInsets.only(bottom: 15),
             elevation: 0,
-            color: klightGrey,
-            surfaceTintColor: klightGrey,
+            color: Theme.of(context).brightness == Brightness.dark
+                ? kblack
+                : klightGrey,
+            surfaceTintColor: Theme.of(context).brightness == Brightness.dark
+                ? kblack
+                : klightGrey,
             borderOnForeground: false,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -44,15 +53,21 @@ class NotificationPage extends StatelessWidget {
                     width: 340,
                     height: 110,
                     decoration: BoxDecoration(
-                        color: kwhite, borderRadius: BorderRadius.circular(18)),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? const Color.fromARGB(255, 53, 53, 53)
+                            : kwhite,
+                        borderRadius: BorderRadius.circular(18)),
                     child: Row(
                       children: [
                         const SizedBox(
                           width: 10,
                         ),
-                        const CircleAvatar(
+                        CircleAvatar(
                           maxRadius: 36,
-                          backgroundColor: kblack,
+                          backgroundColor:
+                              Theme.of(context).brightness == Brightness.dark
+                                  ? kwhite
+                                  : kblack,
                         ),
                         const SizedBox(
                           width: 25,

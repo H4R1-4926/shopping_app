@@ -30,17 +30,38 @@ class GridCategaryWidget extends StatelessWidget {
               children: [
                 ButtonsTabBar(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25), color: kblack),
+                      borderRadius: BorderRadius.circular(25),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kwhite
+                          : kblack,
+                    ),
                     unselectedDecoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25), color: kwhite),
-                    borderColor: kblack,
+                      borderRadius: BorderRadius.circular(25),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? Theme.of(context).scaffoldBackgroundColor
+                          : kwhite,
+                    ),
+                    borderColor: Theme.of(context).brightness == Brightness.dark
+                        ? kwhite
+                        : kblack,
+                    unselectedBorderColor:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
                     borderWidth: 2,
                     unselectedLabelStyle: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600, color: kblack),
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kwhite
+                          : kblack,
+                    ),
                     labelStyle: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 13,
-                        color: kwhite),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kblack
+                          : kwhite,
+                    ),
                     radius: 25,
                     height: 40,
                     buttonMargin: const EdgeInsets.symmetric(
@@ -154,7 +175,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -254,7 +274,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -354,7 +373,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -454,7 +472,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -554,7 +571,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -654,7 +670,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),
@@ -754,7 +769,6 @@ class GridCategaryWidget extends StatelessWidget {
                                       'Name Of The Product',
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.poppins(
-                                          color: kblack,
                                           fontWeight: FontWeight.bold,
                                           fontSize: 14),
                                     ),

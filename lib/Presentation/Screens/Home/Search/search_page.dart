@@ -78,7 +78,6 @@ class _SearchPageState extends State<SearchPage> {
                       onPressed: () {},
                       icon: const Icon(
                         Icons.tune_outlined,
-                        color: kblack,
                       )),
                 ],
                 onSubmitted: (value) {
