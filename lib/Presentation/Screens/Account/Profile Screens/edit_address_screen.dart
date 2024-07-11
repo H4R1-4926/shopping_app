@@ -11,11 +11,10 @@ class EditAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        surfaceTintColor: kwhite,
         automaticallyImplyLeading: true,
-        backgroundColor: kwhite,
         title: Text(
           'Edit Address',
           style:
@@ -32,7 +31,9 @@ class EditAddress extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: ListTile(
-                  tileColor: kwhite,
+                  tileColor: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 53, 53, 53)
+                      : kwhite,
                   leading: CircleAvatar(
                     backgroundColor: kGrey.withOpacity(0.4),
                     radius: 25,
@@ -67,9 +68,9 @@ class EditAddress extends StatelessWidget {
                   title: Text(
                     'Person Name',
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 17,
-                        color: kblack),
+                      fontWeight: FontWeight.w900,
+                      fontSize: 17,
+                    ),
                   ),
                   subtitle: Text(
                     'Address',
@@ -112,9 +113,15 @@ class EditAddress extends StatelessWidget {
               },
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStatePropertyAll(kGrey.withOpacity(0.1)),
-                  foregroundColor: const MaterialStatePropertyAll(kblack),
-                  fixedSize: const MaterialStatePropertyAll(Size(0, 50))),
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(
+                              Color.fromARGB(255, 101, 101, 101))
+                          : WidgetStatePropertyAll(kGrey.withOpacity(0.1)),
+                  foregroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
+                  fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
                 'Add New Address',
                 style:
@@ -127,20 +134,25 @@ class EditAddress extends StatelessWidget {
       bottomSheet: Container(
         width: double.infinity,
         height: 100,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color.fromARGB(255, 97, 97, 97)
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 50)),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                foregroundColor: MaterialStatePropertyAll(kwhite),
-                elevation: MaterialStatePropertyAll(10)),
+            style: ButtonStyle(
+                fixedSize: const WidgetStatePropertyAll(Size(310, 50)),
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? const WidgetStatePropertyAll(
+                        Color.fromARGB(255, 59, 59, 59))
+                    : const WidgetStatePropertyAll(kblack),
+                foregroundColor: const WidgetStatePropertyAll(kwhite),
+                elevation: const WidgetStatePropertyAll(10)),
             child: Text('Apply',
                 style: GoogleFonts.lato(
                     color: kwhite, fontWeight: FontWeight.bold, fontSize: 12)),

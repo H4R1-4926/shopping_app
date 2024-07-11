@@ -24,18 +24,21 @@ class AccountPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          surfaceTintColor: kwhite,
           automaticallyImplyLeading: false,
-          backgroundColor: kwhite,
+          backgroundColor: Theme.of(context).brightness == Brightness.dark
+              ? Theme.of(context).scaffoldBackgroundColor
+              : kwhite,
           title: Text(
             'Profile',
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
-          leading: const Padding(
-            padding: EdgeInsets.only(left: 5),
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 5),
             child: CircleAvatar(
-              backgroundColor: kblack,
+              backgroundColor: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
               radius: 2,
             ),
           ),

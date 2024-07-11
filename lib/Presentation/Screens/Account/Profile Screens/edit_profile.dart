@@ -17,9 +17,13 @@ class EditProfile extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: kwhite,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? Theme.of(context).scaffoldBackgroundColor
+            : kwhite,
         automaticallyImplyLeading: true,
-        backgroundColor: kwhite,
+        surfaceTintColor: Theme.of(context).brightness == Brightness.dark
+            ? Theme.of(context).scaffoldBackgroundColor
+            : kwhite,
         title: Text(
           'Edit Profile',
           style:
@@ -49,7 +53,9 @@ class EditProfile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 54, 54, 54)
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -73,7 +79,9 @@ class EditProfile extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 54, 54, 54)
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -92,17 +100,21 @@ class EditProfile extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide.none),
                 filled: true,
-                fillColor: const Color.fromARGB(255, 243, 243, 243),
+                fillColor: Theme.of(context).brightness == Brightness.dark
+                    ? const Color.fromARGB(255, 54, 54, 54)
+                    : kwhite,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 5),
                   child: DropdownButton(
                     underline: const SizedBox(),
                     icon: const Icon(Icons.arrow_drop_down_rounded),
-                    iconEnabledColor: kblack,
+                    iconEnabledColor:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
                     iconSize: 32,
                     borderRadius: BorderRadius.circular(18),
-                    style: GoogleFonts.lato(
-                        color: kblack, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.lato(fontWeight: FontWeight.bold),
                     items: gender
                         .map((e) => DropdownMenuItem(
                               value: e,
@@ -122,17 +134,22 @@ class EditProfile extends StatelessWidget {
         ],
       ),
       bottomSheet: Container(
-          color: kwhite,
+          color: Theme.of(context).brightness == Brightness.dark
+              ? const Color.fromARGB(255, 31, 31, 31)
+              : kwhite,
           height: 100,
           child: Center(
               child: ElevatedButton(
             onPressed: () {
               Navigator.pop(context);
             },
-            style: const ButtonStyle(
-                elevation: MaterialStatePropertyAll(8),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                fixedSize: MaterialStatePropertyAll(Size(300, 55))),
+            style: ButtonStyle(
+                elevation: const WidgetStatePropertyAll(8),
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? const WidgetStatePropertyAll(
+                        Color.fromARGB(255, 72, 72, 72))
+                    : const WidgetStatePropertyAll(kblack),
+                fixedSize: const WidgetStatePropertyAll(Size(300, 55))),
             child: Text(
               'Apply',
               style: GoogleFonts.lato(
