@@ -20,7 +20,7 @@ ThemeData kdarkMode = ThemeData(
     ));
 ThemeData klightMode = ThemeData(
     bottomSheetTheme: const BottomSheetThemeData(
-      modalBackgroundColor: kwhite,
+      modalBackgroundColor: klightGrey,
     ),
     searchBarTheme: const SearchBarThemeData(
         backgroundColor: WidgetStatePropertyAll(

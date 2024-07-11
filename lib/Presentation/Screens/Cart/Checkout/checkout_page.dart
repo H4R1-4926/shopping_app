@@ -14,10 +14,9 @@ class CheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        backgroundColor: kwhite,
-        surfaceTintColor: kwhite,
         title: Text(
           'Checkout',
           style:
@@ -38,9 +37,9 @@ class CheckoutPage extends StatelessWidget {
                   child: Text(
                     'Shipping Address',
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 21,
-                        color: kblack),
+                      fontWeight: FontWeight.w900,
+                      fontSize: 21,
+                    ),
                   ),
                 ),
                 const SizedBox(
@@ -85,9 +84,9 @@ class CheckoutPage extends StatelessWidget {
                       title: Text(
                         'Person Name',
                         style: GoogleFonts.lato(
-                            fontWeight: FontWeight.w900,
-                            fontSize: 18,
-                            color: kblack),
+                          fontWeight: FontWeight.w900,
+                          fontSize: 18,
+                        ),
                       ),
                       subtitle: Text(
                         'Address',
@@ -98,7 +97,9 @@ class CheckoutPage extends StatelessWidget {
                       ),
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 10),
-                      tileColor: kwhite,
+                      tileColor: Theme.of(context).brightness == Brightness.dark
+                          ? const Color.fromARGB(255, 38, 38, 38)
+                          : kwhite,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
                     ),
@@ -108,17 +109,18 @@ class CheckoutPage extends StatelessWidget {
             ),
           ),
           kSizedBoxHeight10,
-          Divider(
+          const Divider(
             indent: 23,
             endIndent: 23,
-            color: kGrey.withOpacity(0.2),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
               'Order List',
               style: GoogleFonts.lato(
-                  fontWeight: FontWeight.w900, fontSize: 21, color: kblack),
+                fontWeight: FontWeight.w900,
+                fontSize: 21,
+              ),
             ),
           ),
           kSizedBoxHeight10,
@@ -132,7 +134,10 @@ class CheckoutPage extends StatelessWidget {
                 child: Container(
                   height: 150,
                   decoration: BoxDecoration(
-                      color: kwhite, borderRadius: BorderRadius.circular(20)),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? const Color.fromARGB(255, 40, 40, 40)
+                          : kwhite,
+                      borderRadius: BorderRadius.circular(20)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
@@ -171,7 +176,6 @@ class CheckoutPage extends StatelessWidget {
                                           'Name of Product',
                                           overflow: TextOverflow.ellipsis,
                                           style: GoogleFonts.lato(
-                                              color: kblack,
                                               fontWeight: FontWeight.w900,
                                               fontSize: 17),
                                         ),
@@ -235,9 +239,11 @@ class CheckoutPage extends StatelessWidget {
       bottomSheet: Container(
         width: double.infinity,
         height: 100,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color.fromARGB(255, 32, 32, 32)
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
@@ -258,11 +264,15 @@ class CheckoutPage extends StatelessWidget {
                   },
                 ));
               },
-              style: const ButtonStyle(
-                  fixedSize: MaterialStatePropertyAll(Size(310, 60)),
-                  backgroundColor: MaterialStatePropertyAll(kblack),
-                  foregroundColor: MaterialStatePropertyAll(kwhite),
-                  elevation: MaterialStatePropertyAll(10)),
+              style: ButtonStyle(
+                  fixedSize: const WidgetStatePropertyAll(Size(310, 60)),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(
+                              Color.fromARGB(255, 77, 77, 77))
+                          : const WidgetStatePropertyAll(kblack),
+                  foregroundColor: const WidgetStatePropertyAll(kwhite),
+                  elevation: const WidgetStatePropertyAll(10)),
               child: Text(
                 'Continue ➤',
                 style: GoogleFonts.lato(

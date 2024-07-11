@@ -11,10 +11,9 @@ class RecieptPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        backgroundColor: kwhite,
-        surfaceTintColor: kwhite,
         title: Text(
           'Overview',
           style:
@@ -31,13 +30,17 @@ class RecieptPage extends StatelessWidget {
             child: Text(
               'Shipping Address',
               style: GoogleFonts.lato(
-                  fontWeight: FontWeight.w900, fontSize: 21, color: kblack),
+                fontWeight: FontWeight.w900,
+                fontSize: 21,
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: ListTile(
-              tileColor: kwhite,
+              tileColor: Theme.of(context).brightness == Brightness.dark
+                  ? const Color.fromARGB(255, 53, 53, 53)
+                  : kwhite,
               leading: CircleAvatar(
                 backgroundColor: kGrey.withOpacity(0.4),
                 radius: 34,
@@ -53,7 +56,9 @@ class RecieptPage extends StatelessWidget {
               title: Text(
                 'Person Name',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 18,
+                ),
               ),
               subtitle: Text(
                 'Address',
@@ -76,13 +81,17 @@ class RecieptPage extends StatelessWidget {
             child: Text(
               'Shipping Method',
               style: GoogleFonts.lato(
-                  fontWeight: FontWeight.w900, fontSize: 21, color: kblack),
+                fontWeight: FontWeight.w900,
+                fontSize: 21,
+              ),
             ),
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: ListTile(
-              tileColor: kwhite,
+              tileColor: Theme.of(context).brightness == Brightness.dark
+                  ? const Color.fromARGB(255, 53, 53, 53)
+                  : kwhite,
               leading: CircleAvatar(
                 backgroundColor: kGrey.withOpacity(0.4),
                 radius: 34,
@@ -98,7 +107,9 @@ class RecieptPage extends StatelessWidget {
               title: Text(
                 'Delivery',
                 style: GoogleFonts.lato(
-                    fontWeight: FontWeight.w900, fontSize: 18, color: kblack),
+                  fontWeight: FontWeight.w900,
+                  fontSize: 18,
+                ),
               ),
               subtitle: Text(
                 'Time',
@@ -124,7 +135,10 @@ class RecieptPage extends StatelessWidget {
               height: 270,
               width: double.infinity,
               decoration: BoxDecoration(
-                  color: kwhite, borderRadius: BorderRadius.circular(20)),
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 52, 52, 52)
+                      : kwhite,
+                  borderRadius: BorderRadius.circular(20)),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -229,9 +243,11 @@ class RecieptPage extends StatelessWidget {
       bottomSheet: Container(
         height: 80,
         width: double.infinity,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color.fromARGB(255, 32, 32, 32)
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
@@ -252,10 +268,14 @@ class RecieptPage extends StatelessWidget {
                   },
                 ));
               },
-              style: const ButtonStyle(
-                  fixedSize: MaterialStatePropertyAll(Size(300, 50)),
-                  backgroundColor: MaterialStatePropertyAll(kblack),
-                  foregroundColor: MaterialStatePropertyAll(kwhite)),
+              style: ButtonStyle(
+                  fixedSize: const WidgetStatePropertyAll(Size(300, 50)),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(
+                              Color.fromARGB(255, 64, 64, 64))
+                          : const WidgetStatePropertyAll(kblack),
+                  foregroundColor: const WidgetStatePropertyAll(kwhite)),
               child: Text(
                 'Payment ➤',
                 style:

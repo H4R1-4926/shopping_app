@@ -14,10 +14,10 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: klightGrey,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kblack
+            : klightGrey,
         appBar: AppBar(
-          surfaceTintColor: kwhite,
-          backgroundColor: kwhite,
           title: Text(
             'My Cart',
             style: GoogleFonts.montserrat(
@@ -90,9 +90,14 @@ class CartPage extends StatelessWidget {
                             },
                           ));
                         },
-                        style: const ButtonStyle(
-                            backgroundColor: WidgetStatePropertyAll(kblack),
-                            fixedSize: WidgetStatePropertyAll(Size(200, 55))),
+                        style: ButtonStyle(
+                            backgroundColor:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? const WidgetStatePropertyAll(
+                                        Color.fromARGB(255, 53, 53, 53))
+                                    : const WidgetStatePropertyAll(kblack),
+                            fixedSize:
+                                const WidgetStatePropertyAll(Size(200, 55))),
                         child: Text(
                           'Checkout  ➤',
                           style: GoogleFonts.lato(
@@ -105,10 +110,12 @@ class CartPage extends StatelessWidget {
                   ),
                 ),
               )),
-          leading: const Padding(
-            padding: EdgeInsets.only(left: 5),
+          leading: Padding(
+            padding: const EdgeInsets.only(left: 5),
             child: CircleAvatar(
-              backgroundColor: kblack,
+              backgroundColor: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
               radius: 2,
             ),
           ),
@@ -124,7 +131,10 @@ class CartPage extends StatelessWidget {
                 child: Container(
                   height: 150,
                   decoration: BoxDecoration(
-                      color: kwhite, borderRadius: BorderRadius.circular(20)),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? const Color.fromARGB(115, 69, 69, 69)
+                          : kwhite,
+                      borderRadius: BorderRadius.circular(20)),
                   child: Padding(
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Row(
@@ -160,7 +170,6 @@ class CartPage extends StatelessWidget {
                                         'Name of Product',
                                         overflow: TextOverflow.ellipsis,
                                         style: GoogleFonts.lato(
-                                            color: kblack,
                                             fontWeight: FontWeight.w900,
                                             fontSize: 15),
                                       ),
@@ -173,17 +182,25 @@ class CartPage extends StatelessWidget {
                                         onPressed: () {
                                           showModalBottomSheet(
                                             showDragHandle: true,
-                                            backgroundColor: klightGrey,
                                             context: context,
                                             builder: (context) {
                                               return Container(
                                                 height: 380,
                                                 width: double.infinity,
-                                                decoration: const BoxDecoration(
-                                                    color: klightGrey,
+                                                decoration: BoxDecoration(
+                                                    color: Theme.of(context)
+                                                                .brightness ==
+                                                            Brightness.dark
+                                                        ? kblack
+                                                        : klightGrey,
                                                     boxShadow: [
                                                       BoxShadow(
-                                                          color: klightGrey,
+                                                          color: Theme.of(context)
+                                                                      .brightness ==
+                                                                  Brightness
+                                                                      .dark
+                                                              ? kblack
+                                                              : klightGrey,
                                                           blurRadius: 10,
                                                           spreadRadius: 10)
                                                     ]),
@@ -199,17 +216,19 @@ class CartPage extends StatelessWidget {
                                                                       .bold),
                                                     ),
                                                     kSizedBoxHeight10,
-                                                    Divider(
+                                                    const Divider(
                                                       indent: 23,
                                                       endIndent: 23,
-                                                      color: kGrey
-                                                          .withOpacity(0.2),
                                                     ),
                                                     kSizedBoxHeight10,
                                                     Container(
                                                       height: 210,
                                                       width: double.infinity,
-                                                      color: klightGrey,
+                                                      color: Theme.of(context)
+                                                                  .brightness ==
+                                                              Brightness.dark
+                                                          ? kblack
+                                                          : klightGrey,
                                                       child: Center(
                                                         child: Padding(
                                                           padding:
@@ -221,7 +240,17 @@ class CartPage extends StatelessWidget {
                                                           child: Container(
                                                             height: 150,
                                                             decoration: BoxDecoration(
-                                                                color: kwhite,
+                                                                color: Theme.of(context)
+                                                                            .brightness ==
+                                                                        Brightness
+                                                                            .dark
+                                                                    ? const Color
+                                                                        .fromARGB(
+                                                                        255,
+                                                                        51,
+                                                                        51,
+                                                                        51)
+                                                                    : kwhite,
                                                                 borderRadius:
                                                                     BorderRadius
                                                                         .circular(
@@ -281,7 +310,7 @@ class CartPage extends StatelessWidget {
                                                                                   child: Text(
                                                                                     'Name of Product',
                                                                                     overflow: TextOverflow.ellipsis,
-                                                                                    style: GoogleFonts.lato(color: kblack, fontWeight: FontWeight.w900, fontSize: 17),
+                                                                                    style: GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 17),
                                                                                   ),
                                                                                 ),
                                                                               ],
@@ -332,11 +361,9 @@ class CartPage extends StatelessWidget {
                                                         ),
                                                       ),
                                                     ),
-                                                    Divider(
+                                                    const Divider(
                                                       indent: 23,
                                                       endIndent: 23,
-                                                      color: kGrey
-                                                          .withOpacity(0.2),
                                                     ),
                                                     Padding(
                                                       padding:
@@ -380,16 +407,24 @@ class CartPage extends StatelessWidget {
                                                                 Navigator.pop(
                                                                     context);
                                                               },
-                                                              style: const ButtonStyle(
+                                                              style: ButtonStyle(
                                                                   fixedSize:
-                                                                      WidgetStatePropertyAll(Size(
+                                                                      const WidgetStatePropertyAll(Size(
                                                                           150,
                                                                           50)),
-                                                                  backgroundColor:
-                                                                      WidgetStatePropertyAll(
+                                                                  backgroundColor: Theme.of(context)
+                                                                              .brightness ==
+                                                                          Brightness
+                                                                              .dark
+                                                                      ? const WidgetStatePropertyAll(Color.fromARGB(
+                                                                          255,
+                                                                          69,
+                                                                          69,
+                                                                          69))
+                                                                      : const WidgetStatePropertyAll(
                                                                           kblack),
                                                                   foregroundColor:
-                                                                      WidgetStatePropertyAll(
+                                                                      const WidgetStatePropertyAll(
                                                                           kwhite)),
                                                               child: Text(
                                                                 'Yes, Remove',
@@ -412,7 +447,6 @@ class CartPage extends StatelessWidget {
                                         icon: const Icon(
                                           Icons.delete_outline_outlined,
                                           size: 23,
-                                          color: kblack,
                                         ),
                                       ),
                                     )

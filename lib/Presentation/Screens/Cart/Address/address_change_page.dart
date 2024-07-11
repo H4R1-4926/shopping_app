@@ -10,10 +10,9 @@ class AddressChangePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        backgroundColor: kwhite,
-        surfaceTintColor: kwhite,
         title: Text(
           'Shipping Address',
           style:
@@ -30,7 +29,9 @@ class AddressChangePage extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: ListTile(
-                  tileColor: kwhite,
+                  tileColor: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 54, 54, 54)
+                      : kwhite,
                   leading: CircleAvatar(
                     backgroundColor: kGrey.withOpacity(0.4),
                     radius: 34,
@@ -47,17 +48,21 @@ class AddressChangePage extends StatelessWidget {
                     value: 1,
                     groupValue: 1,
                     onChanged: (value) {},
-                    activeColor: kblack,
-                    fillColor: const MaterialStatePropertyAll(kblack),
+                    activeColor: Theme.of(context).brightness == Brightness.dark
+                        ? kwhite
+                        : kblack,
+                    fillColor: Theme.of(context).brightness == Brightness.dark
+                        ? const WidgetStatePropertyAll(kwhite)
+                        : const WidgetStatePropertyAll(kblack),
                     splashRadius: 25,
                     visualDensity: VisualDensity.comfortable,
                   ),
                   title: Text(
                     'Person Name',
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900,
-                        fontSize: 18,
-                        color: kblack),
+                      fontWeight: FontWeight.w900,
+                      fontSize: 18,
+                    ),
                   ),
                   subtitle: Text(
                     'Address',
@@ -82,9 +87,15 @@ class AddressChangePage extends StatelessWidget {
               onPressed: () {},
               style: ButtonStyle(
                   backgroundColor:
-                      MaterialStatePropertyAll(kGrey.withOpacity(0.1)),
-                  foregroundColor: const MaterialStatePropertyAll(kblack),
-                  fixedSize: const MaterialStatePropertyAll(Size(0, 50))),
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(
+                              Color.fromARGB(255, 53, 53, 53))
+                          : WidgetStatePropertyAll(kGrey.withOpacity(0.1)),
+                  foregroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kGrey)
+                          : const WidgetStatePropertyAll(kblack),
+                  fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
                 'Add New Address',
                 style:
@@ -97,20 +108,25 @@ class AddressChangePage extends StatelessWidget {
       bottomSheet: Container(
         width: double.infinity,
         height: 100,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color.fromARGB(255, 41, 41, 41)
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 60)),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                foregroundColor: MaterialStatePropertyAll(kwhite),
-                elevation: MaterialStatePropertyAll(10)),
+            style: ButtonStyle(
+                fixedSize: const WidgetStatePropertyAll(Size(310, 60)),
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? const WidgetStatePropertyAll(
+                        Color.fromARGB(255, 53, 53, 53))
+                    : const WidgetStatePropertyAll(kblack),
+                foregroundColor: const WidgetStatePropertyAll(kwhite),
+                elevation: const WidgetStatePropertyAll(10)),
             child: const Text('Apply'),
           ),
         ),

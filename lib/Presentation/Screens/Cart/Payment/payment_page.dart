@@ -10,10 +10,9 @@ class PaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor:
+          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
       appBar: AppBar(
-        backgroundColor: kwhite,
-        surfaceTintColor: kwhite,
         title: Text(
           'Payment Methods',
           style:
@@ -38,9 +37,11 @@ class PaymentPage extends StatelessWidget {
               child: Container(
                 height: 70,
                 width: 350,
-                decoration: const BoxDecoration(
-                    color: kwhite,
-                    borderRadius: BorderRadius.only(
+                decoration: BoxDecoration(
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? const Color.fromARGB(255, 53, 53, 53)
+                        : kwhite,
+                    borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),
                         topRight: Radius.circular(20))),
                 child: Row(
@@ -72,8 +73,13 @@ class PaymentPage extends StatelessWidget {
                       value: 1,
                       groupValue: 1,
                       onChanged: (value) {},
-                      activeColor: kblack,
-                      fillColor: const MaterialStatePropertyAll(kblack),
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
+                      fillColor: Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
                     )
                   ],
                 ),
@@ -84,32 +90,37 @@ class PaymentPage extends StatelessWidget {
                     child: Container(
               height: 100,
               width: 350,
-              decoration: const BoxDecoration(
-                  color: kwhite,
-                  borderRadius: BorderRadius.only(
+              decoration: BoxDecoration(
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? const Color.fromARGB(255, 54, 54, 54)
+                      : kwhite,
+                  borderRadius: const BorderRadius.only(
                       bottomRight: Radius.circular(20),
                       bottomLeft: Radius.circular(20))),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 8),
-                    child: TextField(
-                      maxLength: 30,
-                      maxLines: 1,
-                      cursorColor: kblack,
-                      decoration: InputDecoration(
-                          enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(35),
-                              borderSide:
-                                  const BorderSide(width: 1.3, color: kblack)),
-                          counterText: '',
-                          hintText: 'Enter valid UPI ID',
-                          focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(35),
-                              borderSide:
-                                  const BorderSide(color: kblack, width: 2)),
-                          suffixIcon: IconButton(
-                              onPressed: () {}, icon: const Icon(Icons.close))),
+                  Flexible(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8),
+                      child: TextField(
+                        maxLength: 30,
+                        maxLines: 1,
+                        cursorColor: kblack,
+                        decoration: InputDecoration(
+                            enabledBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(35),
+                                borderSide: const BorderSide(
+                                    width: 1.3, color: kblack)),
+                            counterText: '',
+                            hintText: 'Enter valid UPI ID',
+                            focusedBorder: OutlineInputBorder(
+                                borderRadius: BorderRadius.circular(35),
+                                borderSide:
+                                    const BorderSide(color: kblack, width: 2)),
+                            suffixIcon: IconButton(
+                                onPressed: () {},
+                                icon: const Icon(Icons.close))),
+                      ),
                     ),
                   ),
                   kSizedBoxHeight5,
@@ -147,7 +158,10 @@ class PaymentPage extends StatelessWidget {
                 height: 70,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: kwhite, borderRadius: BorderRadius.circular(20)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? const Color.fromARGB(255, 54, 54, 54)
+                        : kwhite,
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -177,8 +191,13 @@ class PaymentPage extends StatelessWidget {
                       value: 1,
                       groupValue: 0,
                       onChanged: (value) {},
-                      activeColor: kblack,
-                      fillColor: const MaterialStatePropertyAll(kblack),
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
+                      fillColor: Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
                     )
                   ],
                 ),
@@ -190,7 +209,10 @@ class PaymentPage extends StatelessWidget {
                 height: 70,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: kwhite, borderRadius: BorderRadius.circular(20)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? const Color.fromARGB(255, 53, 53, 53)
+                        : kwhite,
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -220,8 +242,13 @@ class PaymentPage extends StatelessWidget {
                       value: 1,
                       groupValue: 0,
                       onChanged: (value) {},
-                      activeColor: kblack,
-                      fillColor: const MaterialStatePropertyAll(kblack),
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
+                      fillColor: Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
                     )
                   ],
                 ),
@@ -233,7 +260,10 @@ class PaymentPage extends StatelessWidget {
                 height: 70,
                 width: 350,
                 decoration: BoxDecoration(
-                    color: kwhite, borderRadius: BorderRadius.circular(20)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? const Color.fromARGB(255, 54, 54, 54)
+                        : kwhite,
+                    borderRadius: BorderRadius.circular(20)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -263,8 +293,13 @@ class PaymentPage extends StatelessWidget {
                       value: 1,
                       groupValue: 0,
                       onChanged: (value) {},
-                      activeColor: kblack,
-                      fillColor: const MaterialStatePropertyAll(kblack),
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
+                      fillColor: Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
                     )
                   ],
                 ),
@@ -276,9 +311,11 @@ class PaymentPage extends StatelessWidget {
       bottomSheet: Container(
         height: 80,
         width: double.infinity,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? const Color.fromARGB(255, 42, 42, 42)
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
@@ -290,9 +327,12 @@ class PaymentPage extends StatelessWidget {
                   ),
                   (route) => false);
             },
-            style: const ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                fixedSize: MaterialStatePropertyAll(Size(300, 50))),
+            style: ButtonStyle(
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? const WidgetStatePropertyAll(
+                        Color.fromARGB(255, 62, 62, 62))
+                    : const WidgetStatePropertyAll(kblack),
+                fixedSize: const WidgetStatePropertyAll(Size(300, 50))),
             child: Text(
               'Confirm Payment',
               style: GoogleFonts.lato(
