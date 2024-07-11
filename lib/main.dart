@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shopping_app/Application/Theme%20Bloc/theme_bloc_bloc.dart';
 
-import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/theme.dart';
 import 'package:shopping_app/Presentation/Home/tab_bar.dart';
 import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
@@ -17,13 +17,24 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => RadioButtonBloc(),
-      child: MaterialApp(
-          // darkTheme: kdarkMode,
-          theme: ThemeData(scaffoldBackgroundColor: kwhite),
-          debugShowCheckedModeBanner: false,
-          home: const TabBarPage()),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => RadioButtonBloc(),
+        ),
+        BlocProvider(
+          create: (context) => ThemeBlocBloc(),
+        ),
+      ],
+      child: BlocBuilder<ThemeBlocBloc, ThemeBlocState>(
+        builder: (context, state) {
+          return MaterialApp(
+              darkTheme: kdarkMode,
+              theme: state.isTrue ? kdarkMode : klightMode,
+              debugShowCheckedModeBanner: false,
+              home: const TabBarPage());
+        },
+      ),
     );
   }
 }

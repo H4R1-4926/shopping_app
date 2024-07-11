@@ -119,9 +119,9 @@ class LanguageSettings extends StatelessWidget {
                 Navigator.pop(context);
               },
               style: const ButtonStyle(
-                  elevation: MaterialStatePropertyAll(8),
-                  backgroundColor: MaterialStatePropertyAll(kblack),
-                  fixedSize: MaterialStatePropertyAll(Size(270, 50))),
+                  elevation: WidgetStatePropertyAll(8),
+                  backgroundColor: WidgetStatePropertyAll(kblack),
+                  fixedSize: WidgetStatePropertyAll(Size(270, 50))),
               child: Text(
                 'Apply',
                 style: GoogleFonts.lato(

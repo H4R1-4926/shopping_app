@@ -15,7 +15,9 @@ class CatogorySection extends StatelessWidget {
     return Container(
       height: 230,
       width: double.infinity,
-      color: kwhite,
+      color: Theme.of(context).brightness == Brightness.dark
+          ? Theme.of(context).scaffoldBackgroundColor
+          : kwhite,
       child: Column(
         children: [
           Row(
