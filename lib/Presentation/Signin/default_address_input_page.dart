@@ -11,9 +11,7 @@ class MainAddressAddPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: kwhite,
         automaticallyImplyLeading: true,
-        backgroundColor: kwhite,
         title: Text(
           'Add Address',
           style:
@@ -52,7 +50,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -85,7 +85,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -118,7 +120,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -151,7 +155,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -184,7 +190,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -217,7 +225,9 @@ class MainAddressAddPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           const SizedBox(
@@ -228,9 +238,11 @@ class MainAddressAddPage extends StatelessWidget {
       bottomSheet: Container(
         width: double.infinity,
         height: 80,
-        decoration: const BoxDecoration(
-            color: kwhite,
-            borderRadius: BorderRadius.only(
+        decoration: BoxDecoration(
+            color: Theme.of(context).brightness == Brightness.dark
+                ? kdarkbackground
+                : kwhite,
+            borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
         child: Center(
           child: ElevatedButton(
@@ -241,11 +253,14 @@ class MainAddressAddPage extends StatelessWidget {
                     builder: (context) => const TabBarPage(),
                   ));
             },
-            style: const ButtonStyle(
-                fixedSize: MaterialStatePropertyAll(Size(310, 50)),
-                backgroundColor: MaterialStatePropertyAll(kblack),
-                foregroundColor: MaterialStatePropertyAll(kwhite),
-                elevation: MaterialStatePropertyAll(10)),
+            style: ButtonStyle(
+                fixedSize: const WidgetStatePropertyAll(Size(310, 50)),
+                backgroundColor: WidgetStatePropertyAll(
+                    Theme.of(context).brightness == Brightness.dark
+                        ? kdarkcolor1
+                        : kblack),
+                foregroundColor: const WidgetStatePropertyAll(kwhite),
+                elevation: const WidgetStatePropertyAll(10)),
             child: Text(
               'Continue',
               style: GoogleFonts.lato(fontWeight: FontWeight.bold),

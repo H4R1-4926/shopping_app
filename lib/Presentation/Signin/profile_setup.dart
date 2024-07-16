@@ -18,8 +18,6 @@ class ProfileSetUpPage extends StatelessWidget {
         TextEditingController(text: 'Gender');
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: kwhite,
-        surfaceTintColor: kwhite,
         title: Text(
           'Fill your profile',
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),
@@ -39,7 +37,9 @@ class ProfileSetUpPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(
-              cursorColor: kblack,
+              cursorColor: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
               maxLength: 20,
               maxLines: 1,
               autofocus: true,
@@ -56,14 +56,15 @@ class ProfileSetUpPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(
-              cursorColor: kblack,
               maxLength: 20,
               maxLines: 1,
               autofocus: true,
@@ -80,7 +81,9 @@ class ProfileSetUpPage extends StatelessWidget {
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 243, 243, 243)),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite),
             ),
           ),
           kSizedBoxHeight30,
@@ -99,17 +102,23 @@ class ProfileSetUpPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide.none),
                 filled: true,
-                fillColor: const Color.fromARGB(255, 243, 243, 243),
+                fillColor: kdarkcolor1,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 5),
                   child: DropdownButton(
                     underline: const SizedBox(),
                     icon: const Icon(Icons.arrow_drop_down_rounded),
-                    iconEnabledColor: kblack,
+                    iconEnabledColor:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? kGrey
+                            : kblack,
                     iconSize: 32,
                     borderRadius: BorderRadius.circular(18),
                     style: GoogleFonts.lato(
-                        color: kblack, fontWeight: FontWeight.bold),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
+                        fontWeight: FontWeight.bold),
                     items: gender
                         .map((e) => DropdownMenuItem(
                               value: e,
@@ -140,7 +149,10 @@ class ProfileSetUpPage extends StatelessWidget {
                 height: 55,
                 width: 300,
                 decoration: BoxDecoration(
-                    color: kblack, borderRadius: BorderRadius.circular(25)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kdarkcolor1
+                        : kblack,
+                    borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
                     'Proceed',

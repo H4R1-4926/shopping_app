@@ -18,8 +18,8 @@ class OtpPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 25),
             child: Text(
               'Enter Otp',
-              style: GoogleFonts.inter(
-                  color: kblack, fontSize: 45, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
@@ -32,7 +32,7 @@ class OtpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             fieldWidth: 55,
             filled: true,
-            fillColor: const Color.fromARGB(60, 243, 243, 243),
+            fillColor: kdarkcolor3,
             numberOfFields: 4,
             autoFocus: true,
           ),
@@ -69,7 +69,10 @@ class OtpPage extends StatelessWidget {
                 height: 55,
                 width: 300,
                 decoration: BoxDecoration(
-                    color: kblack, borderRadius: BorderRadius.circular(25)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kdarkcolor3
+                        : kblack,
+                    borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
                     'Proceed',

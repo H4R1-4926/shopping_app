@@ -13,8 +13,6 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: true,
-          backgroundColor: kwhite,
-          surfaceTintColor: kwhite,
           leading: IconButton(
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
@@ -31,8 +29,8 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
               'Login To Your Account',
-              style: GoogleFonts.inter(
-                  color: kblack, fontSize: 45, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
@@ -56,7 +54,9 @@ class LoginPage extends StatelessWidget {
                   hintStyle: GoogleFonts.lato(
                       color: const Color.fromARGB(255, 120, 119, 119),
                       fontWeight: FontWeight.bold),
-                  fillColor: const Color.fromARGB(255, 247, 247, 247),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor3
+                      : kwhite,
                   filled: true,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
@@ -78,7 +78,10 @@ class LoginPage extends StatelessWidget {
                 height: 55,
                 width: 300,
                 decoration: BoxDecoration(
-                    color: kblack, borderRadius: BorderRadius.circular(25)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kdarkcolor1
+                        : kblack,
+                    borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
                     'Sign In',
@@ -129,7 +132,10 @@ class LoginPage extends StatelessWidget {
                   child: Text(
                     'Sign up.',
                     style: GoogleFonts.poppins(
-                        color: kblack, fontWeight: FontWeight.w600),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
+                        fontWeight: FontWeight.w600),
                   ))
             ],
           )

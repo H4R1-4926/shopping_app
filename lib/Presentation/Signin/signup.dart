@@ -12,17 +12,15 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: kwhite,
-      ),
+      appBar: AppBar(),
       body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
               'Create Your Account',
-              style: GoogleFonts.inter(
-                  color: kblack, fontSize: 47, fontWeight: FontWeight.bold),
+              style:
+                  GoogleFonts.inter(fontSize: 47, fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,
@@ -46,7 +44,9 @@ class SignUpPage extends StatelessWidget {
                   hintStyle: GoogleFonts.lato(
                       color: const Color.fromARGB(255, 120, 119, 119),
                       fontWeight: FontWeight.bold),
-                  fillColor: Color.fromARGB(255, 247, 247, 247),
+                  fillColor: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor1
+                      : kwhite,
                   filled: true,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
@@ -66,7 +66,10 @@ class SignUpPage extends StatelessWidget {
                 height: 55,
                 width: 300,
                 decoration: BoxDecoration(
-                    color: kblack, borderRadius: BorderRadius.circular(25)),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kdarkcolor1
+                        : kblack,
+                    borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
                     'Send Otp',
@@ -94,8 +97,7 @@ class SignUpPage extends StatelessWidget {
               decoration: BoxDecoration(
                   color: kwhite,
                   borderRadius: BorderRadius.circular(10),
-                  border:
-                      Border.all(color: Color.fromARGB(255, 237, 237, 237))),
+                  border: Border.all(color: kwhite)),
               child: Image.asset(
                 'assets/google_logo.png',
                 scale: 80,
@@ -119,7 +121,10 @@ class SignUpPage extends StatelessWidget {
                   child: Text(
                     'Sign in.',
                     style: GoogleFonts.poppins(
-                        color: kblack, fontWeight: FontWeight.w600),
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
+                        fontWeight: FontWeight.w600),
                   ))
             ],
           )

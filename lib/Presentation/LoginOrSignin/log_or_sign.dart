@@ -11,9 +11,7 @@ class LogOrSignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: kwhite,
-        ),
+        appBar: AppBar(),
         body: Center(
           child: Column(
             children: [
@@ -52,7 +50,8 @@ class LogOrSignIn extends StatelessWidget {
                     ),
                     Text(
                       'Continue with Google',
-                      style: GoogleFonts.poppins(fontWeight: FontWeight.bold),
+                      style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold, color: kblack),
                     ),
                   ],
                 ),
@@ -74,7 +73,10 @@ class LogOrSignIn extends StatelessWidget {
                   height: 50,
                   width: 330,
                   decoration: BoxDecoration(
-                      color: kblack, borderRadius: BorderRadius.circular(25)),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kdarkcolor3
+                          : kblack,
+                      borderRadius: BorderRadius.circular(25)),
                   child: Center(
                     child: Text(
                       'Sign in with phone',
@@ -101,7 +103,11 @@ class LogOrSignIn extends StatelessWidget {
                       child: Text(
                         'Sign up.',
                         style: GoogleFonts.poppins(
-                            color: kblack, fontWeight: FontWeight.w600),
+                            color:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? kwhite
+                                    : kblack,
+                            fontWeight: FontWeight.w600),
                       ))
                 ],
               )
