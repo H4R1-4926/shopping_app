@@ -11,8 +11,9 @@ class EditAddress extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Text(
@@ -32,7 +33,7 @@ class EditAddress extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: ListTile(
                   tileColor: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 53, 53, 53)
+                      ? kdarkcolor1
                       : kwhite,
                   leading: CircleAvatar(
                     backgroundColor: kGrey.withOpacity(0.4),
@@ -114,8 +115,7 @@ class EditAddress extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 101, 101, 101))
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
                           : WidgetStatePropertyAll(kGrey.withOpacity(0.1)),
                   foregroundColor:
                       Theme.of(context).brightness == Brightness.dark
@@ -136,7 +136,7 @@ class EditAddress extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 97, 97, 97)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -148,8 +148,7 @@ class EditAddress extends StatelessWidget {
             style: ButtonStyle(
                 fixedSize: const WidgetStatePropertyAll(Size(310, 50)),
                 backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? const WidgetStatePropertyAll(
-                        Color.fromARGB(255, 59, 59, 59))
+                    ? const WidgetStatePropertyAll(kdarkcolor3)
                     : const WidgetStatePropertyAll(kblack),
                 foregroundColor: const WidgetStatePropertyAll(kwhite),
                 elevation: const WidgetStatePropertyAll(10)),
