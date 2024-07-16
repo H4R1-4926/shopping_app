@@ -32,7 +32,9 @@ class ListTileRadioWidget extends StatelessWidget {
             value: value,
             groupValue: groupValue,
             onChanged: onChanged,
-            activeColor: kblack,
+            activeColor: Theme.of(context).brightness == Brightness.dark
+                ? kwhite
+                : kblack,
             splashRadius: 20,
           ),
         ),

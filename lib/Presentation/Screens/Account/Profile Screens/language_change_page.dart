@@ -15,9 +15,13 @@ class LanguageSettings extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            surfaceTintColor: kwhite,
+            surfaceTintColor: Theme.of(context).brightness == Brightness.dark
+                ? kdarkbackground
+                : kwhite,
             automaticallyImplyLeading: true,
-            backgroundColor: kwhite,
+            backgroundColor: Theme.of(context).brightness == Brightness.dark
+                ? kdarkbackground
+                : kwhite,
             title: Text(
               'Select Language',
               style: GoogleFonts.montserrat(
@@ -118,14 +122,21 @@ class LanguageSettings extends StatelessWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              style: const ButtonStyle(
-                  elevation: WidgetStatePropertyAll(8),
-                  backgroundColor: WidgetStatePropertyAll(kblack),
-                  fixedSize: WidgetStatePropertyAll(Size(270, 50))),
+              style: ButtonStyle(
+                  elevation: const WidgetStatePropertyAll(8),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
+                  fixedSize: const WidgetStatePropertyAll(Size(270, 50))),
               child: Text(
                 'Apply',
                 style: GoogleFonts.lato(
-                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 12),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kblack
+                        : kwhite,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12),
               ),
             ),
           ),
