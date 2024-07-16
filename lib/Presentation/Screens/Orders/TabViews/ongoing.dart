@@ -12,7 +12,7 @@ class OrderOnGoing extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         body: ListView(
           children: [
@@ -28,7 +28,7 @@ class OrderOnGoing extends StatelessWidget {
                     height: 150,
                     decoration: BoxDecoration(
                         color: Theme.of(context).brightness == Brightness.dark
-                            ? const Color.fromARGB(255, 53, 53, 53)
+                            ? kdarkcolor1
                             : kwhite,
                         borderRadius: BorderRadius.circular(20)),
                     child: Padding(

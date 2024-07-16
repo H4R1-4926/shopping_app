@@ -16,7 +16,7 @@ class TrackOrderPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         appBar: AppBar(
           title: Text(
@@ -33,7 +33,7 @@ class TrackOrderPage extends StatelessWidget {
                 height: 150,
                 decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? const Color.fromARGB(255, 54, 54, 54)
+                        ? kdarkcolor1
                         : kwhite,
                     borderRadius: BorderRadius.circular(20)),
                 child: Padding(
