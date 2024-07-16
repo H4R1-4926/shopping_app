@@ -3,7 +3,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/Application/Theme%20Bloc/theme_bloc_bloc.dart';
 import 'package:shopping_app/Core/theme.dart';
 import 'package:shopping_app/Presentation/Home/tab_bar.dart';
-import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
 import 'Application/RadioButton/radio_button_bloc.dart';
 
 void main() {
@@ -30,7 +29,7 @@ class MainApp extends StatelessWidget {
               darkTheme: kdarkMode,
               theme: state.isTrue ? kdarkMode : klightMode,
               debugShowCheckedModeBanner: false,
-              home: const LogOrSignIn());
+              home: const TabBarPage());
         },
       ),
     );
