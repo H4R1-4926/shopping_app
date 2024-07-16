@@ -9,14 +9,15 @@ class NotificationPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         surfaceTintColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         title: Text(
           'Notifications',
@@ -30,10 +31,10 @@ class NotificationPage extends StatelessWidget {
             margin: const EdgeInsets.only(bottom: 15),
             elevation: 0,
             color: Theme.of(context).brightness == Brightness.dark
-                ? kblack
+                ? kdarkbackground
                 : klightGrey,
             surfaceTintColor: Theme.of(context).brightness == Brightness.dark
-                ? kblack
+                ? kdarkbackground
                 : klightGrey,
             borderOnForeground: false,
             child: Column(
@@ -54,7 +55,7 @@ class NotificationPage extends StatelessWidget {
                     height: 110,
                     decoration: BoxDecoration(
                         color: Theme.of(context).brightness == Brightness.dark
-                            ? const Color.fromARGB(255, 53, 53, 53)
+                            ? kdarkcolor1
                             : kwhite,
                         borderRadius: BorderRadius.circular(18)),
                     child: Row(

@@ -198,13 +198,13 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                       width: double.infinity,
                       decoration: BoxDecoration(
                           color: Theme.of(context).brightness == Brightness.dark
-                              ? kblack
+                              ? kdarkbackground
                               : kwhite,
                           boxShadow: [
                             BoxShadow(
                                 color: Theme.of(context).brightness ==
                                         Brightness.dark
-                                    ? kblack
+                                    ? kdarkbackground
                                     : kwhite,
                                 blurRadius: 10,
                                 spreadRadius: 10),
@@ -288,8 +288,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                               color: Theme.of(context)
                                                           .brightness ==
                                                       Brightness.dark
-                                                  ? const Color.fromARGB(
-                                                      255, 53, 53, 53)
+                                                  ? kdarkcolor1
                                                   : klightGrey,
                                               borderRadius:
                                                   const BorderRadius.only(
@@ -313,8 +312,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                               color: Theme.of(context)
                                                           .brightness ==
                                                       Brightness.dark
-                                                  ? const Color.fromARGB(
-                                                      255, 53, 53, 53)
+                                                  ? kdarkcolor1
                                                   : klightGrey,
                                               borderRadius:
                                                   const BorderRadius.only(
@@ -338,8 +336,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                       height: 90,
                                       color: Theme.of(context).brightness ==
                                               Brightness.dark
-                                          ? const Color.fromARGB(
-                                              255, 53, 53, 53)
+                                          ? kdarkcolor1
                                           : klightGrey,
                                       child: Center(
                                         child: Text(
@@ -359,8 +356,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                               color: Theme.of(context)
                                                           .brightness ==
                                                       Brightness.dark
-                                                  ? const Color.fromARGB(
-                                                      255, 53, 53, 53)
+                                                  ? kdarkcolor1
                                                   : klightGrey,
                                               borderRadius:
                                                   const BorderRadius.only(
@@ -384,8 +380,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                               color: Theme.of(context)
                                                           .brightness ==
                                                       Brightness.dark
-                                                  ? const Color.fromARGB(
-                                                      255, 53, 53, 53)
+                                                  ? kdarkcolor1
                                                   : klightGrey,
                                               borderRadius:
                                                   const BorderRadius.only(
@@ -417,7 +412,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                             child: Container(
                               color: Theme.of(context).brightness ==
                                       Brightness.dark
-                                  ? kblack
+                                  ? kdarkbackground
                                   : kwhite,
                               height: 70,
                               child: Padding(
@@ -459,8 +454,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                                         .brightness ==
                                                     Brightness.dark
                                                 ? const WidgetStatePropertyAll(
-                                                    Color.fromARGB(
-                                                        255, 53, 53, 53))
+                                                    kdarkcolor1)
                                                 : const WidgetStatePropertyAll(
                                                     kblack)),
                                         child: Text(

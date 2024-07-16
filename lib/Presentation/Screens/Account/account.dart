@@ -26,7 +26,7 @@ class AccountPage extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: false,
           backgroundColor: Theme.of(context).brightness == Brightness.dark
-              ? Theme.of(context).scaffoldBackgroundColor
+              ? kdarkbackground
               : kwhite,
           title: Text(
             'Profile',

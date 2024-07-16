@@ -15,7 +15,7 @@ class CartPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         appBar: AppBar(
           title: Text(

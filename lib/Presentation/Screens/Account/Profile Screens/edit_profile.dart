@@ -135,7 +135,7 @@ class EditProfile extends StatelessWidget {
       ),
       bottomSheet: Container(
           color: Theme.of(context).brightness == Brightness.dark
-              ? const Color.fromARGB(255, 31, 31, 31)
+              ? kdarkbackground
               : kwhite,
           height: 100,
           child: Center(

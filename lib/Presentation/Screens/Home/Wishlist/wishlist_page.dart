@@ -11,14 +11,15 @@ class WishListPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         surfaceTintColor: Theme.of(context).brightness == Brightness.dark
-            ? kblack
+            ? kdarkbackground
             : klightGrey,
         title: Text(
           'My Wishlist',
@@ -50,7 +51,7 @@ class WishListPage extends StatelessWidget {
               ));
             },
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(11.0),
               child: SizedBox(
                 child: Column(
                   children: [

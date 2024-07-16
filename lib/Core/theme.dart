@@ -3,14 +3,13 @@ import 'package:shopping_app/Core/colors.dart';
 
 ThemeData kdarkMode = ThemeData(
     bottomSheetTheme: const BottomSheetThemeData(
-      modalBackgroundColor: kblack,
+      modalBackgroundColor: kdarkbackground,
     ),
     searchBarTheme: const SearchBarThemeData(
-        backgroundColor: WidgetStatePropertyAll(Color.fromARGB(95, 69, 69, 69)),
-        surfaceTintColor:
-            WidgetStatePropertyAll(Color.fromARGB(95, 69, 69, 69))),
-    appBarTheme:
-        const AppBarTheme(backgroundColor: kblack, surfaceTintColor: kblack),
+        backgroundColor: WidgetStatePropertyAll(kdarkcolor3),
+        surfaceTintColor: WidgetStatePropertyAll(kdarkcolor3)),
+    appBarTheme: const AppBarTheme(
+        backgroundColor: kdarkbackground, surfaceTintColor: kdarkbackground),
     colorScheme: const ColorScheme.dark(
       surface: kblack,
       primary: klightGrey,
@@ -18,6 +17,7 @@ ThemeData kdarkMode = ThemeData(
       tertiary: kblack,
       inversePrimary: kGrey,
     ));
+
 ThemeData klightMode = ThemeData(
     bottomSheetTheme: const BottomSheetThemeData(
       modalBackgroundColor: klightGrey,

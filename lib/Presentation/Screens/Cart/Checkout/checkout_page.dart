@@ -269,7 +269,7 @@ class CheckoutPage extends StatelessWidget {
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
                           ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 77, 77, 77))
+                              Color.fromARGB(255, 56, 56, 56))
                           : const WidgetStatePropertyAll(kblack),
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),

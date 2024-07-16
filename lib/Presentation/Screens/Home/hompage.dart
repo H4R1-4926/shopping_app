@@ -109,7 +109,7 @@ class HomePage extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Theme.of(context).brightness ==
                                       Brightness.dark
-                                  ? const Color.fromARGB(255, 57, 57, 57)
+                                  ? kdarkcolor1
                                   : klightGrey,
                               borderRadius: BorderRadius.circular(25)),
                           child: const Row(

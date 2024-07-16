@@ -48,7 +48,7 @@ class TabBarPage extends StatelessWidget {
                   25,
                 ),
                 color: Theme.of(context).brightness == Brightness.dark
-                    ? const Color.fromARGB(255, 49, 49, 49)
+                    ? kdarkcolor1
                     : kwhite,
               ),
               child: BottomNavigationBar(
