@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Presentation/Screens/Account/widgets/titile_desc_widget.dart';
 
 class TermsAndConditions extends StatelessWidget {
@@ -10,9 +9,7 @@ class TermsAndConditions extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: kwhite,
         automaticallyImplyLeading: true,
-        backgroundColor: kwhite,
         title: Text(
           'Terms & Conditions',
           style:
