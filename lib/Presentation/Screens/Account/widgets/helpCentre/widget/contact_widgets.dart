@@ -24,7 +24,8 @@ class ContactWidgets extends StatelessWidget {
         ),
         title: Text(
           text,
-          style: GoogleFonts.poppins(fontSize: 13, fontWeight: FontWeight.bold),
+          style: GoogleFonts.poppins(
+              fontSize: 13, fontWeight: FontWeight.bold, color: kblack),
         ),
         tileColor: kwhite,
       ),

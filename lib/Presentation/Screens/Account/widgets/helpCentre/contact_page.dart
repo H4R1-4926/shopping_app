@@ -10,7 +10,9 @@ class ContactPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       body: ListView(
         children: [
           GestureDetector(

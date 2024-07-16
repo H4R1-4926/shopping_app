@@ -11,7 +11,9 @@ class FAQPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: klightGrey,
+        backgroundColor: Theme.of(context).brightness == Brightness.dark
+            ? kdarkbackground
+            : klightGrey,
         body: DefaultTabController(
           length: 10,
           child: SingleChildScrollView(
@@ -21,18 +23,32 @@ class FAQPage extends StatelessWidget {
                   padding: const EdgeInsets.only(top: 15),
                   child: ButtonsTabBar(
                     decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25), color: kblack),
+                      borderRadius: BorderRadius.circular(25),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kwhite
+                          : kblack,
+                    ),
                     unselectedDecoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: klightGrey),
+                      borderRadius: BorderRadius.circular(25),
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kdarkcolor3
+                          : klightGrey,
+                    ),
                     borderColor: kblack,
                     borderWidth: 2,
                     unselectedLabelStyle: GoogleFonts.poppins(
-                        fontWeight: FontWeight.w600, color: kblack),
+                      fontWeight: FontWeight.w600,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kwhite
+                          : kblack,
+                    ),
                     labelStyle: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 13,
-                        color: kwhite),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 13,
+                      color: Theme.of(context).brightness == Brightness.dark
+                          ? kblack
+                          : kwhite,
+                    ),
                     radius: 25,
                     height: 40,
                     buttonMargin: const EdgeInsets.symmetric(
@@ -82,7 +98,10 @@ class FAQPage extends StatelessWidget {
                         GoogleFonts.poppins(color: kGrey.withOpacity(0.6))),
                     autoFocus: false,
                     elevation: const WidgetStatePropertyAll(0),
-                    backgroundColor: const WidgetStatePropertyAll(kwhite),
+                    backgroundColor:
+                        Theme.of(context).brightness == Brightness.dark
+                            ? const WidgetStatePropertyAll(kdarkcolor1)
+                            : const WidgetStatePropertyAll(kwhite),
                     shape: WidgetStatePropertyAll(RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     )),

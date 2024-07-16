@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
@@ -11,9 +10,7 @@ class CustomerServicePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        surfaceTintColor: kwhite,
         automaticallyImplyLeading: true,
-        backgroundColor: kwhite,
         title: Text(
           'Fill the query',
           style:
@@ -64,9 +61,13 @@ class CustomerServicePage extends StatelessWidget {
             kSizedBoxHeight30,
             ElevatedButton(
                 onPressed: () {},
-                style: const ButtonStyle(
-                    fixedSize: WidgetStatePropertyAll(Size(250, 50)),
-                    backgroundColor: WidgetStatePropertyAll(kblack)),
+                style: ButtonStyle(
+                  fixedSize: const WidgetStatePropertyAll(Size(250, 50)),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
+                          : const WidgetStatePropertyAll(kblack),
+                ),
                 child: Text(
                   'Submit',
                   style: GoogleFonts.lato(

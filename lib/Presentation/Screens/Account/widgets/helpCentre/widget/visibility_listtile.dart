@@ -28,7 +28,9 @@ class _VisblityListTileState extends State<VisblityListTile> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: AnimatedContainer(
               decoration: BoxDecoration(
-                  color: kwhite,
+                  color: Theme.of(context).brightness == Brightness.dark
+                      ? kdarkcolor3
+                      : kwhite,
                   borderRadius: BorderRadius.only(
                     topLeft: const Radius.circular(22),
                     topRight: const Radius.circular(22),
@@ -78,7 +80,9 @@ class _VisblityListTileState extends State<VisblityListTile> {
             curve: Curves.easeInOut,
             height: isVisible ? 120 : 0,
             decoration: BoxDecoration(
-                color: kwhite,
+                color: Theme.of(context).brightness == Brightness.dark
+                    ? kdarkcolor3
+                    : kwhite,
                 borderRadius: BorderRadius.only(
                     topRight: isVisible
                         ? const Radius.circular(0)
@@ -93,7 +97,9 @@ class _VisblityListTileState extends State<VisblityListTile> {
               child: AnimatedDefaultTextStyle(
                 style: isVisible
                     ? GoogleFonts.poppins(
-                        color: kblack,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack,
                         fontSize: 13,
                       )
                     : GoogleFonts.poppins(color: kblack, fontSize: 0),

@@ -16,9 +16,7 @@ class HelpCentrePage extends StatelessWidget {
       length: 2,
       child: Scaffold(
         appBar: AppBar(
-          surfaceTintColor: kwhite,
           automaticallyImplyLeading: true,
-          backgroundColor: kwhite,
           title: Text(
             'Help Centre',
             style: GoogleFonts.montserrat(
@@ -33,12 +31,19 @@ class HelpCentrePage extends StatelessWidget {
                 text: 'Contact us',
               )
             ],
-            indicatorColor: kblack,
+            indicatorColor: Theme.of(context).brightness == Brightness.dark
+                ? kwhite
+                : kblack,
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),
             indicatorWeight: 3,
             labelStyle: GoogleFonts.poppins(
-                fontWeight: FontWeight.bold, fontSize: 14, color: kblack),
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
+            ),
             unselectedLabelStyle: GoogleFonts.poppins(
                 fontWeight: FontWeight.w500, fontSize: 12, color: kGrey),
           ),
