@@ -12,7 +12,11 @@ class ListTileWidget extends StatelessWidget {
         leading: Text(
           title,
           style: GoogleFonts.lato(
-              fontWeight: FontWeight.w800, fontSize: 14.8, color: kblack),
+              fontWeight: FontWeight.w800,
+              fontSize: 14.8,
+              color: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack),
         ),
         trailing: const SwitchWidget());
   }
@@ -32,6 +36,9 @@ class _SwitchWidgetState extends State<SwitchWidget> {
 
   @override
   Widget build(BuildContext context) {
+    final Color color = Theme.of(context).brightness == Brightness.dark
+        ? kdarkcolor3
+        : klightGrey;
     return Switch(
       value: _value,
       onChanged: (value) {
@@ -39,10 +46,15 @@ class _SwitchWidgetState extends State<SwitchWidget> {
           _value = value;
         });
       },
-      activeTrackColor: kblack,
-      inactiveTrackColor: klightGrey,
-      trackOutlineColor: MaterialStatePropertyAll(_value ? kblack : klightGrey),
-      thumbColor: const MaterialStatePropertyAll(kwhite),
+      activeTrackColor:
+          Theme.of(context).brightness == Brightness.dark ? kwhite : kblack,
+      inactiveTrackColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkcolor3
+          : klightGrey,
+      trackOutlineColor: WidgetStatePropertyAll(_value ? kblack : color),
+      thumbColor: Theme.of(context).brightness == Brightness.dark
+          ? const WidgetStatePropertyAll(kblack)
+          : const WidgetStatePropertyAll(kwhite),
     );
   }
 }
