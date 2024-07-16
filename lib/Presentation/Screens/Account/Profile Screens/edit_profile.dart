@@ -18,11 +18,11 @@ class EditProfile extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).brightness == Brightness.dark
-            ? Theme.of(context).scaffoldBackgroundColor
+            ? kdarkbackground
             : kwhite,
         automaticallyImplyLeading: true,
         surfaceTintColor: Theme.of(context).brightness == Brightness.dark
-            ? Theme.of(context).scaffoldBackgroundColor
+            ? kdarkbackground
             : kwhite,
         title: Text(
           'Edit Profile',
@@ -54,7 +54,7 @@ class EditProfile extends StatelessWidget {
                       borderSide: BorderSide.none),
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 54, 54, 54)
+                      ? kdarkcolor1
                       : kwhite),
             ),
           ),
@@ -80,7 +80,7 @@ class EditProfile extends StatelessWidget {
                       borderSide: BorderSide.none),
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 54, 54, 54)
+                      ? kdarkcolor1
                       : kwhite),
             ),
           ),
@@ -101,7 +101,7 @@ class EditProfile extends StatelessWidget {
                     borderSide: BorderSide.none),
                 filled: true,
                 fillColor: Theme.of(context).brightness == Brightness.dark
-                    ? const Color.fromARGB(255, 54, 54, 54)
+                    ? kdarkcolor1
                     : kwhite,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 5),
@@ -146,8 +146,7 @@ class EditProfile extends StatelessWidget {
             style: ButtonStyle(
                 elevation: const WidgetStatePropertyAll(8),
                 backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? const WidgetStatePropertyAll(
-                        Color.fromARGB(255, 72, 72, 72))
+                    ? const WidgetStatePropertyAll(kdarkcolor3)
                     : const WidgetStatePropertyAll(kblack),
                 fixedSize: const WidgetStatePropertyAll(Size(300, 55))),
             child: Text(
