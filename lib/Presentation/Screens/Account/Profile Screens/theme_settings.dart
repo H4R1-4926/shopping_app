@@ -16,9 +16,7 @@ class ThemeSettings extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            surfaceTintColor: kwhite,
             automaticallyImplyLeading: true,
-            backgroundColor: kwhite,
             title: Text(
               'Theme',
               style: GoogleFonts.montserrat(
@@ -44,7 +42,10 @@ class ThemeSettings extends StatelessWidget {
                             .read<ThemeBlocBloc>()
                             .add(OnSelected(value: value!));
                       },
-                      activeColor: kblack,
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
                       splashRadius: 20,
                     ),
                   ),
@@ -67,7 +68,10 @@ class ThemeSettings extends StatelessWidget {
                             .read<ThemeBlocBloc>()
                             .add(OnSelected(value: value!));
                       },
-                      activeColor: kblack,
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
                       splashRadius: 20,
                     ),
                   ),
@@ -90,7 +94,10 @@ class ThemeSettings extends StatelessWidget {
                             .read<ThemeBlocBloc>()
                             .add(OnSelected(value: value!));
                       },
-                      activeColor: kblack,
+                      activeColor:
+                          Theme.of(context).brightness == Brightness.dark
+                              ? kwhite
+                              : kblack,
                       splashRadius: 20,
                     ),
                   ),
@@ -106,14 +113,21 @@ class ThemeSettings extends StatelessWidget {
                 context.read<ThemeBlocBloc>().add(OnTap(value: state.value));
                 Navigator.pop(context);
               },
-              style: const ButtonStyle(
-                  elevation: WidgetStatePropertyAll(8),
-                  backgroundColor: WidgetStatePropertyAll(kblack),
-                  fixedSize: WidgetStatePropertyAll(Size(270, 50))),
+              style: ButtonStyle(
+                  elevation: const WidgetStatePropertyAll(8),
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const WidgetStatePropertyAll(kwhite)
+                          : const WidgetStatePropertyAll(kblack),
+                  fixedSize: const WidgetStatePropertyAll(Size(270, 50))),
               child: Text(
                 'Apply',
                 style: GoogleFonts.lato(
-                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 12),
+                    color: Theme.of(context).brightness == Brightness.dark
+                        ? kblack
+                        : kwhite,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 12),
               ),
             ),
           ),
