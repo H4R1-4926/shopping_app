@@ -58,7 +58,7 @@ class ProfileSetUpPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -83,7 +83,7 @@ class ProfileSetUpPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -102,7 +102,9 @@ class ProfileSetUpPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                     borderSide: BorderSide.none),
                 filled: true,
-                fillColor: kdarkcolor1,
+                fillColor: Theme.of(context).brightness == Brightness.dark
+                    ? kdarkcolor1
+                    : klightGrey,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 5),
                   child: DropdownButton(

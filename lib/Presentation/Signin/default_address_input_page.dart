@@ -52,7 +52,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -87,7 +87,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -122,7 +122,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -157,7 +157,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -192,7 +192,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -227,7 +227,7 @@ class MainAddressAddPage extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           const SizedBox(

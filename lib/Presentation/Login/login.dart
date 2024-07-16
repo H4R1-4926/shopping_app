@@ -56,7 +56,7 @@ class LoginPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor3
-                      : kwhite,
+                      : klightGrey,
                   filled: true,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,

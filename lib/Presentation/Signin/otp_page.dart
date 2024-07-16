@@ -32,7 +32,9 @@ class OtpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             fieldWidth: 55,
             filled: true,
-            fillColor: kdarkcolor3,
+            fillColor: Theme.of(context).brightness == Brightness.dark
+                ? kdarkcolor3
+                : klightGrey,
             numberOfFields: 4,
             autoFocus: true,
           ),
