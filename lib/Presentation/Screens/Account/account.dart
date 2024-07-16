@@ -271,21 +271,29 @@ class AccountPage extends StatelessWidget {
               ontap: () {
                 showModalBottomSheet(
                   showDragHandle: true,
-                  backgroundColor: kwhite,
+                  backgroundColor:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? kdarkbackground
+                          : kwhite,
                   context: context,
                   builder: (context) {
                     return Container(
                       height: 190,
                       width: double.infinity,
-                      decoration: const BoxDecoration(
-                          color: kwhite,
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).brightness == Brightness.dark
+                              ? kdarkbackground
+                              : kwhite,
                           boxShadow: [
                             BoxShadow(
-                                color: kwhite,
+                                color: Theme.of(context).brightness ==
+                                        Brightness.dark
+                                    ? kdarkbackground
+                                    : kwhite,
                                 blurRadius: 10,
                                 spreadRadius: 10),
                           ],
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(15),
                               topRight: Radius.circular(15))),
                       child: Column(
@@ -309,7 +317,8 @@ class AccountPage extends StatelessWidget {
                             child: Text(
                               'Are you sure you want to logout?',
                               style: GoogleFonts.openSans(
-                                  fontWeight: FontWeight.bold, color: kblack),
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                           ),
                           Padding(
@@ -346,13 +355,19 @@ class AccountPage extends StatelessWidget {
                                           ),
                                           (route) => false);
                                     },
-                                    style: const ButtonStyle(
-                                        fixedSize: WidgetStatePropertyAll(
+                                    style: ButtonStyle(
+                                        fixedSize: const WidgetStatePropertyAll(
                                             Size(150, 50)),
                                         backgroundColor:
-                                            WidgetStatePropertyAll(kblack),
+                                            Theme.of(context).brightness ==
+                                                    Brightness.dark
+                                                ? const WidgetStatePropertyAll(
+                                                    kdarkcolor3)
+                                                : const WidgetStatePropertyAll(
+                                                    kblack),
                                         foregroundColor:
-                                            WidgetStatePropertyAll(kwhite)),
+                                            const WidgetStatePropertyAll(
+                                                kwhite)),
                                     child: Text(
                                       'Yes, Logout',
                                       style: GoogleFonts.lato(
