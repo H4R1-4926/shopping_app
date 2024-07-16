@@ -14,8 +14,9 @@ class CheckoutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         title: Text(
           'Checkout',
@@ -98,7 +99,7 @@ class CheckoutPage extends StatelessWidget {
                       contentPadding: const EdgeInsets.symmetric(
                           vertical: 15, horizontal: 10),
                       tileColor: Theme.of(context).brightness == Brightness.dark
-                          ? const Color.fromARGB(255, 38, 38, 38)
+                          ? kdarkcolor1
                           : kwhite,
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(20)),
@@ -135,7 +136,7 @@ class CheckoutPage extends StatelessWidget {
                   height: 150,
                   decoration: BoxDecoration(
                       color: Theme.of(context).brightness == Brightness.dark
-                          ? const Color.fromARGB(255, 40, 40, 40)
+                          ? kdarkcolor1
                           : kwhite,
                       borderRadius: BorderRadius.circular(20)),
                   child: Padding(
@@ -241,7 +242,7 @@ class CheckoutPage extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 32, 32, 32)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -268,8 +269,7 @@ class CheckoutPage extends StatelessWidget {
                   fixedSize: const WidgetStatePropertyAll(Size(310, 60)),
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 56, 56, 56))
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
                           : const WidgetStatePropertyAll(kblack),
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),

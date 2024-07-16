@@ -10,8 +10,9 @@ class AddressChangePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         title: Text(
           'Shipping Address',
@@ -30,7 +31,7 @@ class AddressChangePage extends StatelessWidget {
                     const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 child: ListTile(
                   tileColor: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 54, 54, 54)
+                      ? kdarkcolor1
                       : kwhite,
                   leading: CircleAvatar(
                     backgroundColor: kGrey.withOpacity(0.4),
@@ -88,12 +89,11 @@ class AddressChangePage extends StatelessWidget {
               style: ButtonStyle(
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 53, 53, 53))
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
                           : WidgetStatePropertyAll(kGrey.withOpacity(0.1)),
                   foregroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(kGrey)
+                          ? const WidgetStatePropertyAll(kwhite)
                           : const WidgetStatePropertyAll(kblack),
                   fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
@@ -110,7 +110,7 @@ class AddressChangePage extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 41, 41, 41)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -122,8 +122,7 @@ class AddressChangePage extends StatelessWidget {
             style: ButtonStyle(
                 fixedSize: const WidgetStatePropertyAll(Size(310, 60)),
                 backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? const WidgetStatePropertyAll(
-                        Color.fromARGB(255, 53, 53, 53))
+                    ? const WidgetStatePropertyAll(kdarkcolor3)
                     : const WidgetStatePropertyAll(kblack),
                 foregroundColor: const WidgetStatePropertyAll(kwhite),
                 elevation: const WidgetStatePropertyAll(10)),

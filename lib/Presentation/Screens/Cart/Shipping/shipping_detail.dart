@@ -10,8 +10,9 @@ class ShippingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         title: Text(
           'Choose Shipping',
@@ -25,7 +26,7 @@ class ShippingPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: ListTile(
               tileColor: Theme.of(context).brightness == Brightness.dark
-                  ? const Color.fromARGB(221, 32, 32, 32)
+                  ? kdarkcolor1
                   : kwhite,
               leading: CircleAvatar(
                 backgroundColor: kGrey.withOpacity(0.4),
@@ -84,7 +85,7 @@ class ShippingPage extends StatelessWidget {
         height: 100,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 59, 59, 59)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -111,8 +112,7 @@ class ShippingPage extends StatelessWidget {
                   fixedSize: const WidgetStatePropertyAll(Size(310, 60)),
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 84, 84, 84))
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
                           : const WidgetStatePropertyAll(kblack),
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),

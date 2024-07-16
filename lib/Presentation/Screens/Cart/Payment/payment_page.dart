@@ -10,8 +10,9 @@ class PaymentPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         title: Text(
           'Payment Methods',
@@ -39,7 +40,7 @@ class PaymentPage extends StatelessWidget {
                 width: 350,
                 decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? const Color.fromARGB(255, 53, 53, 53)
+                        ? kdarkcolor1
                         : kwhite,
                     borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(20),
@@ -92,7 +93,7 @@ class PaymentPage extends StatelessWidget {
               width: 350,
               decoration: BoxDecoration(
                   color: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 54, 54, 54)
+                      ? kdarkcolor1
                       : kwhite,
                   borderRadius: const BorderRadius.only(
                       bottomRight: Radius.circular(20),
@@ -159,7 +160,7 @@ class PaymentPage extends StatelessWidget {
                 width: 350,
                 decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? const Color.fromARGB(255, 54, 54, 54)
+                        ? kdarkcolor1
                         : kwhite,
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
@@ -210,7 +211,7 @@ class PaymentPage extends StatelessWidget {
                 width: 350,
                 decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? const Color.fromARGB(255, 53, 53, 53)
+                        ? kdarkcolor1
                         : kwhite,
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
@@ -261,7 +262,7 @@ class PaymentPage extends StatelessWidget {
                 width: 350,
                 decoration: BoxDecoration(
                     color: Theme.of(context).brightness == Brightness.dark
-                        ? const Color.fromARGB(255, 54, 54, 54)
+                        ? kdarkcolor1
                         : kwhite,
                     borderRadius: BorderRadius.circular(20)),
                 child: Row(
@@ -313,7 +314,7 @@ class PaymentPage extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 42, 42, 42)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -329,8 +330,7 @@ class PaymentPage extends StatelessWidget {
             },
             style: ButtonStyle(
                 backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? const WidgetStatePropertyAll(
-                        Color.fromARGB(255, 62, 62, 62))
+                    ? const WidgetStatePropertyAll(kdarkcolor3)
                     : const WidgetStatePropertyAll(kblack),
                 fixedSize: const WidgetStatePropertyAll(Size(300, 50))),
             child: Text(

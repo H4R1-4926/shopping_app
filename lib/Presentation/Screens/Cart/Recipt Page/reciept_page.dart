@@ -11,8 +11,9 @@ class RecieptPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:
-          Theme.of(context).brightness == Brightness.dark ? kblack : klightGrey,
+      backgroundColor: Theme.of(context).brightness == Brightness.dark
+          ? kdarkbackground
+          : klightGrey,
       appBar: AppBar(
         title: Text(
           'Overview',
@@ -39,7 +40,7 @@ class RecieptPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: ListTile(
               tileColor: Theme.of(context).brightness == Brightness.dark
-                  ? const Color.fromARGB(255, 53, 53, 53)
+                  ? kdarkcolor1
                   : kwhite,
               leading: CircleAvatar(
                 backgroundColor: kGrey.withOpacity(0.4),
@@ -90,7 +91,7 @@ class RecieptPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
             child: ListTile(
               tileColor: Theme.of(context).brightness == Brightness.dark
-                  ? const Color.fromARGB(255, 53, 53, 53)
+                  ? kdarkcolor1
                   : kwhite,
               leading: CircleAvatar(
                 backgroundColor: kGrey.withOpacity(0.4),
@@ -136,7 +137,7 @@ class RecieptPage extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                   color: Theme.of(context).brightness == Brightness.dark
-                      ? const Color.fromARGB(255, 52, 52, 52)
+                      ? kdarkcolor1
                       : kwhite,
                   borderRadius: BorderRadius.circular(20)),
               child: Column(
@@ -245,7 +246,7 @@ class RecieptPage extends StatelessWidget {
         width: double.infinity,
         decoration: BoxDecoration(
             color: Theme.of(context).brightness == Brightness.dark
-                ? const Color.fromARGB(255, 32, 32, 32)
+                ? kdarkbackground
                 : kwhite,
             borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(20), topRight: Radius.circular(20))),
@@ -272,8 +273,7 @@ class RecieptPage extends StatelessWidget {
                   fixedSize: const WidgetStatePropertyAll(Size(300, 50)),
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? const WidgetStatePropertyAll(
-                              Color.fromARGB(255, 64, 64, 64))
+                          ? const WidgetStatePropertyAll(kdarkcolor3)
                           : const WidgetStatePropertyAll(kblack),
                   foregroundColor: const WidgetStatePropertyAll(kwhite)),
               child: Text(

@@ -93,8 +93,7 @@ class CartPage extends StatelessWidget {
                         style: ButtonStyle(
                             backgroundColor:
                                 Theme.of(context).brightness == Brightness.dark
-                                    ? const WidgetStatePropertyAll(
-                                        Color.fromARGB(255, 53, 53, 53))
+                                    ? const WidgetStatePropertyAll(kdarkcolor1)
                                     : const WidgetStatePropertyAll(kblack),
                             fixedSize:
                                 const WidgetStatePropertyAll(Size(200, 55))),
@@ -132,7 +131,7 @@ class CartPage extends StatelessWidget {
                   height: 150,
                   decoration: BoxDecoration(
                       color: Theme.of(context).brightness == Brightness.dark
-                          ? const Color.fromARGB(115, 69, 69, 69)
+                          ? kdarkcolor1
                           : kwhite,
                       borderRadius: BorderRadius.circular(20)),
                   child: Padding(
@@ -191,7 +190,7 @@ class CartPage extends StatelessWidget {
                                                     color: Theme.of(context)
                                                                 .brightness ==
                                                             Brightness.dark
-                                                        ? kblack
+                                                        ? kdarkbackground
                                                         : klightGrey,
                                                     boxShadow: [
                                                       BoxShadow(
@@ -199,7 +198,7 @@ class CartPage extends StatelessWidget {
                                                                       .brightness ==
                                                                   Brightness
                                                                       .dark
-                                                              ? kblack
+                                                              ? kdarkbackground
                                                               : klightGrey,
                                                           blurRadius: 10,
                                                           spreadRadius: 10)
@@ -227,7 +226,7 @@ class CartPage extends StatelessWidget {
                                                       color: Theme.of(context)
                                                                   .brightness ==
                                                               Brightness.dark
-                                                          ? kblack
+                                                          ? kdarkbackground
                                                           : klightGrey,
                                                       child: Center(
                                                         child: Padding(
@@ -244,12 +243,7 @@ class CartPage extends StatelessWidget {
                                                                             .brightness ==
                                                                         Brightness
                                                                             .dark
-                                                                    ? const Color
-                                                                        .fromARGB(
-                                                                        255,
-                                                                        51,
-                                                                        51,
-                                                                        51)
+                                                                    ? kdarkcolor1
                                                                     : kwhite,
                                                                 borderRadius:
                                                                     BorderRadius
@@ -409,18 +403,16 @@ class CartPage extends StatelessWidget {
                                                               },
                                                               style: ButtonStyle(
                                                                   fixedSize:
-                                                                      const WidgetStatePropertyAll(Size(
-                                                                          150,
-                                                                          50)),
+                                                                      const WidgetStatePropertyAll(
+                                                                          Size(
+                                                                              150,
+                                                                              50)),
                                                                   backgroundColor: Theme.of(context)
                                                                               .brightness ==
                                                                           Brightness
                                                                               .dark
-                                                                      ? const WidgetStatePropertyAll(Color.fromARGB(
-                                                                          255,
-                                                                          69,
-                                                                          69,
-                                                                          69))
+                                                                      ? const WidgetStatePropertyAll(
+                                                                          kdarkcolor3)
                                                                       : const WidgetStatePropertyAll(
                                                                           kblack),
                                                                   foregroundColor:
