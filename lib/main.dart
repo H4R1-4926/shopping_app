@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:shopping_app/Application/First%20Time/first_time_bloc.dart';
 import 'package:shopping_app/Application/Theme%20Bloc/theme_bloc_bloc.dart';
 import 'package:shopping_app/Core/theme.dart';
 import 'package:shopping_app/Presentation/Home/tab_bar.dart';
+import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
 import 'Application/RadioButton/radio_button_bloc.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MainApp());
 }
 
@@ -22,6 +25,9 @@ class MainApp extends StatelessWidget {
         BlocProvider(
           create: (context) => ThemeBlocBloc(),
         ),
+        BlocProvider(
+          create: (context) => FirstTimeBloc(),
+        ),
       ],
       child: BlocBuilder<ThemeBlocBloc, ThemeBlocState>(
         builder: (context, state) {
@@ -29,7 +35,7 @@ class MainApp extends StatelessWidget {
               darkTheme: kdarkMode,
               theme: state.isTrue ? kdarkMode : klightMode,
               debugShowCheckedModeBanner: false,
-              home: const TabBarPage());
+              home: const LogOrSignIn());
         },
       ),
     );

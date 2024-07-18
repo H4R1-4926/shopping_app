@@ -46,7 +46,7 @@ class SignUpPage extends StatelessWidget {
                       fontWeight: FontWeight.bold),
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite,
+                      : klightGrey,
                   filled: true,
                   border: OutlineInputBorder(
                       borderSide: BorderSide.none,
