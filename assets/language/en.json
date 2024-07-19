@@ -1,3 +1,21 @@
 {
-    
+    "logorsignin":{
+
+        "letyouin":"Lets's you in",
+        "google":"Continue with Google",
+        "or":"or",
+        "signinwithphone":"Sign in with phone",
+        "donthaveanaccount":"Don't have an account?",
+        "signup":"Sign up",
+        "byContinuing":"By Continuing you'll also accepy out",
+        "termsandcondition":"Terms and Conditions"
+    },
+    "createAcoount":{
+        "createYourAccount":"Create Your Account",
+        "phone":"Phone",
+        "sendOtp":"Send Otp",
+        "orcontinue":"Or Continue With",
+        "alreadyhaveaccount":"Already Have An Account",
+        "signin":"Sign in"
+    }
 }
