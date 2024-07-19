@@ -17,5 +17,37 @@
         "orcontinue":"Or Continue With",
         "alreadyhaveaccount":"Already Have An Account",
         "signin":"Sign in"
+
+    },
+    "logintoaccount":{
+        "logintoyouraccount":"Login To Your Account"
+        
+    },
+    "otppage":{
+        "enterOtp":"Enter Otp",
+        "resendOtp":"Resend Otp",
+        "proceed":"Proceed"
+    },
+    "profileFill":{
+        "firstname":"First Name",
+        "lastname":"Last Name",
+        "gender":"Gender",
+        "male":"Male",
+        "female":"Female"
+    },
+    "addressAdd":{
+        "houseoretc":"House/Building Name/Flat/Building No.",
+        
+        
+        "streetoretc":"Street Name/Colony Name",
+        "cityname":"City Name",
+        "landmark":"Landmark",
+        "district":"District",
+"pincode":"Pincode"
+
+    },
+    "continue":"Continue",
+    "homepage":{
+"hello":"Hello"
     }
 }
