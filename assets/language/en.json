@@ -48,6 +48,15 @@
     },
     "continue":"Continue",
     "homepage":{
-"hello":"Hello"
+"hello":"Hello",
+"mostpopular":"Most Popular",
+"viewmore":"View More",
+"product":"Product",
+"explore":"Explore",
+"items":"Items"
+
+    },
+    "notificationpage":{
+        
     }
 }
