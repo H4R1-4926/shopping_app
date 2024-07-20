@@ -126,7 +126,9 @@ class AddressChangePage extends StatelessWidget {
                     : const WidgetStatePropertyAll(kblack),
                 foregroundColor: const WidgetStatePropertyAll(kwhite),
                 elevation: const WidgetStatePropertyAll(10)),
-            child: const Text('Apply'),
+            child: Text('Apply',
+                style: GoogleFonts.lato(
+                    color: kwhite, fontWeight: FontWeight.bold, fontSize: 14)),
           ),
         ),
       ),
