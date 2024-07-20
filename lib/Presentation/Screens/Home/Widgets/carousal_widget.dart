@@ -59,8 +59,7 @@ class _TopContainerWidgetState extends State<TopContainerWidget> {
                                 borderRadius: BorderRadius.circular(20),
                                 image: const DecorationImage(
                                     fit: BoxFit.fill,
-                                    image:
-                                        AssetImage('assets//img/demo.webp'))),
+                                    image: AssetImage('assets/img/demo.webp'))),
                           ),
                         );
                       },
