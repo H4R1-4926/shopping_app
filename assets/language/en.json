@@ -56,7 +56,28 @@
 "items":"Items"
 
     },
-    "notificationpage":{
-        
-    }
+   
+        "notification":"Notification",
+        "mywishlis":"My Wishlist",
+        "selecteditem":{
+            "description":"Description",
+            "color":"Colours",
+            "instock":"In Stock",
+            "outofstock":"Out of Stock",
+            "addtocart":"Add to Cart",
+            "price":"Price",
+            "quantity":"Quantity",
+            "totalPrize":"Total Prize"
+        },
+        "cart":{
+            "myCart":"My Cart",
+            "checkout":"Checkout",
+"remove":"Remove From Cart?",
+"shipping":"Shipping Address",
+"orderlist":"Order List"
+        },
+        "cancel":"Cancel"
+
+    
+
 }
