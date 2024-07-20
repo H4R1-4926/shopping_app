@@ -57,7 +57,7 @@ class PaymentPage extends StatelessWidget {
                             width: 50,
                             decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage('assets/upi.png'))),
+                                    image: AssetImage('assets/img/upi.png'))),
                           ),
                           const SizedBox(
                             width: 20,
@@ -175,7 +175,7 @@ class PaymentPage extends StatelessWidget {
                             width: 50,
                             decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage('assets/gpay.png'))),
+                                    image: AssetImage('assets/img/gpay.png'))),
                           ),
                           const SizedBox(
                             width: 20,
@@ -226,7 +226,7 @@ class PaymentPage extends StatelessWidget {
                             width: 50,
                             decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage('assets/paytm.png'))),
+                                    image: AssetImage('assets/img/paytm.png'))),
                           ),
                           const SizedBox(
                             width: 20,
@@ -277,7 +277,7 @@ class PaymentPage extends StatelessWidget {
                             width: 50,
                             decoration: const BoxDecoration(
                                 image: DecorationImage(
-                                    image: AssetImage('assets/cod.png'))),
+                                    image: AssetImage('assets/img/cod.png'))),
                           ),
                           const SizedBox(
                             width: 20,

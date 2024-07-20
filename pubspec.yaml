@@ -36,12 +36,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/google_logo.png
-    - assets/demo.webp
-    - assets/cod.png
-    - assets/gpay.png
-    - assets/paytm.png
-    - assets/upi.png
-
+    - assets/img/
 
     - assets/language/
