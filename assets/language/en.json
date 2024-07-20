@@ -8,7 +8,7 @@
         "donthaveanaccount":"Don't have an account?",
         "signup":"Sign up",
         "byContinuing":"By Continuing you'll also accepy out",
-        "termsandcondition":"Terms and Conditions"
+        "termsandcondition":"Terms & Conditions"
     },
     "createAcoount":{
         "createYourAccount":"Create Your Account",
@@ -69,14 +69,65 @@
             "quantity":"Quantity",
             "totalPrize":"Total Prize"
         },
+        "search":{
+            "norecentSearch":"No Recent Searches",
+            "recentSearch":"Recent Searches",
+            "result":"Results For",
+            "found":"founds",
+            "clearall":"Clear All"
+        },
         "cart":{
             "myCart":"My Cart",
             "checkout":"Checkout",
 "remove":"Remove From Cart?",
 "shipping":"Shipping Address",
-"orderlist":"Order List"
+"orderlist":"Order List",
+"addaddress":"Add New Address",
+"chooseshipping":"Choose Shipping",
+"overview":"Overview",
+"shippingmethod":"Shipping Method",
+"amount":"Amount",
+"shippingCharge":"Shipping Charge",
+"totalAmoount":"Total Amount",
+"payment":"Payment",
+"paymentMethod":"Payment Methods",
+"selectPayment":"Select the payment method you want to use",
+"confirmpayment":"Confirm Payment"
         },
-        "cancel":"Cancel"
+        "cancel":"Cancel",
+        "apply":"Apply",
+        "orderpage":{
+            "myorder":"My Order",
+            "ongoiung":"On Going",
+            "completed":"Completed",
+            "track":"Track",
+            "trackorder":"Track Order",
+            "packetindelivery":"Packet in Delivery",
+            "oderstatus":"Order Status Details",
+            "orderrecieved":"Order Recieved",
+            "orderpacked":"Order Packed",
+            "ordershipped":"Order Shipped",
+            "expected":"Expected on",
+            "cancelorder":"Cancel Order",
+            "indelivery":"In Delivery",
+            "return":"Return"
+        },
+        "profilepage":{
+            "profile":"Profile",
+"editprofile":"Edit Profile",
+"address":"Address",
+"notification":"Notification",
+"language":"Language",
+"theme":"Theme",
+"systemDefault":"System Default",
+"privacypolicy":"Privacy Policy",
+"helpcentre":"Help Centre",
+"invite":"Invite Friends",
+"logout":"Logout"
+        },
+        "editprofilepage":{
+            
+        }
 
     
 
