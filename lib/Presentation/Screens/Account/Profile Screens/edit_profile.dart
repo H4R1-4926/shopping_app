@@ -36,7 +36,9 @@ class EditProfile extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20),
             child: TextFormField(
-              cursorColor: kblack,
+              cursorColor: Theme.of(context).brightness == Brightness.dark
+                  ? kwhite
+                  : kblack,
               maxLength: 20,
               maxLines: 1,
               initialValue: 'Person',
@@ -55,7 +57,7 @@ class EditProfile extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -81,7 +83,7 @@ class EditProfile extends StatelessWidget {
                   filled: true,
                   fillColor: Theme.of(context).brightness == Brightness.dark
                       ? kdarkcolor1
-                      : kwhite),
+                      : klightGrey),
             ),
           ),
           kSizedBoxHeight30,
@@ -102,7 +104,7 @@ class EditProfile extends StatelessWidget {
                 filled: true,
                 fillColor: Theme.of(context).brightness == Brightness.dark
                     ? kdarkcolor1
-                    : kwhite,
+                    : klightGrey,
                 suffixIcon: Padding(
                   padding: const EdgeInsets.only(right: 5),
                   child: DropdownButton(
