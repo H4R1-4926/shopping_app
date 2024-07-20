@@ -160,7 +160,11 @@
 
         },
         "termsandconditionpage":{
-            
+            "t1-1":"Introduction",
+            "t1-2":"Welcome to [App Name] ('we', 'our', 'us'). These Terms and Conditions ('Terms') govern your use of our mobile application and services (collectively, the 'Service'). By accessing or using the Service, you agree to be bound by these Terms. If you do not agree to these Terms, you may not use the Service.",
+            "t2-2":"Use of the Service",
+            "t2-1":"To use the Service, you must be at least 18 years old. By using the Service, you confirm that you meet this age requirement. You may need to register for an account to access certain features. You agree to provide accurate and complete information during registration and to update your information as necessary. You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree not to use the Service for any unlawful purposes, interfere with the Service, or attempt to gain unauthorized access to any part of the Service.",
+            "t3-1":""
         }
 
     
