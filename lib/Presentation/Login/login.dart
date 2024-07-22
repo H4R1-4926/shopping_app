@@ -112,7 +112,7 @@ class LoginPage extends StatelessWidget {
                   border: Border.all(
                       color: const Color.fromARGB(255, 237, 237, 237))),
               child: Image.asset(
-                'assets/google_logo.png',
+                'assets/img/google_logo.png',
                 scale: 80,
               ),
             ),

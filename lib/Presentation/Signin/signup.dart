@@ -99,7 +99,7 @@ class SignUpPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(color: kwhite)),
               child: Image.asset(
-                'assets/google_logo.png',
+                'assets/img/google_logo.png',
                 scale: 80,
               ),
             ),

@@ -180,7 +180,8 @@ class LogOrSignIn extends StatelessWidget {
                           width: 30,
                           decoration: const BoxDecoration(
                               image: DecorationImage(
-                                  image: AssetImage('assets/google_logo.png'))),
+                                  image: AssetImage(
+                                      'assets/img/google_logo.png'))),
                         ),
                         const SizedBox(
                           width: 10,
