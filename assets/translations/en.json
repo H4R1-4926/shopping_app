@@ -50,7 +50,7 @@
     },
     "continue":"Continue",
     "homepage":{
-"hello":"Hello",
+"hello":"Hello {user}",
 "mostpopular":"Most Popular",
 "viewmore":"View More",
 "product":"Product",

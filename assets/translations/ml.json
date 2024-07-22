@@ -44,7 +44,7 @@
     },
     "continue": "തുടരുക",
     "homepage": {
-        "hello": "ഹലോ",
+        "hello": "ഹലോ {user}",
         "mostpopular": "ഏറ്റവും ജനപ്രിയമായത്",
         "viewmore": "കൂടുതൽ കാണുക",
         "product": "ഉൽപ്പന്നം",
