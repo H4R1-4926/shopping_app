@@ -25,6 +25,8 @@ class LogOrSignIn extends StatelessWidget {
               context: context,
               builder: (context) {
                 return AlertDialog(
+                  contentPadding:
+                      const EdgeInsets.symmetric(horizontal: 5, vertical: 15),
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
                           ? kdarkbackground
@@ -249,37 +251,38 @@ class LogOrSignIn extends StatelessWidget {
                           ))
                     ],
                   ),
-                  const Flexible(
-                    child: SizedBox(
-                      height: 130,
-                    ),
+                  const SizedBox(
+                    height: 80,
                   ),
                   Text(
                     'By Continuing you\'ll also accept our',
                     style: GoogleFonts.poppins(color: kGrey),
                   ),
-                  InkWell(
-                    onTap: () {
-                      Navigator.of(context).push(PageRouteBuilder(
-                        pageBuilder: (context, animation, secondaryAnimation) =>
-                            const TermsAndConditions(),
-                        transitionsBuilder:
-                            (context, animation, secondaryAnimation, child) {
-                          var tween = Tween(
-                            begin: const Offset(1.0, 0.0),
-                            end: Offset.zero,
-                          ).chain(CurveTween(curve: Curves.easeIn));
-                          return SlideTransition(
-                            position: animation.drive(tween),
-                            child: child,
-                          );
-                        },
-                      ));
-                    },
-                    child: Text(
-                      'Terms and Condition',
-                      style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold,
+                  Expanded(
+                    child: InkWell(
+                      onTap: () {
+                        Navigator.of(context).push(PageRouteBuilder(
+                          pageBuilder:
+                              (context, animation, secondaryAnimation) =>
+                                  const TermsAndConditions(),
+                          transitionsBuilder:
+                              (context, animation, secondaryAnimation, child) {
+                            var tween = Tween(
+                              begin: const Offset(1.0, 0.0),
+                              end: Offset.zero,
+                            ).chain(CurveTween(curve: Curves.easeIn));
+                            return SlideTransition(
+                              position: animation.drive(tween),
+                              child: child,
+                            );
+                          },
+                        ));
+                      },
+                      child: Text(
+                        'Terms and Condition',
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                   )
