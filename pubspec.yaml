@@ -38,4 +38,4 @@ flutter:
   assets:
     - assets/img/
 
-    - assets/language/
+    - assets/translations/

@@ -16,7 +16,7 @@ void main() async {
         Locale("en"),
         Locale("ml"),
       ],
-      path: 'assets/language',
+      path: 'assets/translations',
       fallbackLocale: const Locale("en"),
       startLocale: const Locale("en"),
       child: const MainApp()));
@@ -42,6 +42,9 @@ class MainApp extends StatelessWidget {
       child: BlocBuilder<ThemeBlocBloc, ThemeBlocState>(
         builder: (context, state) {
           return MaterialApp(
+              localizationsDelegates: context.localizationDelegates,
+              supportedLocales: context.supportedLocales,
+              locale: context.locale,
               darkTheme: kdarkMode,
               theme: state.isTrue ? kdarkMode : klightMode,
               debugShowCheckedModeBanner: false,

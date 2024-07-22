@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -68,7 +69,7 @@ class LanguageSettings extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 15, top: 5, bottom: 10),
                   child: Text(
-                    'Language',
+                    'Other Languages',
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900, fontSize: 19),
                   ),
@@ -120,6 +121,9 @@ class LanguageSettings extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10),
             child: ElevatedButton(
               onPressed: () {
+                if (state.value == 3) {
+                  context.setLocale(const Locale('ml'));
+                }
                 Navigator.pop(context);
               },
               style: ButtonStyle(
