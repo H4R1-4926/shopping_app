@@ -30,7 +30,7 @@ class AccountPage extends StatelessWidget {
               ? kdarkbackground
               : kwhite,
           title: Text(
-            "profilepage.profile".tr(),
+            'profilepage.profile'.tr(),
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
