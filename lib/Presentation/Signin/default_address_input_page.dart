@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -13,7 +14,7 @@ class MainAddressAddPage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Text(
-          'Add Address',
+          'addressAdd.addaddres'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -24,7 +25,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'House/Building Name/Flat/Building No.',
+              'addressAdd.houseoretc'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -59,7 +60,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'Street Name/Colony Name',
+              'addressAdd.streetoretc'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -94,7 +95,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'City Name',
+              'addressAdd.cityname'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -129,7 +130,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'Landmark',
+              'addressAdd.landmark'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -164,7 +165,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'District',
+              'addressAdd.district'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -199,7 +200,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'Pincode',
+              'addressAdd.pincode',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),
@@ -262,7 +263,7 @@ class MainAddressAddPage extends StatelessWidget {
                 foregroundColor: const WidgetStatePropertyAll(kwhite),
                 elevation: const WidgetStatePropertyAll(10)),
             child: Text(
-              'Continue',
+              'continue'.tr(),
               style: GoogleFonts.lato(fontWeight: FontWeight.bold),
             ),
           ),
