@@ -137,6 +137,7 @@
             "appipdates":"App Updates"
         },
         "languagepage":{
+            "selectLanguage":"Select Language",
             "suggested":"Suggested",
             "otherslanguages":"Other Languages",
             "apply":"Apply"
@@ -146,6 +147,7 @@
             "dark":"Dark"
             
         },
+        "select":"Select",
         "privacypage":{
             "introduction":"Introduction",
             "introsentence":"Welcome to [App Name] ('we', 'our', 'us'). We are committed to protecting your personal data and your privacy. This Privacy Policy explains how we collect, use, and share information about you when you use our mobile application ('App').",

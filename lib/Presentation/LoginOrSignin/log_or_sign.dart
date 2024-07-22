@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -32,7 +33,7 @@ class LogOrSignIn extends StatelessWidget {
                           ? kdarkbackground
                           : kwhite,
                   title: Text(
-                    'Select Language',
+                    'languagepage.selectLanguage'.tr(),
                     style: GoogleFonts.lato(fontWeight: FontWeight.bold),
                   ),
                   content: BlocBuilder<RadioButtonBloc, RadioButtonState>(
@@ -46,7 +47,7 @@ class LogOrSignIn extends StatelessWidget {
                             padding: const EdgeInsets.only(
                                 left: 15, top: 5, bottom: 10),
                             child: Text(
-                              'Suggested',
+                              'languagepage.suggested'.tr(),
                               style: GoogleFonts.lato(
                                   fontWeight: FontWeight.w900, fontSize: 19),
                             ),
@@ -78,7 +79,7 @@ class LogOrSignIn extends StatelessWidget {
                             padding: const EdgeInsets.only(
                                 left: 15, top: 5, bottom: 10),
                             child: Text(
-                              'Other languages',
+                              'languagepage.otherslanguages'.tr(),
                               style: GoogleFonts.lato(
                                   fontWeight: FontWeight.w900, fontSize: 19),
                             ),
@@ -134,7 +135,7 @@ class LogOrSignIn extends StatelessWidget {
                                             ? kdarkcolor3
                                             : kblack)),
                                 child: Text(
-                                  'Select',
+                                  'select'.tr(),
                                   style: GoogleFonts.openSans(
                                       color: kwhite,
                                       fontWeight: FontWeight.bold),
