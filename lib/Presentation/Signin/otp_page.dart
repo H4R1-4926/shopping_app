@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,7 @@ class OtpPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 50, left: 25),
             child: Text(
-              'Enter Otp',
+              'otppage.enterOtp'.tr(),
               style:
                   GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
             ),
@@ -52,7 +53,7 @@ class OtpPage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(right: 30),
                 child: Text(
-                  'Resend Otp',
+                  'otppage.resendOtp'.tr(),
                   style: GoogleFonts.poppins(fontSize: 15),
                 ),
               )
@@ -77,7 +78,7 @@ class OtpPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
-                    'Proceed',
+                    'otppage.proceed'.tr(),
                     style: GoogleFonts.poppins(
                         color: kwhite, fontWeight: FontWeight.w600),
                   ),

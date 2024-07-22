@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -28,7 +29,7 @@ class LoginPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
-              'Login To Your Account',
+              'logintoaccount.logintoyouraccount'.tr(),
               style:
                   GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
             ),
@@ -50,7 +51,7 @@ class LoginPage extends StatelessWidget {
                     child: Icon(Icons.phone_outlined),
                   ),
                   prefixIconColor: Colors.grey,
-                  hintText: 'Phone',
+                  hintText: 'createAcoount.phone'.tr(),
                   hintStyle: GoogleFonts.lato(
                       color: const Color.fromARGB(255, 120, 119, 119),
                       fontWeight: FontWeight.bold),
@@ -84,7 +85,7 @@ class LoginPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
-                    'Sign In',
+                    'createAcoount.signin'.tr(),
                     style: GoogleFonts.poppins(
                         color: kwhite, fontWeight: FontWeight.w600),
                   ),
@@ -97,7 +98,7 @@ class LoginPage extends StatelessWidget {
           ),
           Center(
             child: Text(
-              'or continue with',
+              'createAcoount.orcontinue'.tr(),
               style: GoogleFonts.poppins(color: Colors.grey),
             ),
           ),
@@ -122,7 +123,7 @@ class LoginPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Don't have an account?",
+                "logorsignin.donthaveanaccount".tr(),
                 style: GoogleFonts.poppins(color: Colors.grey),
               ),
               TextButton(
@@ -130,7 +131,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   child: Text(
-                    'Sign up.',
+                    'logorsignin.signup',
                     style: GoogleFonts.poppins(
                         color: Theme.of(context).brightness == Brightness.dark
                             ? kwhite

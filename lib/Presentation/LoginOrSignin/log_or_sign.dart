@@ -163,7 +163,7 @@ class LogOrSignIn extends StatelessWidget {
                   ),
                   kSizedBoxHeight20,
                   Text(
-                    "Let's you in",
+                    "logorsignin.letyouin".tr(),
                     style: GoogleFonts.poppins(
                         fontSize: 28, fontWeight: FontWeight.bold),
                   ),
@@ -190,7 +190,7 @@ class LogOrSignIn extends StatelessWidget {
                           width: 10,
                         ),
                         Text(
-                          'Continue with Google',
+                          "logorsignin.google".tr(),
                           style: GoogleFonts.poppins(
                               fontWeight: FontWeight.bold, color: kblack),
                         ),
@@ -199,7 +199,7 @@ class LogOrSignIn extends StatelessWidget {
                   ),
                   kSizedBoxHeight30,
                   Text(
-                    'or',
+                    "logorsignin.or".tr(),
                     style: GoogleFonts.poppins(
                         fontWeight: FontWeight.bold, color: Colors.grey),
                   ),
@@ -220,7 +220,7 @@ class LogOrSignIn extends StatelessWidget {
                           borderRadius: BorderRadius.circular(25)),
                       child: Center(
                         child: Text(
-                          'Sign in with phone',
+                          "logorsignin.signinwithphone".tr(),
                           style: GoogleFonts.poppins(
                               color: kwhite, fontWeight: FontWeight.w600),
                         ),
@@ -232,7 +232,7 @@ class LogOrSignIn extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "Don't have an account?",
+                        "logorsignin.donthaveanaccount".tr(),
                         style: GoogleFonts.poppins(color: Colors.grey),
                       ),
                       TextButton(
@@ -242,7 +242,7 @@ class LogOrSignIn extends StatelessWidget {
                             ));
                           },
                           child: Text(
-                            'Sign up.',
+                            "logorsignin.signup".tr(),
                             style: GoogleFonts.poppins(
                                 color: Theme.of(context).brightness ==
                                         Brightness.dark
@@ -256,7 +256,7 @@ class LogOrSignIn extends StatelessWidget {
                     height: 80,
                   ),
                   Text(
-                    'By Continuing you\'ll also accept our',
+                    "logorsignin.byContinuing".tr(),
                     style: GoogleFonts.poppins(color: kGrey),
                   ),
                   Expanded(
@@ -280,7 +280,7 @@ class LogOrSignIn extends StatelessWidget {
                         ));
                       },
                       child: Text(
-                        'Terms and Condition',
+                        "logorsignin.termsandcondition".tr(),
                         style: GoogleFonts.poppins(
                           fontWeight: FontWeight.bold,
                         ),

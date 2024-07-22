@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,7 @@ class SignUpPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
-              'Create Your Account',
+              'createAcoount.createYourAccount'.tr(),
               style:
                   GoogleFonts.inter(fontSize: 47, fontWeight: FontWeight.bold),
             ),
@@ -40,7 +41,7 @@ class SignUpPage extends StatelessWidget {
                     child: Icon(Icons.phone_outlined),
                   ),
                   prefixIconColor: Colors.grey,
-                  hintText: 'Phone',
+                  hintText: 'createAcoount.phone'.tr(),
                   hintStyle: GoogleFonts.lato(
                       color: const Color.fromARGB(255, 120, 119, 119),
                       fontWeight: FontWeight.bold),
@@ -72,7 +73,7 @@ class SignUpPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
-                    'Send Otp',
+                    'createAcoount.sendOtp'.tr(),
                     style: GoogleFonts.poppins(
                         color: kwhite, fontWeight: FontWeight.w600),
                   ),
@@ -85,7 +86,7 @@ class SignUpPage extends StatelessWidget {
           ),
           Center(
             child: Text(
-              'or continue with',
+              'createAcoount.orcontinue'.tr(),
               style: GoogleFonts.poppins(color: Colors.grey),
             ),
           ),
@@ -109,7 +110,7 @@ class SignUpPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                "Already have an account?",
+                'createAcoount.alreadyhaveaccount'.tr(),
                 style: GoogleFonts.poppins(color: Colors.grey),
               ),
               TextButton(
@@ -119,7 +120,7 @@ class SignUpPage extends StatelessWidget {
                     ));
                   },
                   child: Text(
-                    'Sign in.',
+                    'createAcoount.signin'.tr(),
                     style: GoogleFonts.poppins(
                         color: Theme.of(context).brightness == Brightness.dark
                             ? kwhite

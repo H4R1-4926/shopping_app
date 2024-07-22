@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -13,13 +14,13 @@ class ProfileSetUpPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final gender = ['Male', 'Female'];
+    final gender = ['profileFill.male'.tr(), 'profileFill.female'.tr()];
     final TextEditingController genderController =
-        TextEditingController(text: 'Gender');
+        TextEditingController(text: 'profileFill.gender'.tr());
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Fill your profile',
+          'profileFill.',
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),
         ),
       ),
