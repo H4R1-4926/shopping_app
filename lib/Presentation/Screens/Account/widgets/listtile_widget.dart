@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -40,7 +41,7 @@ class ListTileWidget extends StatelessWidget {
                 style: GoogleFonts.poppins(
                     color: textColour,
                     fontWeight: FontWeight.w600,
-                    fontSize: 16),
+                    fontSize: context.locale.languageCode == 'en' ? 16 : 14),
               ),
               Text(
                 secondText ?? ' ',
