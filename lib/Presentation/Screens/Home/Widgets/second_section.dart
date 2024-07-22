@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:shopping_app/Core/colors.dart';
@@ -115,7 +116,7 @@ class CatogorySection extends StatelessWidget {
                       ));
                 },
                 icon: Icons.add,
-                text: 'View More',
+                text: 'homepage.viewmore'.tr(),
               ),
             ],
           ),

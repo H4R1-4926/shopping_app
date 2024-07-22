@@ -41,7 +41,7 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               title: Text(
-                'homepage.hello user'.tr(),
+                'homepage.hello'.tr(args: ['user']),
                 style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold, fontSize: 18),
               ),

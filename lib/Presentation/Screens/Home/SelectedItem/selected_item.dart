@@ -1,4 +1,5 @@
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 import 'package:flutter/material.dart';
 
@@ -109,7 +110,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
             Padding(
               padding: const EdgeInsets.only(right: 230, top: 10),
               child: Text(
-                'Description',
+                'selecteditem.description'.tr(),
                 style:
                     GoogleFonts.lato(fontSize: 18, fontWeight: FontWeight.w900),
               ),
@@ -130,7 +131,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
             Padding(
               padding: const EdgeInsets.only(right: 270, top: 10),
               child: Text(
-                'Colours',
+                'selecteditem.color'.tr(),
                 style:
                     GoogleFonts.lato(fontSize: 19, fontWeight: FontWeight.w900),
               ),
@@ -170,7 +171,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
             Padding(
               padding: const EdgeInsets.only(right: 270, top: 15),
               child: Text(
-                'In Stock',
+                'selecteditem.instock'.tr(),
                 style: GoogleFonts.lato(
                     fontSize: 17,
                     fontWeight: FontWeight.w900,
@@ -254,7 +255,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Price',
+                                Text('selecteditem.price'.tr(),
                                     style: GoogleFonts.poppins(
                                         fontSize: 20,
                                         fontWeight: FontWeight.bold)),
@@ -273,7 +274,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text('Quantity',
+                                Text('selecteditem.quantity'.tr(),
                                     style: GoogleFonts.poppins(
                                         fontSize: 18,
                                         fontWeight: FontWeight.bold)),
@@ -429,7 +430,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            'Total price',
+                                            'selecteditem.totalPrize'.tr(),
                                             style: GoogleFonts.lato(
                                                 fontSize: 13, color: kGrey),
                                           ),
@@ -458,7 +459,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                                 : const WidgetStatePropertyAll(
                                                     kblack)),
                                         child: Text(
-                                          'Add to cart',
+                                          'selecteditem.addtocart'.tr(),
                                           style: GoogleFonts.lato(
                                               color: kwhite,
                                               fontWeight: FontWeight.bold,
@@ -483,7 +484,7 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                   ),
                   fixedSize: WidgetStatePropertyAll(Size(300, 45))),
               child: Text(
-                'Add to Cart',
+                'selecteditem.addtocart'.tr(),
                 style: GoogleFonts.roboto(
                     fontSize: 15, fontWeight: FontWeight.w700, color: kblack),
               ),

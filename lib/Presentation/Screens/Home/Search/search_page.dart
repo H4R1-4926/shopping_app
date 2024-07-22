@@ -1,5 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -95,7 +96,7 @@ class _SearchPageState extends State<SearchPage> {
           if (_recentSearches.isEmpty) {
             return Center(
               child: Text(
-                'No Recent Searches',
+                'search.norecentSearch'.tr(),
                 style: GoogleFonts.lato(color: Colors.grey),
               ),
             );
@@ -112,7 +113,7 @@ class _SearchPageState extends State<SearchPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text('Recent Searches',
+                    Text('search.recentSearch'.tr(),
                         style: GoogleFonts.montserrat(
                             fontWeight: FontWeight.bold, fontSize: 16)),
                     TextButton(
@@ -120,7 +121,7 @@ class _SearchPageState extends State<SearchPage> {
                           _clearRecentSearches();
                         },
                         child: Text(
-                          'Clear All',
+                          'search.clearall'.tr(),
                           style: GoogleFonts.montserrat(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -20,7 +21,7 @@ class NotificationPage extends StatelessWidget {
             ? kdarkbackground
             : klightGrey,
         title: Text(
-          'Notifications',
+          'notification'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
