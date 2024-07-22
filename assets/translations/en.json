@@ -74,8 +74,8 @@
         "search":{
             "norecentSearch":"No Recent Searches",
             "recentSearch":"Recent Searches",
-            "result":"Results For",
-            "found":"founds",
+            "result":"Results For {searchbartext}",
+            "found":"{searchResultLength} founds",
             "clearall":"Clear All"
         },
         "cart":{
