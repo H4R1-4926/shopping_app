@@ -50,7 +50,7 @@
     },
     "continue":"Continue",
     "homepage":{
-"hello":"Hello {user}",
+"hello":"Hello {}",
 "mostpopular":"Most Popular",
 "viewmore":"View More",
 "product":"Product",
@@ -74,8 +74,8 @@
         "search":{
             "norecentSearch":"No Recent Searches",
             "recentSearch":"Recent Searches",
-            "result":"Results For {searchbartext}",
-            "found":"{searchResultLength} founds",
+            "result":"Results For '{}'",
+            "found":"{} founds",
             "clearall":"Clear All"
         },
         "cart":{

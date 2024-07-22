@@ -66,8 +66,8 @@
     "search": {
         "norecentSearch": "സമീപകാല തിരയലുകൾ ഇല്ല",
         "recentSearch": "സമീപകാല തിരയലുകൾ",
-        "result": "{searchbartext} ഫലംഎന്നതിനായുള്ള ഫലങ്ങൾ",
-        "found": "{searchResultLength} കണ്ടുപിടിച്ചു",
+        "result": "'{}' ന് ഫലങ്ങൾ",
+        "found": "{} കണ്ടുപിടിച്ചു",
         "clearall": "എല്ലാം മായ്ക്കുക"
     },
     "cart": {
