@@ -1,3 +1,6 @@
+import 'dart:developer';
+
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -14,6 +17,7 @@ class SearchResultPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log('search.result'.tr(args: [searchBarText]));
     return Column(
       children: [
         Padding(
@@ -22,11 +26,11 @@ class SearchResultPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Results For \'$searchBarText\'',
+                'search.result'.tr(args: [searchBarText]),
                 style: GoogleFonts.montserrat(
                     fontWeight: FontWeight.bold, fontSize: 17),
               ),
-              Text('$searchResultLength founds',
+              Text('search.found'.tr(args: [searchResultLength]),
                   style: GoogleFonts.montserrat(
                       fontWeight: FontWeight.bold, fontSize: 14))
             ],

@@ -131,7 +131,7 @@ class LoginPage extends StatelessWidget {
                     Navigator.of(context).pop();
                   },
                   child: Text(
-                    'logorsignin.signup',
+                    'logorsignin.signup'.tr(),
                     style: GoogleFonts.poppins(
                         color: Theme.of(context).brightness == Brightness.dark
                             ? kwhite
