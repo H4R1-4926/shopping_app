@@ -20,7 +20,7 @@ class ProfileSetUpPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'profileFill.',
+          'profileFill.fillprofile'.tr(),
           style: GoogleFonts.lato(fontWeight: FontWeight.bold),
         ),
       ),
@@ -52,7 +52,7 @@ class ProfileSetUpPage extends StatelessWidget {
                       borderSide: const BorderSide(width: 1.5)),
                   counterText: '',
                   hintStyle: GoogleFonts.lato(),
-                  hintText: 'First Name',
+                  hintText: 'profileFill.firstname'.tr(),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
@@ -77,7 +77,7 @@ class ProfileSetUpPage extends StatelessWidget {
                       borderSide: const BorderSide(width: 1.5)),
                   counterText: '',
                   hintStyle: GoogleFonts.lato(),
-                  hintText: 'Last Name',
+                  hintText: 'profileFill.lastname'.tr(),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide.none),
@@ -158,7 +158,7 @@ class ProfileSetUpPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(25)),
                 child: Center(
                   child: Text(
-                    'Proceed',
+                    'otppage.proceed'.tr(),
                     style: GoogleFonts.poppins(
                         color: kwhite, fontWeight: FontWeight.w600),
                   ),
