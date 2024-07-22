@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/Application/First%20Time/first_time_bloc.dart';
@@ -8,7 +9,17 @@ import 'Application/RadioButton/radio_button_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp(const MainApp());
+
+  await EasyLocalization.ensureInitialized();
+  runApp(EasyLocalization(
+      supportedLocales: const [
+        Locale("en"),
+        Locale("ml"),
+      ],
+      path: 'assets/language',
+      fallbackLocale: const Locale("en"),
+      startLocale: const Locale("en"),
+      child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {

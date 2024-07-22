@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_share/flutter_share.dart';
 
@@ -29,7 +30,7 @@ class AccountPage extends StatelessWidget {
               ? kdarkbackground
               : kwhite,
           title: Text(
-            'Profile',
+            "profilepage.profile".tr(),
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
@@ -80,7 +81,7 @@ class AccountPage extends StatelessWidget {
             kSizedBoxHeight10,
             ListTileWidget(
               prefixIcon: Iconsax.user_edit,
-              titleText: 'Edit Profile',
+              titleText: 'profilepage.editprofile'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
