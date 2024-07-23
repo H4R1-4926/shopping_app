@@ -122,9 +122,9 @@ class LanguageSettings extends StatelessWidget {
             child: ElevatedButton(
               onPressed: () {
                 if (state.value == 1) {
-                  context.setLocale(const Locale('en'));
+                  context.setLocale(const Locale('en', 'US'));
                 } else if (state.value == 3) {
-                  context.setLocale(const Locale('ml'));
+                  context.setLocale(const Locale('ml', 'IN'));
                 }
                 Navigator.pop(context);
               },

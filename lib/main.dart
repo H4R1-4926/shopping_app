@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shopping_app/Application/First%20Time/first_time_bloc.dart';
 import 'package:shopping_app/Application/Theme%20Bloc/theme_bloc_bloc.dart';
 import 'package:shopping_app/Core/theme.dart';
-import 'package:shopping_app/Presentation/Home/tab_bar.dart';
+import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
 
 import 'Application/RadioButton/radio_button_bloc.dart';
 
@@ -13,12 +13,12 @@ void main() async {
   await EasyLocalization.ensureInitialized();
   runApp(EasyLocalization(
       supportedLocales: const [
-        Locale("en"),
-        Locale("ml"),
+        Locale("en", 'US'),
+        Locale("ml", 'IN'),
       ],
       path: 'assets/translations',
-      fallbackLocale: const Locale("en"),
-      startLocale: const Locale("en"),
+      fallbackLocale: const Locale("en", 'US'),
+      startLocale: const Locale("en", 'US'),
       child: const MainApp()));
 }
 
@@ -48,7 +48,7 @@ class MainApp extends StatelessWidget {
               darkTheme: kdarkMode,
               theme: state.isTrue ? kdarkMode : klightMode,
               debugShowCheckedModeBanner: false,
-              home: const TabBarPage());
+              home: const LogOrSignIn());
         },
       ),
     );

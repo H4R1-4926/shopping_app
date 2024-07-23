@@ -20,9 +20,9 @@ class LogOrSignIn extends StatelessWidget {
       context.read<FirstTimeBloc>().add(const OnCheck());
     });
     return BlocListener<FirstTimeBloc, FirstTimeState>(
-        listener: (context, state) {
+        listener: (context, state) async {
           if (state.isFirstTime == true) {
-            showDialog(
+            await showDialog(
               context: context,
               builder: (context) {
                 return AlertDialog(
@@ -124,6 +124,11 @@ class LogOrSignIn extends StatelessWidget {
                           Center(
                             child: ElevatedButton(
                                 onPressed: () {
+                                  if (state.value == 1) {
+                                    context.setLocale(const Locale('en', 'US'));
+                                  } else if (state.value == 3) {
+                                    context.setLocale(const Locale('ml', 'IN'));
+                                  }
                                   Navigator.pop(context);
                                 },
                                 style: ButtonStyle(
