@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -16,7 +17,7 @@ class RecieptPage extends StatelessWidget {
           : klightGrey,
       appBar: AppBar(
         title: Text(
-          'Overview',
+          'cart.overview'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -29,7 +30,7 @@ class RecieptPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              'Shipping Address',
+              'cart.shipping'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
                 fontSize: 21,
@@ -80,7 +81,7 @@ class RecieptPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              'Shipping Method',
+              'cart.shippingmethod'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
                 fontSize: 21,
@@ -149,7 +150,7 @@ class RecieptPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Amount',
+                          'cart.amount'.tr(),
                           style: GoogleFonts.lato(color: kGrey, fontSize: 18),
                         ),
                         Text(
@@ -200,7 +201,7 @@ class RecieptPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Shipping Charge',
+                          'cart.shippingCharge'.tr(),
                           style: GoogleFonts.lato(color: kGrey, fontSize: 18),
                         ),
                         Text(
@@ -221,7 +222,7 @@ class RecieptPage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          'Total Amount',
+                          'cart.totalAmount'.tr(),
                           style: GoogleFonts.lato(color: kGrey, fontSize: 18),
                         ),
                         Text(
@@ -277,7 +278,7 @@ class RecieptPage extends StatelessWidget {
                           : const WidgetStatePropertyAll(kblack),
                   foregroundColor: const WidgetStatePropertyAll(kwhite)),
               child: Text(
-                'Payment ➤',
+                'cart.payment'.tr(),
                 style:
                     GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 16),
               )),

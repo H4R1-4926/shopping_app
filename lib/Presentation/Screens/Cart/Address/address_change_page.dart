@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,7 +16,7 @@ class AddressChangePage extends StatelessWidget {
           : klightGrey,
       appBar: AppBar(
         title: Text(
-          'Shipping Address',
+          'cart.shipping'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -97,7 +98,7 @@ class AddressChangePage extends StatelessWidget {
                           : const WidgetStatePropertyAll(kblack),
                   fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
-                'Add New Address',
+                'cart.addaddress'.tr(),
                 style:
                     GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 15),
               ),
@@ -126,7 +127,7 @@ class AddressChangePage extends StatelessWidget {
                     : const WidgetStatePropertyAll(kblack),
                 foregroundColor: const WidgetStatePropertyAll(kwhite),
                 elevation: const WidgetStatePropertyAll(10)),
-            child: Text('Apply',
+            child: Text('apply'.tr(),
                 style: GoogleFonts.lato(
                     color: kwhite, fontWeight: FontWeight.bold, fontSize: 14)),
           ),

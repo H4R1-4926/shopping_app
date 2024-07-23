@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -15,7 +16,7 @@ class PaymentPage extends StatelessWidget {
           : klightGrey,
       appBar: AppBar(
         title: Text(
-          'Payment Methods',
+          'cart.paymentMethod'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -29,7 +30,7 @@ class PaymentPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
-                'select the payment method you want to use',
+                'cart.selectPayment'.tr(),
                 style: GoogleFonts.lato(fontSize: 15),
               ),
             ),
@@ -334,7 +335,7 @@ class PaymentPage extends StatelessWidget {
                     : const WidgetStatePropertyAll(kblack),
                 fixedSize: const WidgetStatePropertyAll(Size(300, 50))),
             child: Text(
-              'Confirm Payment',
+              'cart.confirmpayment'.tr(),
               style: GoogleFonts.lato(
                   fontWeight: FontWeight.bold, fontSize: 15, color: kwhite),
             ),

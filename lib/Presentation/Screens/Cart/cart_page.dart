@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,7 @@ class CartPage extends StatelessWidget {
             : klightGrey,
         appBar: AppBar(
           title: Text(
-            'My Cart',
+            'cart.myCart'.tr(),
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
@@ -60,7 +61,7 @@ class CartPage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            Text('Total price',
+                            Text('selecteditem.totalPrize'.tr(),
                                 style: GoogleFonts.lato(
                                     fontSize: 13, color: kGrey)),
                             Text(
@@ -98,7 +99,7 @@ class CartPage extends StatelessWidget {
                             fixedSize:
                                 const WidgetStatePropertyAll(Size(200, 55))),
                         child: Text(
-                          'Checkout  ➤',
+                          'cart.checkout'.tr(),
                           style: GoogleFonts.lato(
                               color: kwhite,
                               fontWeight: FontWeight.bold,
@@ -206,7 +207,7 @@ class CartPage extends StatelessWidget {
                                                 child: Column(
                                                   children: [
                                                     Text(
-                                                      'Remove from Cart?',
+                                                      'cart.remove'.tr(),
                                                       style: GoogleFonts
                                                           .montserrat(
                                                               fontSize: 20,
@@ -388,7 +389,7 @@ class CartPage extends StatelessWidget {
                                                                         kwhite),
                                                               ),
                                                               child: Text(
-                                                                'Cancel',
+                                                                'cancel'.tr(),
                                                                 style: GoogleFonts
                                                                     .lato(
                                                                         fontSize:
@@ -419,7 +420,7 @@ class CartPage extends StatelessWidget {
                                                                       const WidgetStatePropertyAll(
                                                                           kwhite)),
                                                               child: Text(
-                                                                'Yes, Remove',
+                                                                'cart.yes'.tr(),
                                                                 style: GoogleFonts.lato(
                                                                     fontSize:
                                                                         14,

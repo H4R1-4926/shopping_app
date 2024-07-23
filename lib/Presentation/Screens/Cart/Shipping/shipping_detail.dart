@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
@@ -15,7 +16,7 @@ class ShippingPage extends StatelessWidget {
           : klightGrey,
       appBar: AppBar(
         title: Text(
-          'Choose Shipping',
+          'cart.chooseshipping'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -117,7 +118,7 @@ class ShippingPage extends StatelessWidget {
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),
               child: Text(
-                'Continue To Payment ➤',
+                'cart.continuetopayment',
                 style: GoogleFonts.lato(
                     color: kwhite, fontWeight: FontWeight.bold, fontSize: 14),
               )),

@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -19,7 +20,7 @@ class CheckoutPage extends StatelessWidget {
           : klightGrey,
       appBar: AppBar(
         title: Text(
-          'Checkout',
+          'cart.checkoutpage'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -36,7 +37,7 @@ class CheckoutPage extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 15),
                   child: Text(
-                    'Shipping Address',
+                    'cart.shipping'.tr(),
                     style: GoogleFonts.lato(
                       fontWeight: FontWeight.w900,
                       fontSize: 21,
@@ -117,7 +118,7 @@ class CheckoutPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 15),
             child: Text(
-              'Order List',
+              'cart.orderlist'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
                 fontSize: 21,
@@ -274,7 +275,7 @@ class CheckoutPage extends StatelessWidget {
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),
               child: Text(
-                'Continue ➤',
+                'cart.continue'.tr(),
                 style: GoogleFonts.lato(
                     color: kwhite, fontWeight: FontWeight.bold, fontSize: 14),
               )),
