@@ -94,7 +94,7 @@
 "shippingmethod":"Shipping Method",
 "amount":"Amount",
 "shippingCharge":"Shipping Charge",
-"totalAmoount":"Total Amount",
+"totalAmount":"Total Amount",
 "payment":"Payment ➤",
 "paymentMethod":"Payment Methods",
 "selectPayment":"Select the payment method you want to use",
