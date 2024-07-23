@@ -118,7 +118,7 @@ class ShippingPage extends StatelessWidget {
                   foregroundColor: const WidgetStatePropertyAll(kwhite),
                   elevation: const WidgetStatePropertyAll(10)),
               child: Text(
-                'cart.continuetopayment',
+                'cart.continuetopayment'.tr(),
                 style: GoogleFonts.lato(
                     color: kwhite, fontWeight: FontWeight.bold, fontSize: 14),
               )),

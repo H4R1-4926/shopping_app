@@ -121,7 +121,9 @@ class LanguageSettings extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 10),
             child: ElevatedButton(
               onPressed: () {
-                if (state.value == 3) {
+                if (state.value == 1) {
+                  context.setLocale(const Locale('en'));
+                } else if (state.value == 3) {
                   context.setLocale(const Locale('ml'));
                 }
                 Navigator.pop(context);
