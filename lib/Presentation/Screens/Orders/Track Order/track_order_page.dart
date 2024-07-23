@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -20,7 +21,7 @@ class TrackOrderPage extends StatelessWidget {
             : klightGrey,
         appBar: AppBar(
           title: Text(
-            'Track Order',
+            'orderpage.trackorder'.tr(),
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
@@ -180,7 +181,7 @@ class TrackOrderPage extends StatelessWidget {
             ),
             Center(
               child: Text(
-                'Packet In Delivery',
+                'orderpage.packetindelivery'.tr(),
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold, fontSize: 18),
               ),
@@ -193,7 +194,7 @@ class TrackOrderPage extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
-                'Order Status Details',
+                'orderpage.orderstatus'.tr(),
                 style: GoogleFonts.poppins(
                     fontWeight: FontWeight.bold, fontSize: 18),
               ),
@@ -217,7 +218,7 @@ class TrackOrderPage extends StatelessWidget {
                           side: const BorderSide(width: 1, color: kblack),
                           borderRadius: BorderRadius.circular(25)))),
                   child: Text(
-                    'Cancel Order',
+                    'orderpage.cancelorder'.tr(),
                     style: GoogleFonts.lato(
                         color: kblack, fontWeight: FontWeight.bold),
                   )),

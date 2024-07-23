@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -95,7 +96,7 @@ class OrderCompleted extends StatelessWidget {
                                             BorderRadius.circular(20)),
                                     child: Center(
                                       child: Text(
-                                        'Completed',
+                                        'orderpage.completed'.tr(),
                                         style:
                                             GoogleFonts.openSans(fontSize: 12),
                                       ),
@@ -123,7 +124,7 @@ class OrderCompleted extends StatelessWidget {
                                                 WidgetStatePropertyAll(
                                                     klightGrey)),
                                         child: Text(
-                                          'Return',
+                                          'orderpage.return'.tr(),
                                           style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.bold,
                                             fontSize: 12,

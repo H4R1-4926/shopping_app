@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 
 import 'package:google_fonts/google_fonts.dart';
@@ -95,7 +96,7 @@ class OrderOnGoing extends StatelessWidget {
                                             BorderRadius.circular(20)),
                                     child: Center(
                                       child: Text(
-                                        'In Delivery',
+                                        'orderpage.indelivery'.tr(),
                                         style:
                                             GoogleFonts.openSans(fontSize: 12),
                                       ),
@@ -144,7 +145,7 @@ class OrderOnGoing extends StatelessWidget {
                                         },
                                         child: Center(
                                           child: Text(
-                                            'Track',
+                                            'orderpage.track'.tr(),
                                             style: GoogleFonts.lato(
                                                 fontWeight: FontWeight.bold,
                                                 fontSize: 13,
