@@ -109,7 +109,7 @@
             "track":"Track",
             "trackorder":"Track Order",
             "packetindelivery":"Packet in Delivery",
-            "oderstatus":"Order Status Details",
+            "orderstatus":"Order Status Details",
             "orderrecieved":"Order Recieved",
             "orderpacked":"Order Packed",
             "ordershipped":"Order Shipped",
@@ -150,8 +150,8 @@
             "apply":"Apply"
         },
         "themepage":{
-            "light":"Light",
-            "dark":"Dark"
+            "light":"Light Mode",
+            "dark":"Dark Mode"
             
         },
         "select":"Select",
