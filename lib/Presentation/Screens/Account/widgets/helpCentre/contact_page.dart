@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -33,17 +34,17 @@ class ContactPage extends StatelessWidget {
                 },
               ));
             },
-            child: const ContactWidgets(
-              text: 'Customer Service',
+            child: ContactWidgets(
+              text: 'contactus.customerservice'.tr(),
               icon: Icons.headset_mic_outlined,
             ),
           ),
-          const ContactWidgets(
-            text: 'Whatsapp',
+          ContactWidgets(
+            text: 'contactus.whatsapp'.tr(),
             icon: FontAwesomeIcons.whatsapp,
           ),
-          const ContactWidgets(
-            text: 'Instagram',
+          ContactWidgets(
+            text: 'contactus.instagram'.tr(),
             icon: FontAwesomeIcons.instagram,
           ),
         ],

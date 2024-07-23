@@ -1,5 +1,6 @@
 // ignore_for_file: no_leading_underscores_for_local_identifiers
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -18,17 +19,17 @@ class HelpCentrePage extends StatelessWidget {
         appBar: AppBar(
           automaticallyImplyLeading: true,
           title: Text(
-            'Help Centre',
+            'profilepage.helpcentre'.tr(),
             style: GoogleFonts.montserrat(
                 fontWeight: FontWeight.bold, fontSize: 20),
           ),
           bottom: TabBar(
-            tabs: const [
+            tabs: [
               Tab(
-                text: 'FAQ',
+                text: 'helpcentrepage.faq'.tr(),
               ),
               Tab(
-                text: 'Contact us',
+                text: 'helpcentrepage.contactus'.tr(),
               )
             ],
             indicatorColor: Theme.of(context).brightness == Brightness.dark

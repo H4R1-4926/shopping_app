@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -13,7 +14,7 @@ class EditProfile extends StatelessWidget {
     final TextEditingController genderController =
         TextEditingController(text: 'Male');
 
-    final gender = ['Male', 'Female'];
+    final gender = ['profileFill.male'.tr(), 'profileFill.female'.tr()];
 
     return Scaffold(
       appBar: AppBar(
@@ -25,7 +26,7 @@ class EditProfile extends StatelessWidget {
             ? kdarkbackground
             : kwhite,
         title: Text(
-          'Edit Profile',
+          'profilepage.editprofile'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -152,7 +153,7 @@ class EditProfile extends StatelessWidget {
                     : const WidgetStatePropertyAll(kblack),
                 fixedSize: const WidgetStatePropertyAll(Size(300, 55))),
             child: Text(
-              'Apply',
+              'apply'.tr(),
               style: GoogleFonts.lato(
                   color: kwhite, fontWeight: FontWeight.bold, fontSize: 12),
             ),

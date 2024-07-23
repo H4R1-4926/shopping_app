@@ -24,7 +24,7 @@ class LanguageSettings extends StatelessWidget {
                 ? kdarkbackground
                 : kwhite,
             title: Text(
-              'Select Language',
+              'languagepage.selectLanguage'.tr(),
               style: GoogleFonts.montserrat(
                   fontWeight: FontWeight.bold, fontSize: 20),
             ),
@@ -36,7 +36,7 @@ class LanguageSettings extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 15, top: 5, bottom: 10),
                   child: Text(
-                    'Suggested',
+                    'languagepage.suggested'.tr(),
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900, fontSize: 19),
                   ),
@@ -69,7 +69,7 @@ class LanguageSettings extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.only(left: 15, top: 5, bottom: 10),
                   child: Text(
-                    'Other Languages',
+                    'languagepage.otherslanguages'.tr(),
                     style: GoogleFonts.lato(
                         fontWeight: FontWeight.w900, fontSize: 19),
                   ),
@@ -134,7 +134,7 @@ class LanguageSettings extends StatelessWidget {
                           : const WidgetStatePropertyAll(kblack),
                   fixedSize: const WidgetStatePropertyAll(Size(270, 50))),
               child: Text(
-                'Apply',
+                'apply'.tr(),
                 style: GoogleFonts.lato(
                     color: Theme.of(context).brightness == Brightness.dark
                         ? kblack

@@ -103,7 +103,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.location,
-              titleText: 'Address',
+              titleText: 'profilepage.address'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
@@ -125,7 +125,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.notification,
-              titleText: 'Notification',
+              titleText: 'profilepage.notification'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
@@ -147,7 +147,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.language_square,
-              titleText: 'Language',
+              titleText: 'profilepage.language'.tr(),
               secondText: 'English-(US)',
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
@@ -170,7 +170,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.eye,
-              titleText: 'Theme',
+              titleText: 'profilepage.theme'.tr(),
               secondText: '(System Default)',
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
@@ -193,7 +193,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.lock,
-              titleText: 'Privacy Policy',
+              titleText: 'profilepage.privacypolicy'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
@@ -215,7 +215,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.note_21,
-              titleText: 'Terms & Conditions',
+              titleText: 'profilepage.termsandcondition'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
@@ -237,7 +237,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.info_circle,
-              titleText: 'Help Centre',
+              titleText: 'profilepage.helpcentre'.tr(),
               ontap: () {
                 Navigator.of(context).push(PageRouteBuilder(
                   pageBuilder: (context, animation, secondaryAnimation) =>
@@ -259,7 +259,7 @@ class AccountPage extends StatelessWidget {
             ),
             ListTileWidget(
               prefixIcon: Iconsax.people,
-              titleText: 'Invite Friends',
+              titleText: 'profilepage.invite'.tr(),
               ontap: () {
                 FlutterShare.share(title: 'Example', text: 'Invite Link');
               },
@@ -268,7 +268,7 @@ class AccountPage extends StatelessWidget {
             ListTileWidget(
               prefixIcon: Iconsax.logout,
               iconColour: Colors.red,
-              titleText: 'Logout',
+              titleText: 'profilepage.logout'.tr(),
               ontap: () {
                 showModalBottomSheet(
                   showDragHandle: true,
@@ -301,7 +301,7 @@ class AccountPage extends StatelessWidget {
                         children: [
                           Center(
                             child: Text(
-                              'Logout',
+                              'profilepage.logout'.tr(),
                               style: GoogleFonts.poppins(
                                   color: Colors.red,
                                   fontSize: 23,
@@ -316,7 +316,7 @@ class AccountPage extends StatelessWidget {
                           kSizedBoxHeight20,
                           Center(
                             child: Text(
-                              'Are you sure you want to logout?',
+                              'logoutpopup.sure'.tr(),
                               style: GoogleFonts.openSans(
                                 fontWeight: FontWeight.bold,
                               ),
@@ -340,7 +340,7 @@ class AccountPage extends StatelessWidget {
                                           WidgetStatePropertyAll(kwhite),
                                     ),
                                     child: Text(
-                                      'Cancel',
+                                      'logoutpopup.cancel'.tr(),
                                       style: GoogleFonts.lato(
                                           fontSize: 14,
                                           color: kblack,
@@ -370,7 +370,7 @@ class AccountPage extends StatelessWidget {
                                             const WidgetStatePropertyAll(
                                                 kwhite)),
                                     child: Text(
-                                      'Yes, Logout',
+                                      'logoutpopup.yes'.tr(),
                                       style: GoogleFonts.lato(
                                           fontSize: 14,
                                           fontWeight: FontWeight.bold),

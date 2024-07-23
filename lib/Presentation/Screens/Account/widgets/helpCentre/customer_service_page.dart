@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -12,7 +13,7 @@ class CustomerServicePage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: true,
         title: Text(
-          'Fill the query',
+          'contactus.fill'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
@@ -27,7 +28,7 @@ class CustomerServicePage extends StatelessWidget {
                 minLines: 1,
                 decoration: InputDecoration(
                     counterText: '',
-                    hintText: 'Your Name',
+                    hintText: 'contactus.yourname'.tr(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(18))),
               ),
@@ -40,7 +41,7 @@ class CustomerServicePage extends StatelessWidget {
                 keyboardType: TextInputType.phone,
                 decoration: InputDecoration(
                     counterText: '',
-                    hintText: 'Your Phone number',
+                    hintText: 'contactus.yourphone'.tr(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(18))),
               ),
@@ -53,7 +54,7 @@ class CustomerServicePage extends StatelessWidget {
                 maxLines: 5,
                 decoration: InputDecoration(
                     counterText: '',
-                    hintText: 'Reason for contacting',
+                    hintText: 'contactus.reason'.tr(),
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(18))),
               ),
@@ -69,7 +70,7 @@ class CustomerServicePage extends StatelessWidget {
                           : const WidgetStatePropertyAll(kblack),
                 ),
                 child: Text(
-                  'Submit',
+                  'contactus.submit',
                   style: GoogleFonts.lato(
                       color: kwhite, fontWeight: FontWeight.bold),
                 ))

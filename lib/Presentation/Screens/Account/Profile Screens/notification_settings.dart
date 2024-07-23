@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -19,19 +20,19 @@ class NotificationSettings extends StatelessWidget {
             ? kdarkbackground
             : kwhite,
         title: Text(
-          'Notification',
+          'profilepage.notification'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
-      body: const SingleChildScrollView(
+      body: SingleChildScrollView(
         child: Column(
           children: [
-            ListTileWidget(title: 'General Notification'),
-            ListTileWidget(title: 'Sound'),
-            ListTileWidget(title: 'Vibrate'),
-            ListTileWidget(title: 'Special Offer'),
-            ListTileWidget(title: 'App Updates'),
+            ListTileWidget(title: 'notificationpage.genaralnoti'.tr()),
+            ListTileWidget(title: 'notificationpage.sound'.tr()),
+            ListTileWidget(title: 'notificationpage.vibrate'.tr()),
+            ListTileWidget(title: 'notificationpage.specialoffer'.tr()),
+            ListTileWidget(title: 'notificationpage.appupdates'.tr()),
           ],
         ),
       ),
