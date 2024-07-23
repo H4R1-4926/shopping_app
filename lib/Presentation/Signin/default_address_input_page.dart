@@ -200,7 +200,7 @@ class MainAddressAddPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 20),
             child: Text(
-              'addressAdd.pincode',
+              'addressAdd.pincode'.tr(),
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.bold, fontSize: 15),
             ),

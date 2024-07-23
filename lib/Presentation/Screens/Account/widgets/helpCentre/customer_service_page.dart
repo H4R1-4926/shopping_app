@@ -70,7 +70,7 @@ class CustomerServicePage extends StatelessWidget {
                           : const WidgetStatePropertyAll(kblack),
                 ),
                 child: Text(
-                  'contactus.submit',
+                  'contactus.submit'.tr(),
                   style: GoogleFonts.lato(
                       color: kwhite, fontWeight: FontWeight.bold),
                 ))
