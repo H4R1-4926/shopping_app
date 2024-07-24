@@ -125,8 +125,9 @@ class EditAddress extends StatelessWidget {
                   fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
                 'cart.addaddress'.tr(),
-                style:
-                    GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 13),
+                style: GoogleFonts.lato(
+                    fontWeight: FontWeight.w900,
+                    fontSize: context.locale.languageCode == 'en' ? 13 : 10),
               ),
             ),
           )

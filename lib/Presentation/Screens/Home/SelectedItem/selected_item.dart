@@ -132,8 +132,9 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               padding: const EdgeInsets.only(right: 270, top: 10),
               child: Text(
                 'selecteditem.color'.tr(),
-                style:
-                    GoogleFonts.lato(fontSize: 19, fontWeight: FontWeight.w900),
+                style: GoogleFonts.lato(
+                    fontSize: context.locale.languageCode == 'en' ? 19 : 15,
+                    fontWeight: FontWeight.w900),
               ),
             ),
             SizedBox(
@@ -169,11 +170,14 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
               endIndent: 23,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 270, top: 15),
+              padding: EdgeInsets.only(
+                  right: 270,
+                  top: 15,
+                  left: context.locale.languageCode == 'en' ? 0 : 10),
               child: Text(
                 'selecteditem.instock'.tr(),
                 style: GoogleFonts.lato(
-                    fontSize: 17,
+                    fontSize: context.locale.languageCode == 'en' ? 17 : 10,
                     fontWeight: FontWeight.w900,
                     color: Colors.greenAccent),
               ),
@@ -463,7 +467,11 @@ class _SelectedItemPageState extends State<SelectedItemPage> {
                                           style: GoogleFonts.lato(
                                               color: kwhite,
                                               fontWeight: FontWeight.bold,
-                                              fontSize: 16),
+                                              fontSize:
+                                                  context.locale.languageCode ==
+                                                          'en'
+                                                      ? 16
+                                                      : 10),
                                         ),
                                       ),
                                     )

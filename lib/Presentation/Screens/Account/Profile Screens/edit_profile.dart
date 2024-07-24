@@ -27,8 +27,9 @@ class EditProfile extends StatelessWidget {
             : kwhite,
         title: Text(
           'profilepage.editprofile'.tr(),
-          style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
+          style: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              fontSize: context.locale.languageCode == 'en' ? 20 : 17),
         ),
       ),
       body: ListView(

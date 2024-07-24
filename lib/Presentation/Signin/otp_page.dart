@@ -19,8 +19,9 @@ class OtpPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 25),
             child: Text(
               'otppage.enterOtp'.tr(),
-              style:
-                  GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
+              style: GoogleFonts.inter(
+                  fontSize: context.locale.languageCode == 'en' ? 45 : 35,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,

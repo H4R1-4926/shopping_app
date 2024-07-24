@@ -30,8 +30,9 @@ class LoginPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
               'logintoaccount.logintoyouraccount'.tr(),
-              style:
-                  GoogleFonts.inter(fontSize: 45, fontWeight: FontWeight.bold),
+              style: GoogleFonts.inter(
+                  fontSize: context.locale.languageCode == 'en' ? 45 : 30,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,

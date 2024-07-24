@@ -40,7 +40,7 @@ class CheckoutPage extends StatelessWidget {
                     'cart.shipping'.tr(),
                     style: GoogleFonts.lato(
                       fontWeight: FontWeight.w900,
-                      fontSize: 21,
+                      fontSize: context.locale.languageCode == 'en' ? 21 : 17,
                     ),
                   ),
                 ),
@@ -121,7 +121,7 @@ class CheckoutPage extends StatelessWidget {
               'cart.orderlist'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
-                fontSize: 21,
+                fontSize: context.locale.languageCode == 'en' ? 21 : 17,
               ),
             ),
           ),

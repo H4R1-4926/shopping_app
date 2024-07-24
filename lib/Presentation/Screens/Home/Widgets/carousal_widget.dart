@@ -31,7 +31,8 @@ class _TopContainerWidgetState extends State<TopContainerWidget> {
                 Text(
                   'homepage.mostpopular'.tr(),
                   style: GoogleFonts.poppins(
-                      fontWeight: FontWeight.bold, fontSize: 20),
+                      fontWeight: FontWeight.bold,
+                      fontSize: context.locale.languageCode == 'en' ? 20 : 17),
                 ),
               ],
             ),

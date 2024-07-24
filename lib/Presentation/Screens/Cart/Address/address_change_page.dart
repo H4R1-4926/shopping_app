@@ -17,8 +17,9 @@ class AddressChangePage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'cart.shipping'.tr(),
-          style:
-              GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
+          style: GoogleFonts.montserrat(
+              fontWeight: FontWeight.bold,
+              fontSize: context.locale.languageCode == 'en' ? 20 : 14),
         ),
       ),
       body: ListView(
@@ -99,8 +100,9 @@ class AddressChangePage extends StatelessWidget {
                   fixedSize: const WidgetStatePropertyAll(Size(0, 50))),
               child: Text(
                 'cart.addaddress'.tr(),
-                style:
-                    GoogleFonts.lato(fontWeight: FontWeight.w900, fontSize: 15),
+                style: GoogleFonts.lato(
+                    fontWeight: FontWeight.w900,
+                    fontSize: context.locale.languageCode == 'en' ? 15 : 11),
               ),
             ),
           )

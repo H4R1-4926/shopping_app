@@ -423,7 +423,10 @@ class CartPage extends StatelessWidget {
                                                                 'cart.yes'.tr(),
                                                                 style: GoogleFonts.lato(
                                                                     fontSize:
-                                                                        14,
+                                                                        context.locale.languageCode ==
+                                                                                'en'
+                                                                            ? 14
+                                                                            : 8,
                                                                     fontWeight:
                                                                         FontWeight
                                                                             .bold),

@@ -33,6 +33,7 @@ class IconWithTextWidget extends StatelessWidget {
         ),
         Text(
           text,
+          maxLines: 2,
           style: GoogleFonts.poppins(fontWeight: FontWeight.bold, fontSize: 13),
         )
       ],

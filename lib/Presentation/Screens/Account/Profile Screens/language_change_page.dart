@@ -38,7 +38,9 @@ class LanguageSettings extends StatelessWidget {
                   child: Text(
                     'languagepage.suggested'.tr(),
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900, fontSize: 19),
+                        fontWeight: FontWeight.w900,
+                        fontSize:
+                            context.locale.languageCode == 'en' ? 19 : 17),
                   ),
                 ),
                 ListTileRadioWidget(
@@ -71,7 +73,9 @@ class LanguageSettings extends StatelessWidget {
                   child: Text(
                     'languagepage.otherslanguages'.tr(),
                     style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900, fontSize: 19),
+                        fontWeight: FontWeight.w900,
+                        fontSize:
+                            context.locale.languageCode == 'en' ? 19 : 17),
                   ),
                 ),
                 ListTileRadioWidget(

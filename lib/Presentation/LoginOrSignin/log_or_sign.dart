@@ -157,143 +157,141 @@ class LogOrSignIn extends StatelessWidget {
         },
         child: Scaffold(
             appBar: AppBar(),
-            body: Center(
-              child: Column(
-                children: [
-                  kSizedBoxHeight40,
-                  Container(
-                    width: 165,
-                    height: 165,
-                    color: kblack,
-                  ),
-                  kSizedBoxHeight20,
-                  Text(
-                    "logorsignin.letyouin".tr(),
-                    style: GoogleFonts.poppins(
-                        fontSize: 28, fontWeight: FontWeight.bold),
-                  ),
-                  kSizedBoxHeight30,
-                  Container(
-                    height: 50,
-                    width: 280,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15),
-                        color: kwhite,
-                        border: Border.all(color: kblack.withOpacity(0.1))),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Container(
-                          height: 30,
-                          width: 30,
-                          decoration: const BoxDecoration(
-                              image: DecorationImage(
-                                  image: AssetImage(
-                                      'assets/img/google_logo.png'))),
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        Text(
-                          "logorsignin.google".tr(),
-                          style: GoogleFonts.poppins(
-                              fontWeight: FontWeight.bold, color: kblack),
-                        ),
-                      ],
-                    ),
-                  ),
-                  kSizedBoxHeight30,
-                  Text(
-                    "logorsignin.or".tr(),
-                    style: GoogleFonts.poppins(
-                        fontWeight: FontWeight.bold, color: Colors.grey),
-                  ),
-                  kSizedBoxHeight30,
-                  GestureDetector(
-                    onTap: () => Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const LoginPage(),
-                        )),
-                    child: Container(
-                      height: 50,
-                      width: 330,
-                      decoration: BoxDecoration(
-                          color: Theme.of(context).brightness == Brightness.dark
-                              ? kdarkcolor3
-                              : kblack,
-                          borderRadius: BorderRadius.circular(25)),
-                      child: Center(
-                        child: Text(
-                          "logorsignin.signinwithphone".tr(),
-                          style: GoogleFonts.poppins(
-                              color: kwhite, fontWeight: FontWeight.w600),
-                        ),
-                      ),
-                    ),
-                  ),
-                  kSizedBoxHeight40,
-                  Row(
+            body: Column(
+              children: [
+                kSizedBoxHeight40,
+                Container(
+                  width: context.locale.languageCode == 'en' ? 165 : 144,
+                  height: context.locale.languageCode == 'en' ? 165 : 144,
+                  color: kblack,
+                ),
+                kSizedBoxHeight20,
+                Text(
+                  "logorsignin.letyouin".tr(),
+                  style: GoogleFonts.poppins(
+                      fontSize: context.locale.languageCode == 'en' ? 28 : 24,
+                      fontWeight: FontWeight.bold),
+                ),
+                kSizedBoxHeight30,
+                Container(
+                  height: 50,
+                  width: 280,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: kwhite,
+                      border: Border.all(color: kblack.withOpacity(0.1))),
+                  child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
-                        "logorsignin.donthaveanaccount".tr(),
-                        style: GoogleFonts.poppins(color: Colors.grey),
+                      Container(
+                        height: 30,
+                        width: 30,
+                        decoration: const BoxDecoration(
+                            image: DecorationImage(
+                                image:
+                                    AssetImage('assets/img/google_logo.png'))),
                       ),
-                      TextButton(
-                          onPressed: () {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => const SignUpPage(),
-                            ));
-                          },
-                          child: Text(
-                            "logorsignin.signup".tr(),
-                            style: GoogleFonts.poppins(
-                                color: Theme.of(context).brightness ==
-                                        Brightness.dark
-                                    ? kwhite
-                                    : kblack,
-                                fontWeight: FontWeight.w600),
-                          ))
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      Text(
+                        "logorsignin.google".tr(),
+                        style: GoogleFonts.poppins(
+                            fontWeight: FontWeight.bold, color: kblack),
+                      ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 80,
-                  ),
-                  Text(
-                    "logorsignin.byContinuing".tr(),
-                    style: GoogleFonts.poppins(color: kGrey),
-                  ),
-                  Expanded(
-                    child: InkWell(
-                      onTap: () {
-                        Navigator.of(context).push(PageRouteBuilder(
-                          pageBuilder:
-                              (context, animation, secondaryAnimation) =>
-                                  const TermsAndConditions(),
-                          transitionsBuilder:
-                              (context, animation, secondaryAnimation, child) {
-                            var tween = Tween(
-                              begin: const Offset(1.0, 0.0),
-                              end: Offset.zero,
-                            ).chain(CurveTween(curve: Curves.easeIn));
-                            return SlideTransition(
-                              position: animation.drive(tween),
-                              child: child,
-                            );
-                          },
-                        ));
-                      },
+                ),
+                kSizedBoxHeight30,
+                Text(
+                  "logorsignin.or".tr(),
+                  style: GoogleFonts.poppins(
+                      fontWeight: FontWeight.bold, color: Colors.grey),
+                ),
+                kSizedBoxHeight30,
+                GestureDetector(
+                  onTap: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const LoginPage(),
+                      )),
+                  child: Container(
+                    height: 50,
+                    width: 330,
+                    decoration: BoxDecoration(
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kdarkcolor3
+                            : kblack,
+                        borderRadius: BorderRadius.circular(25)),
+                    child: Center(
                       child: Text(
-                        "logorsignin.termsandcondition".tr(),
+                        "logorsignin.signinwithphone".tr(),
                         style: GoogleFonts.poppins(
-                          fontWeight: FontWeight.bold,
-                        ),
+                            color: kwhite, fontWeight: FontWeight.w600),
                       ),
                     ),
-                  )
-                ],
-              ),
+                  ),
+                ),
+                kSizedBoxHeight40,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      "logorsignin.donthaveanaccount".tr(),
+                      style: GoogleFonts.poppins(color: Colors.grey),
+                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => const SignUpPage(),
+                          ));
+                        },
+                        child: Text(
+                          "logorsignin.signup".tr(),
+                          style: GoogleFonts.poppins(
+                              color: Theme.of(context).brightness ==
+                                      Brightness.dark
+                                  ? kwhite
+                                  : kblack,
+                              fontWeight: FontWeight.w600),
+                        ))
+                  ],
+                ),
+                const SizedBox(
+                  height: 80,
+                ),
+                Text(
+                  "logorsignin.byContinuing".tr(),
+                  style: GoogleFonts.poppins(color: kGrey),
+                ),
+                Expanded(
+                  child: InkWell(
+                    onTap: () {
+                      Navigator.of(context).push(PageRouteBuilder(
+                        pageBuilder: (context, animation, secondaryAnimation) =>
+                            const TermsAndConditions(),
+                        transitionsBuilder:
+                            (context, animation, secondaryAnimation, child) {
+                          var tween = Tween(
+                            begin: const Offset(1.0, 0.0),
+                            end: Offset.zero,
+                          ).chain(CurveTween(curve: Curves.easeIn));
+                          return SlideTransition(
+                            position: animation.drive(tween),
+                            child: child,
+                          );
+                        },
+                      ));
+                    },
+                    child: Text(
+                      "logorsignin.termsandcondition".tr(),
+                      style: GoogleFonts.poppins(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                )
+              ],
             )));
   }
 }

@@ -20,8 +20,9 @@ class SignUpPage extends StatelessWidget {
             padding: const EdgeInsets.only(top: 50, left: 15),
             child: Text(
               'createAcoount.createYourAccount'.tr(),
-              style:
-                  GoogleFonts.inter(fontSize: 47, fontWeight: FontWeight.bold),
+              style: GoogleFonts.inter(
+                  fontSize: context.locale.languageCode == 'en' ? 46 : 30,
+                  fontWeight: FontWeight.bold),
             ),
           ),
           kSizedBoxHeight40,

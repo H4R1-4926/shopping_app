@@ -28,11 +28,13 @@ class SearchResultPage extends StatelessWidget {
               Text(
                 'search.result'.tr(args: [searchBarText]),
                 style: GoogleFonts.montserrat(
-                    fontWeight: FontWeight.bold, fontSize: 17),
+                    fontWeight: FontWeight.bold,
+                    fontSize: context.locale.languageCode == 'en' ? 17 : 14),
               ),
               Text('search.found'.tr(args: [searchResultLength]),
                   style: GoogleFonts.montserrat(
-                      fontWeight: FontWeight.bold, fontSize: 14))
+                      fontWeight: FontWeight.bold,
+                      fontSize: context.locale.languageCode == 'en' ? 14 : 12))
             ],
           ),
         ),

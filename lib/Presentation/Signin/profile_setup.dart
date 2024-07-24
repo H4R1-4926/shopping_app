@@ -21,7 +21,9 @@ class ProfileSetUpPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'profileFill.fillprofile'.tr(),
-          style: GoogleFonts.lato(fontWeight: FontWeight.bold),
+          style: GoogleFonts.lato(
+              fontWeight: FontWeight.bold,
+              fontSize: context.locale.languageCode == 'en' ? 18 : 12),
         ),
       ),
       body: ListView(

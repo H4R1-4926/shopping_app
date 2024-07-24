@@ -97,8 +97,12 @@ class OrderCompleted extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         'orderpage.completed'.tr(),
-                                        style:
-                                            GoogleFonts.openSans(fontSize: 12),
+                                        style: GoogleFonts.openSans(
+                                            fontSize:
+                                                context.locale.languageCode ==
+                                                        'en'
+                                                    ? 12
+                                                    : 6),
                                       ),
                                     ),
                                   ),
@@ -127,7 +131,11 @@ class OrderCompleted extends StatelessWidget {
                                           'orderpage.return'.tr(),
                                           style: GoogleFonts.poppins(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 12,
+                                            fontSize:
+                                                context.locale.languageCode ==
+                                                        'en'
+                                                    ? 12
+                                                    : 10,
                                           ),
                                         ),
                                         onPressed: () {},

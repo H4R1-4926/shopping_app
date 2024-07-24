@@ -22,7 +22,8 @@ class GridCategaryWidget extends StatelessWidget {
           child: Text(
             'homepage.explore'.tr(),
             style: GoogleFonts.montserrat(
-                fontWeight: FontWeight.bold, fontSize: 20),
+                fontWeight: FontWeight.bold,
+                fontSize: context.locale.languageCode == 'en' ? 20 : 18),
           ),
         ),
         DefaultTabController(

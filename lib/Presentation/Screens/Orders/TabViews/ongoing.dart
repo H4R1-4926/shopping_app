@@ -97,8 +97,12 @@ class OrderOnGoing extends StatelessWidget {
                                     child: Center(
                                       child: Text(
                                         'orderpage.indelivery'.tr(),
-                                        style:
-                                            GoogleFonts.openSans(fontSize: 12),
+                                        style: GoogleFonts.openSans(
+                                            fontSize:
+                                                context.locale.languageCode ==
+                                                        'en'
+                                                    ? 12
+                                                    : 8),
                                       ),
                                     ),
                                   ),
@@ -148,7 +152,11 @@ class OrderOnGoing extends StatelessWidget {
                                             'orderpage.track'.tr(),
                                             style: GoogleFonts.lato(
                                                 fontWeight: FontWeight.bold,
-                                                fontSize: 13,
+                                                fontSize: context.locale
+                                                            .languageCode ==
+                                                        'en'
+                                                    ? 13
+                                                    : 9,
                                                 color: kwhite),
                                           ),
                                         ),

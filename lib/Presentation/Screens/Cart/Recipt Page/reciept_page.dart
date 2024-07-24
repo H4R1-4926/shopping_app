@@ -33,7 +33,7 @@ class RecieptPage extends StatelessWidget {
               'cart.shipping'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
-                fontSize: 21,
+                fontSize: context.locale.languageCode == 'en' ? 21 : 17,
               ),
             ),
           ),
@@ -84,7 +84,7 @@ class RecieptPage extends StatelessWidget {
               'cart.shippingmethod'.tr(),
               style: GoogleFonts.lato(
                 fontWeight: FontWeight.w900,
-                fontSize: 21,
+                fontSize: context.locale.languageCode == 'en' ? 21 : 17,
               ),
             ),
           ),
@@ -202,7 +202,11 @@ class RecieptPage extends StatelessWidget {
                       children: [
                         Text(
                           'cart.shippingCharge'.tr(),
-                          style: GoogleFonts.lato(color: kGrey, fontSize: 18),
+                          style: GoogleFonts.lato(
+                              color: kGrey,
+                              fontSize: context.locale.languageCode == 'en'
+                                  ? 18
+                                  : 14),
                         ),
                         Text(
                           '₹ 999\\-',

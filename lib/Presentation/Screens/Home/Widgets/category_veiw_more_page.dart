@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shopping_app/Core/colors.dart';
@@ -14,7 +15,7 @@ class ViewMorePage extends StatelessWidget {
       appBar: AppBar(
         surfaceTintColor: kwhite,
         title: Text(
-          'Category',
+          'homepage.category'.tr(),
           style:
               GoogleFonts.montserrat(fontWeight: FontWeight.bold, fontSize: 20),
         ),
