@@ -7,7 +7,7 @@
         "signinwithphone":"Sign in with phone",
         "donthaveanaccount":"Don't have an account?",
         "signup":"Sign up",
-        "byContinuing":"By Continuing you'll also accepy out",
+        "byContinuing":"By Continuing you'll also accept our",
         "termsandcondition":"Terms & Conditions"
     },
     "createAcoount":{
@@ -55,6 +55,7 @@
 "viewmore":"View More",
 "product":"Product",
 "explore":"Explore",
+"category":"Category",
 "items":"Items"
 
     },
