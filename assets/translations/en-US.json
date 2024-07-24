@@ -138,7 +138,7 @@
 
         },
         "notificationpage":{
-            "generalnoti":"General Notification",
+            "genaralnoti":"General Notification",
             "sound":"Sound",
             "vibrate":"Vibrate",
             "specialoffer":"Special Offer",
