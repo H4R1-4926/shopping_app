@@ -37,6 +37,12 @@ class TabBarPage extends StatelessWidget {
               height: 70,
               width: double.infinity,
               decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                      blurRadius: 10,
+                      spreadRadius: 2,
+                      color: kblack.withOpacity(0.2))
+                ],
                 borderRadius: BorderRadius.circular(
                   25,
                 ),
