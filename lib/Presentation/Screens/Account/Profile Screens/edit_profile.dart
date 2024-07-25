@@ -118,7 +118,11 @@ class EditProfile extends StatelessWidget {
                             : kblack,
                     iconSize: 32,
                     borderRadius: BorderRadius.circular(18),
-                    style: GoogleFonts.lato(fontWeight: FontWeight.bold),
+                    style: GoogleFonts.lato(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).brightness == Brightness.dark
+                            ? kwhite
+                            : kblack),
                     items: gender
                         .map((e) => DropdownMenuItem(
                               value: e,
