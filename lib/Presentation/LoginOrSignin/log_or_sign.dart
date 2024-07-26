@@ -161,10 +161,11 @@ class LogOrSignIn extends StatelessWidget {
               children: [
                 kSizedBoxHeight40,
                 Container(
-                  width: context.locale.languageCode == 'en' ? 165 : 144,
-                  height: context.locale.languageCode == 'en' ? 165 : 144,
-                  color: kblack,
-                ),
+                    width: context.locale.languageCode == 'en' ? 165 : 144,
+                    height: context.locale.languageCode == 'en' ? 165 : 144,
+                    decoration: const BoxDecoration(
+                        image: DecorationImage(
+                            image: AssetImage('assets/img/vector.png')))),
                 kSizedBoxHeight20,
                 Text(
                   "logorsignin.letyouin".tr(),
