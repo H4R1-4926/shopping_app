@@ -33,29 +33,9 @@ class LanguageSettings extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(left: 15, top: 5, bottom: 10),
-                  child: Text(
-                    'languagepage.suggested'.tr(),
-                    style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900,
-                        fontSize:
-                            context.locale.languageCode == 'en' ? 19 : 17),
-                  ),
-                ),
                 ListTileRadioWidget(
                   language: 'English (US)',
                   value: 1,
-                  groupValue: state.value,
-                  onChanged: (int? value) {
-                    context
-                        .read<RadioButtonBloc>()
-                        .add(RadioButtonEvent.onClicked(value: value!));
-                  },
-                ),
-                ListTileRadioWidget(
-                  language: 'English (UK)',
-                  value: 2,
                   groupValue: state.value,
                   onChanged: (int? value) {
                     context
@@ -68,49 +48,9 @@ class LanguageSettings extends StatelessWidget {
                   endIndent: 25,
                   color: kGrey.withOpacity(0.3),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 15, top: 5, bottom: 10),
-                  child: Text(
-                    'languagepage.otherslanguages'.tr(),
-                    style: GoogleFonts.lato(
-                        fontWeight: FontWeight.w900,
-                        fontSize:
-                            context.locale.languageCode == 'en' ? 19 : 17),
-                  ),
-                ),
                 ListTileRadioWidget(
                   language: 'മലയാളം (Malayalam)',
-                  value: 3,
-                  groupValue: state.value,
-                  onChanged: (int? value) {
-                    context
-                        .read<RadioButtonBloc>()
-                        .add(RadioButtonEvent.onClicked(value: value!));
-                  },
-                ),
-                ListTileRadioWidget(
-                  language: 'العربية (Arabic)',
-                  value: 4,
-                  groupValue: state.value,
-                  onChanged: (int? value) {
-                    context
-                        .read<RadioButtonBloc>()
-                        .add(RadioButtonEvent.onClicked(value: value!));
-                  },
-                ),
-                ListTileRadioWidget(
-                  language: 'हिन्दी (Hindi)',
-                  value: 5,
-                  groupValue: state.value,
-                  onChanged: (int? value) {
-                    context
-                        .read<RadioButtonBloc>()
-                        .add(RadioButtonEvent.onClicked(value: value!));
-                  },
-                ),
-                ListTileRadioWidget(
-                  language: 'தமிழ் (Tamil)',
-                  value: 6,
+                  value: 2,
                   groupValue: state.value,
                   onChanged: (int? value) {
                     context
@@ -127,7 +67,7 @@ class LanguageSettings extends StatelessWidget {
               onPressed: () {
                 if (state.value == 1) {
                   context.setLocale(const Locale('en', 'US'));
-                } else if (state.value == 3) {
+                } else if (state.value == 2) {
                   context.setLocale(const Locale('ml', 'IN'));
                 }
                 Navigator.pop(context);
