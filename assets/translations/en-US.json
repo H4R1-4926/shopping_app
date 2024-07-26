@@ -152,7 +152,10 @@
         },
         "themepage":{
             "light":"Light Mode",
-            "dark":"Dark Mode"
+            "dark":"Dark Mode",
+            "systemDefault":"(System Default)",
+            "blight":"(Light Mode)",
+            "bdark":"(Dark Mode)"
             
         },
         "select":"Select",
