@@ -7,7 +7,7 @@ import 'package:shopping_app/Presentation/Screens/Account/widgets/radio_listtile
 
 import '../../../../Core/colors.dart';
 
-const String language = ' ';
+String language = ' ';
 
 class LanguageSettings extends StatelessWidget {
   const LanguageSettings({super.key});

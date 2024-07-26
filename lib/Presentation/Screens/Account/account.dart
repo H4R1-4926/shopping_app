@@ -1,9 +1,12 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_share/flutter_share.dart';
 
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
+import 'package:shopping_app/Application/RadioButton/radio_button_bloc.dart';
+import 'package:shopping_app/Application/Theme%20Bloc/theme_bloc_bloc.dart';
 import 'package:shopping_app/Core/colors.dart';
 import 'package:shopping_app/Core/size.dart';
 import 'package:shopping_app/Presentation/LoginOrSignin/log_or_sign.dart';
@@ -155,51 +158,64 @@ class AccountPage extends StatelessWidget {
               },
               trailIcon: true,
             ),
-            ListTileWidget(
-              prefixIcon: Iconsax.language_square,
-              titleText: 'profilepage.language'.tr(),
-              secondText: 'English-(US)',
-              ontap: () {
-                Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const LanguageSettings(),
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) {
-                    var tween = Tween(
-                      begin: const Offset(1.0, 0.0),
-                      end: Offset.zero,
-                    ).chain(CurveTween(curve: Curves.easeIn));
-                    return SlideTransition(
-                      position: animation.drive(tween),
-                      child: child,
-                    );
+            BlocBuilder<RadioButtonBloc, RadioButtonState>(
+              builder: (context, state) {
+                return ListTileWidget(
+                  prefixIcon: Iconsax.language_square,
+                  titleText: 'profilepage.language'.tr(),
+                  secondText:
+                      state.value == 1 ? 'English (US)' : 'മലയാളം (Malayalam)',
+                  ontap: () {
+                    Navigator.of(context).push(PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          const LanguageSettings(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        var tween = Tween(
+                          begin: const Offset(1.0, 0.0),
+                          end: Offset.zero,
+                        ).chain(CurveTween(curve: Curves.easeIn));
+                        return SlideTransition(
+                          position: animation.drive(tween),
+                          child: child,
+                        );
+                      },
+                    ));
                   },
-                ));
+                  trailIcon: true,
+                );
               },
-              trailIcon: true,
             ),
-            ListTileWidget(
-              prefixIcon: Iconsax.eye,
-              titleText: 'profilepage.theme'.tr(),
-              secondText: '(System Default)',
-              ontap: () {
-                Navigator.of(context).push(PageRouteBuilder(
-                  pageBuilder: (context, animation, secondaryAnimation) =>
-                      const ThemeSettings(),
-                  transitionsBuilder:
-                      (context, animation, secondaryAnimation, child) {
-                    var tween = Tween(
-                      begin: const Offset(1.0, 0.0),
-                      end: Offset.zero,
-                    ).chain(CurveTween(curve: Curves.easeIn));
-                    return SlideTransition(
-                      position: animation.drive(tween),
-                      child: child,
-                    );
+            BlocBuilder<ThemeBlocBloc, ThemeBlocState>(
+              builder: (context, state) {
+                return ListTileWidget(
+                  prefixIcon: Iconsax.eye,
+                  titleText: 'profilepage.theme'.tr(),
+                  secondText: state.value == 1
+                      ? 'themepage.systemDefault'.tr()
+                      : state.value == 2
+                          ? 'themepage.blight'.tr()
+                          : 'themepage.bdark'.tr(),
+                  ontap: () {
+                    Navigator.of(context).push(PageRouteBuilder(
+                      pageBuilder: (context, animation, secondaryAnimation) =>
+                          const ThemeSettings(),
+                      transitionsBuilder:
+                          (context, animation, secondaryAnimation, child) {
+                        var tween = Tween(
+                          begin: const Offset(1.0, 0.0),
+                          end: Offset.zero,
+                        ).chain(CurveTween(curve: Curves.easeIn));
+                        return SlideTransition(
+                          position: animation.drive(tween),
+                          child: child,
+                        );
+                      },
+                    ));
                   },
-                ));
+                  trailIcon: true,
+                );
               },
-              trailIcon: true,
             ),
             ListTileWidget(
               prefixIcon: Iconsax.lock,
