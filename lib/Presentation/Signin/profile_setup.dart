@@ -29,10 +29,15 @@ class ProfileSetUpPage extends StatelessWidget {
       body: ListView(
         children: [
           kSizedBoxHeight20,
-          const Center(
+          Center(
             child: CircleAvatar(
               radius: 70,
-              backgroundColor: kblack,
+              backgroundColor: Theme.of(context).brightness == Brightness.dark
+                  ? kblack
+                  : kwhite,
+              backgroundImage: Theme.of(context).brightness == Brightness.dark
+                  ? const AssetImage('assets/img/inverted infinity.png')
+                  : const AssetImage('assets/img/infinity.png'),
             ),
           ),
           kSizedBoxHeight40,

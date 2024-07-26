@@ -35,8 +35,12 @@ class HomePage extends StatelessWidget {
                 child: CircleAvatar(
                   backgroundColor:
                       Theme.of(context).brightness == Brightness.dark
-                          ? kwhite
-                          : kblack,
+                          ? kblack
+                          : kwhite,
+                  backgroundImage:
+                      Theme.of(context).brightness == Brightness.dark
+                          ? const AssetImage('assets/img/inverted infinity.png')
+                          : const AssetImage('assets/img/infinity.png'),
                   radius: 2,
                 ),
               ),

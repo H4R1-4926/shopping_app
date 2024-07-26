@@ -24,8 +24,11 @@ class OrdersPage extends StatelessWidget {
               padding: const EdgeInsets.only(left: 5),
               child: CircleAvatar(
                 backgroundColor: Theme.of(context).brightness == Brightness.dark
-                    ? kwhite
-                    : kblack,
+                    ? kblack
+                    : kwhite,
+                backgroundImage: Theme.of(context).brightness == Brightness.dark
+                    ? const AssetImage('assets/img/inverted infinity.png')
+                    : const AssetImage('assets/img/infinity.png'),
                 radius: 2,
               ),
             ),
