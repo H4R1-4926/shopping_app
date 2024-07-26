@@ -15,7 +15,6 @@ class NotificationSettings extends StatelessWidget {
         surfaceTintColor: Theme.of(context).brightness == Brightness.dark
             ? kdarkbackground
             : kwhite,
-        automaticallyImplyLeading: true,
         backgroundColor: Theme.of(context).brightness == Brightness.dark
             ? kdarkbackground
             : kwhite,

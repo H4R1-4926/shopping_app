@@ -17,7 +17,6 @@ class ThemeSettings extends StatelessWidget {
       builder: (context, state) {
         return Scaffold(
           appBar: AppBar(
-            automaticallyImplyLeading: true,
             title: Text(
               'profilepage.theme'.tr(),
               style: GoogleFonts.montserrat(

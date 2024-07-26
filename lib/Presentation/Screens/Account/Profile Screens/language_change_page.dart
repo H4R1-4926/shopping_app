@@ -7,6 +7,8 @@ import 'package:shopping_app/Presentation/Screens/Account/widgets/radio_listtile
 
 import '../../../../Core/colors.dart';
 
+const String language = ' ';
+
 class LanguageSettings extends StatelessWidget {
   const LanguageSettings({super.key});
 
@@ -19,7 +21,6 @@ class LanguageSettings extends StatelessWidget {
             surfaceTintColor: Theme.of(context).brightness == Brightness.dark
                 ? kdarkbackground
                 : kwhite,
-            automaticallyImplyLeading: true,
             backgroundColor: Theme.of(context).brightness == Brightness.dark
                 ? kdarkbackground
                 : kwhite,
