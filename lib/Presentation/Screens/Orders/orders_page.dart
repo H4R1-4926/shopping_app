@@ -27,8 +27,8 @@ class OrdersPage extends StatelessWidget {
                     ? kblack
                     : kwhite,
                 backgroundImage: Theme.of(context).brightness == Brightness.dark
-                    ? const AssetImage('assets/img/inverted infinity.png')
-                    : const AssetImage('assets/img/infinity.png'),
+                    ? const AssetImage('assets/img/drink white png.png')
+                    : const AssetImage('assets/img/drink black png.png'),
                 radius: 2,
               ),
             ),

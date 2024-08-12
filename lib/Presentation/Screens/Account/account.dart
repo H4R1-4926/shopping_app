@@ -44,8 +44,8 @@ class AccountPage extends StatelessWidget {
                   ? kblack
                   : kwhite,
               backgroundImage: Theme.of(context).brightness == Brightness.dark
-                  ? const AssetImage('assets/img/inverted infinity.png')
-                  : const AssetImage('assets/img/infinity.png'),
+                  ? const AssetImage('assets/img/drink white png.png')
+                  : const AssetImage('assets/img/drink black png.png'),
               radius: 2,
             ),
           ),
@@ -67,8 +67,8 @@ class AccountPage extends StatelessWidget {
                               : kwhite,
                       backgroundImage: Theme.of(context).brightness ==
                               Brightness.dark
-                          ? const AssetImage('assets/img/inverted infinity.png')
-                          : const AssetImage('assets/img/infinity.png'),
+                          ? const AssetImage('assets/img/gym arm white.png')
+                          : const AssetImage('assets/img/gym arm black.png'),
                       radius: 55,
                     ),
                     kSizedBoxHeight10,

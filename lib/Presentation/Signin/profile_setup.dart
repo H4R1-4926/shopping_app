@@ -31,14 +31,13 @@ class ProfileSetUpPage extends StatelessWidget {
           kSizedBoxHeight20,
           Center(
             child: CircleAvatar(
-              radius: 70,
-              backgroundColor: Theme.of(context).brightness == Brightness.dark
-                  ? kblack
-                  : kwhite,
-              backgroundImage: Theme.of(context).brightness == Brightness.dark
-                  ? const AssetImage('assets/img/inverted infinity.png')
-                  : const AssetImage('assets/img/infinity.png'),
-            ),
+                radius: 70,
+                backgroundColor: Theme.of(context).brightness == Brightness.dark
+                    ? kblack
+                    : kwhite,
+                backgroundImage: Theme.of(context).brightness == Brightness.dark
+                    ? const AssetImage('assets/img/gym arm white.png')
+                    : const AssetImage('assets/img/gym arm black.png')),
           ),
           kSizedBoxHeight40,
           kSizedBoxHeight40,
