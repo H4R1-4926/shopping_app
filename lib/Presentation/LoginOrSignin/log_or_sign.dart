@@ -109,9 +109,15 @@ class LogOrSignIn extends StatelessWidget {
                 Container(
                     width: context.locale.languageCode == 'en' ? 165 : 144,
                     height: context.locale.languageCode == 'en' ? 165 : 144,
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                         image: DecorationImage(
-                            image: AssetImage('assets/img/vector.png')))),
+                            fit: BoxFit.cover,
+                            image:
+                                Theme.of(context).brightness == Brightness.dark
+                                    ? const AssetImage(
+                                        'assets/img/gym white png.png')
+                                    : const AssetImage(
+                                        'assets/img/gym black png.png')))),
                 kSizedBoxHeight20,
                 Text(
                   "logorsignin.letyouin".tr(),
