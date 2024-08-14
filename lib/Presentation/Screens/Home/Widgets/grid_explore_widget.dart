@@ -94,700 +94,748 @@ class GridCategaryWidget extends StatelessWidget {
                       ),
                     ]),
                 kSizedBoxHeight10,
-                SizedBox(
-                  height: 2730,
-                  child:
-                      TabBarView(physics: const PageScrollPhysics(), children: [
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Container(
-                                        height: 170,
-                                        width: 170,
-                                        decoration: BoxDecoration(
-                                            image: const DecorationImage(
-                                                fit: BoxFit.cover,
-                                                image: NetworkImage(kDummyImg)),
-                                            borderRadius:
-                                                BorderRadius.circular(25)),
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.end,
-                                          children: [
-                                            Padding(
-                                              padding: const EdgeInsets.only(
-                                                  right: 8, top: 8),
-                                              child: CircleAvatar(
-                                                backgroundColor: kblack,
-                                                maxRadius: 18,
-                                                child: Center(
-                                                  child: IconButton(
-                                                    onPressed: () {},
-                                                    icon: const Icon(Icons
-                                                        .favorite_border_outlined),
-                                                    iconSize: 20,
-                                                    color: kwhite,
+                LayoutBuilder(builder: (context, constraints) {
+                  int gridViewItemCount =
+                      20; // Adjust this value based on your needs
+                  double gridViewHeight = (gridViewItemCount / 2).ceil() *
+                      270; // Assuming each grid item has a height of 200
+                  return SizedBox(
+                    height: gridViewHeight,
+                    child: TabBarView(
+                        physics: const PageScrollPhysics(),
+                        children: [
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
+                              ),
+                              itemCount: gridViewItemCount,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Container(
+                                              height: 170,
+                                              width: 170,
+                                              decoration: BoxDecoration(
+                                                  image: const DecorationImage(
+                                                      fit: BoxFit.cover,
+                                                      image: NetworkImage(
+                                                          kDummyImg)),
+                                                  borderRadius:
+                                                      BorderRadius.circular(
+                                                          25)),
+                                              child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.end,
+                                                children: [
+                                                  Padding(
+                                                    padding:
+                                                        const EdgeInsets.only(
+                                                            right: 8, top: 8),
+                                                    child: CircleAvatar(
+                                                      backgroundColor: kblack,
+                                                      maxRadius: 18,
+                                                      child: Center(
+                                                        child: IconButton(
+                                                          onPressed: () {},
+                                                          icon: const Icon(Icons
+                                                              .favorite_border_outlined),
+                                                          iconSize: 20,
+                                                          color: kwhite,
+                                                        ),
+                                                      ),
+                                                    ),
                                                   ),
-                                                ),
+                                                ],
                                               ),
                                             ),
-                                          ],
+                                          ),
                                         ),
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
                               ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
                               ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
-                              ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
                               ),
-                            ),
-                          );
-                        }),
-                    GridView.builder(
-                        physics: const NeverScrollableScrollPhysics(),
-                        gridDelegate:
-                            const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 2,
-                          mainAxisExtent: 260,
-                          childAspectRatio: 0.68,
-                        ),
-                        itemCount: 20,
-                        itemBuilder: (context, index) {
-                          return GestureDetector(
-                            onTap: () {
-                              Navigator.of(context).push(PageRouteBuilder(
-                                pageBuilder:
-                                    (context, animation, secondaryAnimation) =>
-                                        const SelectedItemPage(),
-                                transitionsBuilder: (context, animation,
-                                    secondaryAnimation, child) {
-                                  var tween = Tween(
-                                    begin: const Offset(1.0, 0.0),
-                                    end: Offset.zero,
-                                  ).chain(CurveTween(curve: Curves.easeIn));
-                                  return SlideTransition(
-                                    position: animation.drive(tween),
-                                    child: child,
-                                  );
-                                },
-                              ));
-                            },
-                            child: Padding(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 8),
-                              child: Column(
-                                children: [
-                                  Padding(
-                                    padding: const EdgeInsets.only(top: 10),
-                                    child: Center(
-                                      child: Stack(
-                                        children: [
-                                          Container(
-                                            height: 180,
-                                            width: 180,
-                                            decoration: BoxDecoration(
-                                                image: const DecorationImage(
-                                                    fit: BoxFit.cover,
-                                                    image: NetworkImage(
-                                                        kDummyImg)),
-                                                borderRadius:
-                                                    BorderRadius.circular(25)),
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
                                           ),
-                                          Row(
-                                            mainAxisAlignment:
-                                                MainAxisAlignment.end,
-                                            children: [
-                                              Padding(
-                                                padding: const EdgeInsets.only(
-                                                    right: 16, top: 8),
-                                                child: CircleAvatar(
-                                                  backgroundColor: kblack,
-                                                  maxRadius: 18,
-                                                  child: Center(
-                                                    child: IconButton(
-                                                      onPressed: () {},
-                                                      icon: const Icon(Icons
-                                                          .favorite_border_outlined),
-                                                      iconSize: 20,
-                                                      color: kwhite,
-                                                    ),
-                                                  ),
-                                                ),
-                                              ),
-                                            ],
-                                          )
-                                        ],
-                                      ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
+                                          ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
                                     ),
                                   ),
-                                  Padding(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 15, vertical: 7),
-                                    child: Text(
-                                      'Name Of The Product',
-                                      overflow: TextOverflow.ellipsis,
-                                      style: GoogleFonts.poppins(
-                                          fontWeight: FontWeight.bold,
-                                          fontSize: 14),
-                                    ),
-                                  ),
-                                  Text(
-                                    '₹ 350 \\-',
-                                    style: GoogleFonts.poppins(
-                                        fontWeight: FontWeight.bold,
-                                        fontSize: 16),
-                                  )
-                                ],
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
                               ),
-                            ),
-                          );
-                        }),
-                  ]),
-                )
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
+                                          ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
+                              ),
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
+                                          ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }),
+                          GridView.builder(
+                              physics: const NeverScrollableScrollPhysics(),
+                              gridDelegate:
+                                  const SliverGridDelegateWithFixedCrossAxisCount(
+                                crossAxisCount: 2,
+                                mainAxisExtent: 260,
+                                childAspectRatio: 0.68,
+                              ),
+                              itemCount: 20,
+                              itemBuilder: (context, index) {
+                                return GestureDetector(
+                                  onTap: () {
+                                    Navigator.of(context).push(PageRouteBuilder(
+                                      pageBuilder: (context, animation,
+                                              secondaryAnimation) =>
+                                          const SelectedItemPage(),
+                                      transitionsBuilder: (context, animation,
+                                          secondaryAnimation, child) {
+                                        var tween = Tween(
+                                          begin: const Offset(1.0, 0.0),
+                                          end: Offset.zero,
+                                        ).chain(
+                                            CurveTween(curve: Curves.easeIn));
+                                        return SlideTransition(
+                                          position: animation.drive(tween),
+                                          child: child,
+                                        );
+                                      },
+                                    ));
+                                  },
+                                  child: Padding(
+                                    padding: const EdgeInsets.symmetric(
+                                        horizontal: 8),
+                                    child: Column(
+                                      children: [
+                                        Padding(
+                                          padding:
+                                              const EdgeInsets.only(top: 10),
+                                          child: Center(
+                                            child: Stack(
+                                              children: [
+                                                Container(
+                                                  height: 180,
+                                                  width: 180,
+                                                  decoration: BoxDecoration(
+                                                      image:
+                                                          const DecorationImage(
+                                                              fit: BoxFit.cover,
+                                                              image: NetworkImage(
+                                                                  kDummyImg)),
+                                                      borderRadius:
+                                                          BorderRadius.circular(
+                                                              25)),
+                                                ),
+                                                Row(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.end,
+                                                  children: [
+                                                    Padding(
+                                                      padding:
+                                                          const EdgeInsets.only(
+                                                              right: 16,
+                                                              top: 8),
+                                                      child: CircleAvatar(
+                                                        backgroundColor: kblack,
+                                                        maxRadius: 18,
+                                                        child: Center(
+                                                          child: IconButton(
+                                                            onPressed: () {},
+                                                            icon: const Icon(Icons
+                                                                .favorite_border_outlined),
+                                                            iconSize: 20,
+                                                            color: kwhite,
+                                                          ),
+                                                        ),
+                                                      ),
+                                                    ),
+                                                  ],
+                                                )
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.symmetric(
+                                              horizontal: 15, vertical: 7),
+                                          child: Text(
+                                            'Name Of The Product',
+                                            overflow: TextOverflow.ellipsis,
+                                            style: GoogleFonts.poppins(
+                                                fontWeight: FontWeight.bold,
+                                                fontSize: 14),
+                                          ),
+                                        ),
+                                        Text(
+                                          '₹ 350 \\-',
+                                          style: GoogleFonts.poppins(
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 16),
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                );
+                              }),
+                        ]),
+                  );
+                })
               ],
             )),
       ],

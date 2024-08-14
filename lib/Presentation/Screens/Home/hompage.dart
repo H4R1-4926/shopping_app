@@ -131,12 +131,14 @@ class HomePage extends StatelessWidget {
                         )),
                   )),
             ),
-            body: ListView(
-              children: const [
-                TopContainerWidget(),
-                CatogorySection(),
-                GridCategaryWidget(),
-              ],
+            body: SingleChildScrollView(
+              child: Column(
+                children: const [
+                  TopContainerWidget(),
+                  CatogorySection(),
+                  GridCategaryWidget(),
+                ],
+              ),
             ));
       },
     );
