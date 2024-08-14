@@ -95,10 +95,8 @@ class GridCategaryWidget extends StatelessWidget {
                     ]),
                 kSizedBoxHeight10,
                 LayoutBuilder(builder: (context, constraints) {
-                  int gridViewItemCount =
-                      20; // Adjust this value based on your needs
-                  double gridViewHeight = (gridViewItemCount / 2).ceil() *
-                      270; // Assuming each grid item has a height of 200
+                  int gridViewItemCount = 20;
+                  double gridViewHeight = (gridViewItemCount / 2).ceil() * 270;
                   return SizedBox(
                     height: gridViewHeight,
                     child: TabBarView(
@@ -109,7 +107,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: gridViewItemCount,
@@ -208,7 +206,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -313,7 +311,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -418,7 +416,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -523,7 +521,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -628,7 +626,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -733,7 +731,7 @@ class GridCategaryWidget extends StatelessWidget {
                               gridDelegate:
                                   const SliverGridDelegateWithFixedCrossAxisCount(
                                 crossAxisCount: 2,
-                                mainAxisExtent: 260,
+                                mainAxisExtent: 270,
                                 childAspectRatio: 0.68,
                               ),
                               itemCount: 20,
@@ -838,6 +836,9 @@ class GridCategaryWidget extends StatelessWidget {
                 })
               ],
             )),
+        const SizedBox(
+          height: 90,
+        )
       ],
     );
   }
